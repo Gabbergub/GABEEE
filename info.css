@@ -5,12 +5,18 @@ body {
 }
 
 
-.icon{
+/*.icon{
   margin-left: 5px;
   width: 70px;
   height: auto;
-}
+}*/
 
+  .icon {
+    margin-left: 5px;
+    width: 70px;
+    height: auto;
+    cursor: pointer;
+  }
 
 .gabe {
 font-family: "articulat-cf", sans-serif;

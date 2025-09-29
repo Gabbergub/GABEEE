@@ -4,12 +4,32 @@ body {
   cursor: url('arrow-cursor.png') 0 0, auto; /* set hot spot (x y) */
 }
 
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
 
-.icon{
+@media (max-width: 600px) {
+  .project {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+}
+
+/*.icon{
   margin-left: 5px;
   width: 70px;
   height: auto;
-}
+}*/
+
+  .icon {
+    margin-left: 5px;
+    width: 70px;
+    height: auto;
+    cursor: pointer;
+  }
 
 
 .gabe {
@@ -264,7 +284,7 @@ video {
   border-radius: 5px;
   line-height: 25px;
   display: flex;
-  
+  margin: auto;
   /*padding-top: 90px;*/
   padding-top: 30px;
   padding-bottom: 10px;
@@ -381,6 +401,17 @@ text-transform: uppercase;
   object-fit: contain;
   /*top:100vh;*/
   }
+ .poster_mockup{
+width: 700px;
+height: auto;
+object-fit: contain;
+}
+    .poster_m2 {
+      width: 700px;
+         
+          height: auto;
+          object-fit: contain;
+    }
 
   .main_content5 {
       display: flex;
