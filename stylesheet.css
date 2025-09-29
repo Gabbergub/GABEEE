@@ -186,13 +186,27 @@ h3 {
 padding-top: 40px;
 padding-bottom: 20px;
 margin: 20px;
-color: #7f7f7f;
-font-family: "indivisible", sans-serif;
+color: transparent;
+font-family: "articulat-heavy-cf", sans-serif;
+       font-family: "dico-code-one", mono;
+        font-weight: 700;
+        font-style: normal;
+     
+  -webkit-text-stroke: 1px 
+#1A191A;
+  
+/*font-family: "indivisible", sans-serif;
 font-weight: 500;
-font-style: normal;
+font-style: normal;*/
 font-size: clamp(0.9rem, 2vw, 8rem);
-/*text-transform: uppercase;*/
+text-transform: uppercase;
 }
+
+.fix-stroke {
+  font-size: 30px;
+   paint-order: stroke fill;
+}
+
 .title2 {
   margin: 20px;
 }
@@ -219,8 +233,12 @@ font-style: normal;
 }
 
 .text {
-font-size: 13px;
 padding-top: -30px;
+ font-family: "dico-code-one", mono;
+  font-weight: 400;
+  font-style: normal;
+   font-size: clamp(13px, 0.9vw, 18px);
+  line-height: clamp(20px, 1.4vw, 30px);
 }
 
 /*.text {
@@ -338,9 +356,12 @@ padding-bottom: 150px;
 .caption {
 margin-top: 20px; 
 font-size: 14px;
-color: #333;
-
-font-family: "indivisible", sans-serif;
+color: #1A191A;
+font-family: "articulat-cf", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  text-transform: uppercase;
+/*font-family: "indivisible", sans-serif;
 font-weight: 700;
 font-style: normal;
 text-transform: uppercase;
@@ -404,9 +425,18 @@ text-transform: uppercase;
   
   max-width: 100%;        /* Container can span full width */
   box-sizing: border-box;
+
+  
 }
 
 .list a{
+  /*font-family: "articulat-cf", sans-serif;
+  font-weight: 700;
+  font-style: normal;*/
+    font-family: "dico-code-one", mono;
+        font-weight: 600;
+        font-style: normal;
+  text-transform: uppercase;
   color: #e21b25;
 }
 
@@ -414,3 +444,64 @@ text-transform: uppercase;
   color: #7f7f7f;
   font-style: italic;
 }
+
+
+
+
+
+.Articulat-CF-Bold {
+      font-family: "articulat-cf", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+      }
+      
+      .Articulat-CF-Bold {
+        font-family: "articulat-cf", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+        }
+  
+      .Articulat-CF-Extra-Bold {
+        font-family: "articulat-cf", sans-serif;
+        font-weight: 900;
+        font-style: normal;
+      }
+      .Articulat-CF-Heavy {
+        font-family: "articulat-heavy-cf", sans-serif;
+      font-weight: 900;
+      font-style: normal;
+      }
+      
+      .Articulat-CF-Medium {
+        font-family: "articulat-cf", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+      }
+      .Articulat-CF-Regular {
+        font-family: "articulat-cf", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+      }
+      .Articulat-CF-Regular {
+      font-family: "articulat-cf", sans-serif;
+      font-weight: 300;
+      font-style: normal;
+      }
+      
+      .Dico-Code-One-Regular {
+        font-family: "dico-code-one", mono;
+        font-weight: 400;
+        font-style: normal;
+      }
+      
+      .Dico-Code-One-Bold {
+        font-family: "dico-code-one", mono;
+        font-weight: 700;
+        font-style: normal;
+      }
+      
+      .Dico-Code-One-Bold-Italic {
+        font-family: "dico-code-one", mono;
+        font-weight: 700;
+        font-style: italic;
+      }
