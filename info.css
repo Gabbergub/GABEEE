@@ -256,7 +256,7 @@ padding-top: 40px;
 
 /* MOBILE: stack image above text */
 @media (max-width: 600px) {
-  .content {
+  .content, .container, .container2 {
     flex-direction: column;   /* stack vertically */
     /*align-items: center;      /* optional: center text under image */
    /* text-align: center;       /* optional: center text */

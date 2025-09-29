@@ -248,7 +248,7 @@ padding-bottom: 150px;
   flex-wrap: wrap;
   gap: 35px;
   width: 100%;
-  max-width: 100%;
+  max-width: 2800px; 
   margin: 0 auto;
   box-sizing: border-box;
   padding: 0 20px;  /* Keeps 20px margin on both sides */
@@ -284,6 +284,25 @@ padding-bottom: 150px;
 
   .gif_wrapper,
   .gif_wrapper2 {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;     /* Stack all gif_wrappers */
+    align-items: center;
+  }
+
+  .gif_wrapper,
+  .gif_wrapper2 {
+    width: 100%;
+    max-width: 500px;           /* Optional: limit width on small screens */
+  }
+
+  .content img {
     width: 100%;
     max-width: 500px;
   }
