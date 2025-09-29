@@ -238,64 +238,55 @@ font-size: 25px;
 
 
 .container {
+width: 100%;
 padding-top: 50px;
 padding-bottom: 150px;
 }
 
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 20px;  /* Keeps 20px margin on both sides */
+}
+
 .content img {
-  max-width: 500px;  /* keeps images reasonable on large screens */
+  max-width: 100%;    /* Responsive to container */
   height: auto;
   display: block;
 }
 
+/* GIF wrapper responsive width */
+.gif_wrapper,
+.gif_wrapper2 {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 467px;       /* Flex-grow, flex-shrink, flex-basis */
+  max-width: calc(100% - 40px); /* Prevents overflow past 20px margins */
+  box-sizing: border-box;
+}
 
 /* MOBILE: stack image above text */
 @media (max-width: 600px) {
   .content {
-    flex-direction: column;   /* stack vertically */
-    /*align-items: center;      /* optional: center text under image */
-   /* text-align: center;       /* optional: center text */
+    flex-direction: column;
+    align-items: center;
   }
 
   .content img {
-    width: 500px;  /* smaller image for mobile */
-    max-width: 100%;
+    width: 100%;
+    max-width: 500px; /* Prevents stretching */
   }
-}
 
-/*.content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  max-width: 100%;       
-  box-sizing: border-box;
-  margin: 20px;
-}*/
-
-.content {
-  display: flex;
-  flex-wrap: wrap;         /* Wrap to the next row */
-  /*justify-content: center; /* Center items in each row */
-  gap: 35px;               /* Space between items */
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;          /* Center the whole row */
-  box-sizing: border-box;
-  padding: 0 20px;         /* Optional: side breathing room */
-}
-
-.gif_wrapper {
-  display: flex;
-  flex-direction: column; 
-  width: 460px;            /* Fixed width for each item */
-  box-sizing: border-box;
-}
-
-.gif_wrapper2 {
-   display: flex;
-  flex-direction: column; 
-  width: 460px;            /* Fixed width for each item */
-  box-sizing: border-box;
+  .gif_wrapper,
+  .gif_wrapper2 {
+    width: 100%;
+    max-width: 500px;
+  }
 }
 /*.content {
   display: flex;

@@ -277,7 +277,7 @@ video {
 
 .project {
   margin-top: 40px;
-  background-color: #ffffff;
+  background-color: #1A191A;
   padding-left: 40px;
   padding-right: 40px;
   border: 2px solid #1A191A;
@@ -287,7 +287,7 @@ video {
   margin: auto;
   /*padding-top: 90px;*/
   padding-top: 30px;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
 }
 
 .project_name{
@@ -297,7 +297,7 @@ video {
   font-size: clamp(20px, 2.5vw, 50px);
   line-height: clamp(20px, 3vw, 50px);
 text-transform: uppercase;
-  color: #1A191A;
+  color: #ffffff;
   padding-top: 5px;
   padding-bottom: 15px;
 }
@@ -309,7 +309,7 @@ text-transform: uppercase;
    font-size: clamp(13px, 0.9vw, 20px);
   line-height: clamp(20px, 1.4vw, 30px);
 
-  color: #1A191A;
+  color: #ffffff;
   padding-bottom: 15px;
 }
 .project-type {
@@ -318,9 +318,9 @@ text-transform: uppercase;
   font-style: normal;
    font-size: clamp(13px, 0.9vw, 15px);
   line-height: clamp(20px, 1.4vw, 30px);
-  color: #1f1f21;
+  color: #ffffff;
   padding: 5px 15px; /* top/bottom and left/right padding */
-  border: 2px solid #1f1f21;
+  border: 2px solid #ffffff;
   border-radius: 9999px; /* makes it pill-shaped */
   display: inline-block; /* ensures padding and border shape apply correctly */
  margin-top: 10px;
@@ -334,12 +334,12 @@ text-transform: uppercase;
   line-height: clamp(20px, 1.4vw, 30px);
  /* font-size: 13px;
  line-height: 20px;*/
-  color: #fff;
-  background-color: #1f1f21;
+  color: #1A191A;
+  background-color: #ffffff;
   padding-bottom: 15px;
   
   padding: 5px 15px; /* top/bottom and left/right padding */
-  border: 2px solid #1f1f21;
+  border: 2px solid #ffffff;
   border-radius: 5px; /* makes it pill-shaped */
   display: inline-block; /* ensures padding and border shape apply correctly */
 }
