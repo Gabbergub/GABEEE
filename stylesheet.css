@@ -391,3 +391,7 @@ text-transform: uppercase;
 .list{
   color: #e21b25;
 }
+
+.list a{
+  color: #e21b25;
+}
