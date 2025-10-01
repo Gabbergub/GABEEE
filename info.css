@@ -242,28 +242,29 @@ font-size: 25px;
 
 
 .container {
-width: 30%;
+width: 35%;
 padding-top: 90px;
-padding-bottom: 150px;
+padding-bottom: 10px;
 }
 
 @media (max-width: 768px) {
-  .container {
+  .container, .container2 {
     width: 100%;
-    padding-top: 60px;   /* optional: adjust spacing for mobile */
-    padding-bottom: 100px;
+   /* padding-top: 60px;   /* optional: adjust spacing for mobile */
+   /* padding-bottom: 100px;*/
   }
 }
 
 .container2 {
-width: 100%;
-padding-top: 40px;
+width: 95%;
+padding-top: 20px;
 }
 
 /* MOBILE: stack image above text */
 @media (max-width: 600px) {
   .content, .container, .container2 {
-    flex-direction: column;   /* stack vertically */
+    flex-direction: column;
+     /* stack vertically */
     /*align-items: center;      /* optional: center text under image */
    /* text-align: center;       /* optional: center text */
   }
@@ -374,7 +375,7 @@ text-transform: uppercase;
 @media (max-width: 480px) {
   .button-container {
     flex-direction: column; /* stack buttons vertically */
-    align-items: stretch; /* make them fill container width */
+  /*  align-items: stretch; /* make them fill container width */
   }
 
   .button1 {
