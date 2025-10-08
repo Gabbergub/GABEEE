@@ -451,6 +451,12 @@ height: auto;
 object-fit: contain;
 }
 
+  .logo2 {
+        width: 500px;
+        height: auto;
+        object-fit: contain;
+      }
+
 .main_content5 {
 display: flex;
 flex-direction: column;
