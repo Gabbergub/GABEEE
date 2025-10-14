@@ -317,7 +317,7 @@ text-transform: uppercase;
 .button-container {
   margin: 20px;
   display: flex;
-  flex-wrap: wrap; /* allow buttons to wrap on small screens */
+  /*flex-wrap: wrap; /* allow buttons to wrap on small screens */
   gap: 10px; /* space between buttons */
 }
 
