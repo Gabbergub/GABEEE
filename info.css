@@ -224,7 +224,7 @@ span {
   font-family: "dico-code-one", mono;
   font-weight: 400;
   font-style: normal;
-  font-size: clamp(8px, 0.9vw, 11px);
+  font-size: clamp(8px, 0.9vw, 8px);
 }
 
 /*.text {
@@ -322,6 +322,9 @@ text-transform: uppercase;
 }
 
 .button1 {
+  font-family: "dico-code-one", mono;
+  font-weight: 700;
+  font-style: normal;
   padding: 5px 15px;
   background-color: #1A191A;
   border: 3px solid transparent;     
@@ -348,6 +351,9 @@ text-transform: uppercase;
 }
 
 .button2 {
+  font-family: "dico-code-one", mono;
+  font-weight: 700;
+  font-style: normal;
   padding: 5px 15px;
   background-color: transparent;
   border: 3px dotted #1A191A;         /* Dotted black border */
@@ -378,9 +384,9 @@ text-transform: uppercase;
   /*  align-items: stretch; /* make them fill container width */
   }
 
-  .button1 {
-    width: 100%; /* full-width buttons on iPhone screens */
-  }
+ /* .button1 {
+    width: 100%; //full-width buttons on iPhone screens //
+  }*/
 }
 
 

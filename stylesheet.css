@@ -376,9 +376,13 @@ text-transform: uppercase;
   display: flex;
   gap: 10px; /* adds space between the buttons */
   padding-top: 20px;
+  
 }
 
 .button1 {
+font-family: "dico-code-one", mono;
+font-weight: 700;
+font-style: normal;
   padding: 5px 15px;
   background-color: #1A191A;
   color: white;
@@ -387,6 +391,9 @@ text-transform: uppercase;
   margin: 0;
 }
 .button2 {
+ font-family: "dico-code-one", mono;
+font-weight: 700;
+font-style: normal;
   padding: 5px 15px;
   background-color: transparent;
   border: 3px dotted #1A191A;         /* Dotted black border */
@@ -401,6 +408,9 @@ text-transform: uppercase;
 }
 
 .button3 {
+  font-family: "dico-code-one", mono;
+  font-weight: 700;
+  font-style: normal;
   padding: 5px 15px;
   background-color: transparent;
   border: 3px dotted #1A191A;         /* Dotted black border */

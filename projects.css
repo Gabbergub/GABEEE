@@ -1,35 +1,23 @@
-body {
-  margin: 0;
-  background-color: 	#ffffff;
-  cursor: url('arrow-cursor.png') 0 0, auto; /* set hot spot (x y) */
+body, html {
+padding: 0;
+margin: 0;
+background-color: 	#ffffff;
+cursor: url('arrow-cursor.png') 0 0, auto; /* set hot spot (x y) */
 }
 
 @media screen and (max-width: 600px) {
-  .column, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
+.column, input[type=submit] {
+width: 100%;
+margin-top: 0;
+}
 }
 
-@media (max-width: 600px) {
-  .project {
-      flex-direction: column;
-      align-items: flex-start;
-  }
+.icon {
+margin-left: 5px;
+width: 70px;
+height: auto;
+cursor: pointer;
 }
-
-/*.icon{
-  margin-left: 5px;
-  width: 70px;
-  height: auto;
-}*/
-
-  .icon {
-    margin-left: 5px;
-    width: 70px;
-    height: auto;
-    cursor: pointer;
-  }
 
 
 .gabe {
@@ -37,26 +25,12 @@ font-family: "articulat-cf", sans-serif;
 font-weight: 700;
 font-style: normal;
 font-size: clamp(15px, 8vw, 15px);
-  color: #1A191A;
+color: #1A191A;
 }
 
 .heading1:hover:not(.active) {
 color: #6b6b6b;
 }
-
-/*.topnav {
- margin-top: -20px;
-  display: flex;
-  justify-content: space-between; 
-  align-items: center; 
-  font-family: "articulat-cf", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  text-transform: uppercase;
-  font-size: clamp(13px, 8vw, 13px);
-  background-color: #ffffff;
-border-bottom: 2px solid #1A191A;
-}*/
 
 .topnav {
 /*padding-left: 30px;
@@ -136,11 +110,12 @@ margin-top: 30px;
 
 
 a {
-  text-decoration: none;
+  text-decoration: underline;
   /*color: #69df46;*/
   color: #1A191A;
   
 }
+
 .link {
 line-height: 0px;
 text-transform: uppercase;
@@ -218,10 +193,7 @@ font-size: 25px;
 }
 
 
-.container {
-padding-top: 90px;
-margin: 20px;
-}
+
 /*
 @media (max-width: 768px) {
   .container {
@@ -266,27 +238,133 @@ video {
 */
 
 /* MOBILE: stack image above text */
-@media (max-width: 600px) {
+/*@media (max-width: 600px) {
   .content {
-    flex-direction: column;   /* stack vertically */
-    /*align-items: center;      /* optional: center text under image */
-   /* text-align: center;       /* optional: center text */
+    flex-direction: column; 
+    /*align-items: center;    
+   /* text-align: center;     
   }
-}
+}*/
 
 
+
+/*
 .project {
-  margin-top: 40px;
-  background-color: #1A191A;
+  flex: 1;
+  max-width: 500px; 
+ position: sticky;
+  top: 0; 
+
+  align-self: flex-start;
+  height: fit-content;
   padding-left: 40px;
   padding-right: 40px;
   border: 2px solid #1A191A;
   border-radius: 5px;
   line-height: 25px;
-  display: flex;
   margin: auto;
-  /*padding-top: 90px;*/
   padding-top: 30px;
+  padding-bottom: 30px;
+}
+*/
+/* Mobile and small tablet layout */
+@media (max-width: 768px) {
+.container {
+flex-direction: column; /* stack vertically */
+align-items: stretch;
+padding-top: 60px; /* slightly less padding for small screens */
+margin: 10px; /* tighter margin for narrow viewports */
+gap: 1.5rem;
+box-sizing: border-box;
+}
+
+.project {
+top: 0;
+position: static !important; /* enforce fixed positioning */
+width: 100%;
+max-width: 100%;
+padding: 20px; /* reduce inner padding for small screens */
+margin: 0 auto 1.5rem auto; /* center and add spacing below */
+box-sizing: border-box;
+}
+
+.project_name {
+font-size: clamp(18px, 6vw, 32px);
+line-height: 1.2;
+}
+
+  .project-descriptor,
+  .project-type,
+  .project-year {
+    font-size: clamp(12px, 3.5vw, 16px);
+    line-height: 1.4;
+  }
+
+  .main_content5 {
+   
+    width: 100%;
+    flex: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .picture_wrapper5 {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    max-width: 100%;
+  }
+
+  .picture_wrapper5 img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+/* Extra-small screens (phones under 480px) */
+@media (max-width: 480px) {
+  .project {
+    padding: 15px;
+  }
+
+  .project_name {
+    font-size: clamp(16px, 7vw, 26px);
+  }
+
+  .container {
+    margin: 5px;
+  }
+}
+
+
+.container {
+padding-top: 70px;
+margin: 20px;
+
+display: flex;
+align-items: flex-start; /* keeps top edges aligned */
+gap: 1rem; /* space between the two sections */
+}
+
+.project {
+  flex: 1;
+  max-width: 500px;
+  position: sticky;
+  top: 70px; /* sticks to top of viewport */
+  align-self: flex-start;
+  height: fit-content;
+  padding-left: 40px;
+  padding-right: 40px;
+  border: 2px solid #1A191A;
+  border-radius: 5px;
+  line-height: 25px;
+  margin: 0; /* remove margin auto */
+  padding-top: 30px; /* aligns with .main_content5 top */
   padding-bottom: 30px;
 }
 
@@ -294,10 +372,10 @@ video {
   font-family: "articulat-cf", sans-serif;
   font-weight: 800;
   font-style: normal;
-  font-size: clamp(20px, 2.5vw, 50px);
-  line-height: clamp(20px, 3vw, 50px);
+  font-size: clamp(20px, 2.5vw, 30px);
+  line-height: clamp(20px, 3vw, 30px);
 text-transform: uppercase;
-  color: #ffffff;
+  color: #1A191A;
   padding-top: 5px;
   padding-bottom: 15px;
 }
@@ -309,18 +387,18 @@ text-transform: uppercase;
    font-size: clamp(13px, 0.9vw, 20px);
   line-height: clamp(20px, 1.4vw, 30px);
 
-  color: #ffffff;
+  color: #1A191A;
   padding-bottom: 15px;
 }
 .project-type {
   font-family: "dico-code-one", mono;
-  font-weight: 400;
+  font-weight: 700;
   font-style: normal;
    font-size: clamp(13px, 0.9vw, 15px);
   line-height: clamp(20px, 1.4vw, 30px);
-  color: #ffffff;
+  color: #1A191A;
   padding: 5px 15px; /* top/bottom and left/right padding */
-  border: 2px solid #ffffff;
+  border: 2px solid #1A191A;
   border-radius: 9999px; /* makes it pill-shaped */
   display: inline-block; /* ensures padding and border shape apply correctly */
  margin-top: 10px;
@@ -328,25 +406,25 @@ text-transform: uppercase;
 
 .project-year{
   font-family: "dico-code-one", mono;
-  font-weight: 400;
+  font-weight: 700;
   font-style: italic;
   font-size: clamp(13px, 0.9vw, 15px);
   line-height: clamp(20px, 1.4vw, 30px);
  /* font-size: 13px;
  line-height: 20px;*/
-  color: #1A191A;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: #1A191A;
   padding-bottom: 15px;
   
   padding: 5px 15px; /* top/bottom and left/right padding */
-  border: 2px solid #ffffff;
+  border: 2px solid #1A191A;
   border-radius: 5px; /* makes it pill-shaped */
   display: inline-block; /* ensures padding and border shape apply correctly */
 }
 
 .title1 {
   text-transform: uppercase;
-  color: #ffffff;
+  color: #1A191A;
   font-family: "dico-code-one", mono;
   font-weight: bold;
   font-style: normal;
@@ -359,6 +437,33 @@ text-transform: uppercase;
   width: 100%;
   padding-bottom: 20px;
 }
+
+
+    
+
+.main_content5 {
+  flex: 2;
+  display: flex;
+  align-items: stretch; /* stretch children instead of centering */
+  /*align-items: center;*/
+  width: 100%;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.picture_wrapper5 {
+display: flex;
+flex-wrap: wrap;
+/*justify-content: center;*/
+justify-content: flex-start; /* align items from left edge */
+gap: 10px;
+width: 100%;
+max-width: 100%; /* remove previous hard limit */
+/*max-width: 2560px;*/
+object-fit: cover;
+
+}
+
 
 
 
@@ -457,25 +562,41 @@ object-fit: contain;
         object-fit: contain;
       }
 
-.main_content5 {
-display: flex;
-flex-direction: column;
-align-items: center;
-padding-top: 20px;
-padding-bottom: 20px;
-width: 100%;
-margin: auto;
-}
-      .picture_wrapper5 {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-        width: 100%;
-        max-width: 2560px;
-        object-fit: cover;
-      }
 
+#myBtn {
+display: none; /* Hidden by default */
+position: fixed; /* Fixed/sticky position */
+bottom: 20px; /* Place the button at the bottom of the page */
+right: 20px; /* Place the button 30px from the right */
+z-index: 99; /* Make sure it does not overlap */
+border: none; /* Remove borders */
+outline: none; /* Remove outline */
+outline-style: solid;
+outline-color: #1A191A;
+outline-width: 2px;
+background-color: rgba(236, 236, 236, 0.5); /* light gray with 40% opacity */
+color: #1A191A; /* Text color */
+cursor: pointer; /* Add a mouse pointer on hover */
+padding: 5px; /* Some padding */
+border-radius: 2px; /* Rounded corners */
+font-size: 15px; /* Increase font size */
+}
+  
+#myBtn:hover {
+    background-color: #1A191A; /* Add a dark-grey background on hover */
+    color: #ececec;
+  }
+
+
+
+
+/*.picture_wrapper5 img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}     */
+
+      
       /* responsive */
 @media (min-width: 2560px) {
   .main_content .main_content2 .main_content3 .main_content5{
