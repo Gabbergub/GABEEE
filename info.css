@@ -11,6 +11,56 @@ body {
   height: auto;
 }*/
 
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  padding-right: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .nav-items {
+    display: none;
+    width: 100%;
+    /*background-color: #e1e1e1;*/
+    position: absolute;
+    top: 55px; /* Adjust based on your .topnav height */
+    right: 0; /* Align to the right */
+    z-index: 999;
+   /* border-bottom: 1px solid #ccc;*/
+   /* border: 1px solid #ccc;*/
+    /*border-radius: 4px;*/
+    padding: 0;
+    padding-bottom: 20px;
+  }
+
+  .nav-items ul {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-items li {
+    margin: 0;
+    margin-right: -10px;
+  }
+
+  .hamburger {
+    display: block;
+   /* font-size: 24px;*/
+    cursor: pointer;
+    margin-left: auto;
+  }
+
+  .nav-items.show {
+    display: block;
+  }
+}
+
+
   .icon {
     margin-left: 5px;
     width: 70px;
@@ -73,7 +123,7 @@ padding-right: 30px;*/
 .nav-items ul {
  
   display: flex;
-  gap: 100px; /* spacing between links */
+  gap: 30px; /* spacing between links */
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -89,15 +139,18 @@ padding-right: 30px;*/
 }
 
 .nav-items a:hover:not(.active) {
-  text-decoration: overline;
-  text-decoration-thickness: 2px;
+  text-decoration: overline dotted;
+  text-decoration-thickness: 3px;
   color: #7f7f7f;
 }
 
-.nav-items .active {
-  text-decoration: overline;
-  text-decoration-thickness: 2px;
-}
+/*.nav-items .active {
+  text-decoration: overline dotted;
+  text-decoration-thickness: 3px;
+}*/
+
+
+
 /*.tabs {
   display: flex;
   position: fixed;
@@ -243,7 +296,7 @@ font-size: 25px;
 
 .container {
 width: 35%;
-padding-top: 90px;
+padding-top: 130px;
 padding-bottom: 10px;
 }
 
@@ -322,6 +375,7 @@ text-transform: uppercase;
 }
 
 .button1 {
+   font-size: clamp(11px, 0.9vw, 11px);
   font-family: "dico-code-one", mono;
   font-weight: 700;
   font-style: normal;
@@ -351,6 +405,7 @@ text-transform: uppercase;
 }
 
 .button2 {
+   font-size: clamp(11px, 0.9vw, 11px);
   font-family: "dico-code-one", mono;
   font-weight: 700;
   font-style: normal;
@@ -377,17 +432,7 @@ text-transform: uppercase;
   color: #7f7f7f;
 }
 
-/* Mobile adjustments */
-@media (max-width: 480px) {
-  .button-container {
-    flex-direction: column; /* stack buttons vertically */
-  /*  align-items: stretch; /* make them fill container width */
-  }
 
- /* .button1 {
-    width: 100%; //full-width buttons on iPhone screens //
-  }*/
-}
 
 
 

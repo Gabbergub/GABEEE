@@ -10,6 +10,57 @@ body {
   width: 70px;
   height: auto;
 }*/
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+  padding-right: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .nav-items {
+    display: none;
+    width: 100%;
+    /*background-color: #e1e1e1;*/
+    position: absolute;
+    top: 55px; /* Adjust based on your .topnav height */
+    right: 0; /* Align to the right */
+    z-index: 999;
+   /* border-bottom: 1px solid #ccc;*/
+   /* border: 1px solid #ccc;*/
+    /*border-radius: 4px;*/
+    padding: 0;
+    padding-bottom: 20px;
+  }
+
+  .nav-items ul {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-items li {
+    margin: 0;
+    margin-right: -10px;
+  }
+
+  .hamburger {
+    display: block;
+   /* font-size: 24px;*/
+    cursor: pointer;
+    margin-left: auto;
+  }
+
+  .nav-items.show {
+    display: block;
+  }
+}
+
+
+
 
   .icon {
     margin-left: 5px;
@@ -75,7 +126,7 @@ padding-right: 30px;*/
 .nav-items ul {
  
   display: flex;
-  gap: 100px; /* spacing between links */
+  gap: 30px; /* spacing between links */
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -91,14 +142,14 @@ padding-right: 30px;*/
 }
 
 .nav-items a:hover:not(.active) {
-  text-decoration: overline;
-  text-decoration-thickness: 2px;
-  color: #ffffff;
+  text-decoration: overline dotted;
+  text-decoration-thickness: 3px;
+  color: #7f7f7f;
 }
 
 .nav-items .active {
-  text-decoration: overline;
-  text-decoration-thickness: 2px;
+  text-decoration: none;
+  text-decoration-thickness: 3px;
 }
 /*.tabs {
   display: flex;
@@ -233,6 +284,7 @@ font-style: normal;
 }
 
 .text {
+  color: #7f7f7f;
 padding-top: -30px;
  font-family: "dico-code-one", mono;
   font-weight: 400;
@@ -363,7 +415,7 @@ margin-top: 20px;
 font-size: 14px;
 color: #1A191A;
 font-family: "articulat-cf", sans-serif;
-  font-weight: 800;
+  font-weight: 700;
   font-style: normal;
   text-transform: uppercase;
 /*font-family: "indivisible", sans-serif;
@@ -381,17 +433,19 @@ text-transform: uppercase;
 }
 
 .button1 {
+   font-size: clamp(11px, 0.9vw, 11px);
 font-family: "dico-code-one", mono;
 font-weight: 700;
 font-style: normal;
   padding: 5px 15px;
-  background-color: #bebebe;
+  background-color: #1A191A;
   color: #ffffff;
   border: 3px solid transparent;     
   border-radius: 5px;
   margin: 0;
 }
 .button2 {
+   font-size: clamp(11px, 0.9vw, 11px);
  font-family: "dico-code-one", mono;
 font-weight: 700;
 font-style: normal;
@@ -409,6 +463,7 @@ font-style: normal;
 }
 
 .button3 {
+   font-size: clamp(11px, 0.9vw, 11px);
   font-family: "dico-code-one", mono;
   font-weight: 700;
   font-style: normal;
@@ -426,12 +481,12 @@ font-style: normal;
 }
 .button3:hover {
   background-color: transparent;
-  border: 2px solid #ffffff;
+  border: 2px solid #7f7f7f;
 }
 
 .button3:hover a {
   font-style: italic;
-  color: #ffffff;
+  color: #7f7f7f;
 }
 
 
