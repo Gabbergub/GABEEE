@@ -1,8 +1,39 @@
 body, html {
 padding: 0;
 margin: 0;
-background-color: 	#e1e1e1;
-cursor: url('arrow-cursor.png') 0 0, auto; /* set hot spot (x y) */
+background-color: 	#ffffff;
+/*cursor: url('arrow-cursor.png') 0 0, auto; /* set hot spot (x y) */
+}
+
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* Adjust size as needed */
+   width: 18px;
+  height: 18px;
+ /* border: 2px solid #1A191A;*/
+  /* black outline */
+  background-color: rgba(236, 236, 236, 0.5);
+  background-color: #1A191A;
+  /* light gray with 40% opacity */
+  border-radius: 50%;
+  /* Make it a circle */
+  pointer-events: none;
+  /* Ensure it doesn't block clicks */
+  z-index: 10000;
+  /* Keep it above all other elements */
+  transition: transform 0.1s ease, background-color 0.2s ease, opacity 0.2s ease;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  /* Start as hidden */
+}
+
+/* Expanded and color-changed cursor when hovering links */
+.custom-cursor.link-hover {
+  transform: translate(-50%, -50%) scale(2);
+  background-color: rgba(236, 236, 236, 0.5);
+  /*border: 1px solid #1A191A;*/
 }
 
 @media screen and (max-width: 600px) {
@@ -99,7 +130,7 @@ padding-right: 30px;*/
   font-style: normal;
   text-transform: uppercase;
    font-size: clamp(10px, 2vw, 13px);
-   background-color: transparent;
+  background-color: #ffffff;
  /* border-bottom: 2px solid #1A191A;*/
 }
 
