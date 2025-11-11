@@ -10,8 +10,8 @@ background-color: 	#ffffff;
   top: 0;
   left: 0;
   /* Adjust size as needed */
-   width: 18px;
-  height: 18px;
+    width: 25px;
+  height: 25px;
  /* border: 2px solid #1A191A;*/
   /* black outline */
   background-color: rgba(236, 236, 236, 0.5);
@@ -159,13 +159,13 @@ padding-right: 30px;*/
 }
 
 .nav-items a:hover:not(.active) {
-  text-decoration: overline;
-  text-decoration-thickness: 2px;
+  text-decoration: overline dotted;
+  text-decoration-thickness: 3px;
   color: #7f7f7f;
 }
 
 .nav-items .active {
-  text-decoration: overline;
+  text-decoration: none;
   text-decoration-thickness: 2px;
 }
 
