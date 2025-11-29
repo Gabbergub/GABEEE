@@ -143,7 +143,7 @@ padding-right: 30px;*/
 .nav-items ul {
  
   display: flex;
-  gap: 30px; /* spacing between links */
+  gap: 20px; /* spacing between links */
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -234,19 +234,7 @@ font-size: clamp(0.9rem, 2vw, 8rem);
 .title2 {
   margin: 20px;
 }
-.project-info {
-   color: #7f7f7f;
-  display: flex;
-  /*justify-content: space-between; /* pushes them to opposite sides */
-  align-items: center; /* keeps text aligned nicely */
-  gap: 7rem;
-  /*gap: 24%;*/
-  font-family: "indivisible", sans-serif;
-font-weight: 500;
-font-style: italic;
- font-size: clamp(0.9rem, 1vw, 1rem);
- padding-top: 7px;
-}
+
 
 p {
 font-size: 13px;
@@ -261,12 +249,6 @@ font-size: 13px;
 padding-top: -30px;
 }
 
-/*.text {
-width: 50%;
-padding-top: 10px;
-padding-bottom: 40px;
-font-size: 25px;
-}*/
 
 @media (max-width: 768px) {
   .text {
@@ -274,23 +256,6 @@ font-size: 25px;
   }
 }
 
-
-
-/*
-@media (max-width: 768px) {
-  .container {
-    width: 100%;
-    padding-top: 60px;  
-    padding-bottom: 100px;
-  }
-}*/
-
-/*img {
-  width: 100%;
-  height: auto;
-  border-radius: 2px;
-  display: block;
-}*/
 video {
         width: 100%    !important;
         height: auto   !important;
@@ -302,59 +267,37 @@ video {
         object-fit: cover;
         flex: 1 1 300px; 
       }
-/*
-.container2 {
-  margin: auto;
-  width: 100%;
-  display: flex;
-  gap: 10px; 
-  flex-wrap: wrap; 
-  
-  align-items: center; 
-}
 
-.container2 img {
-  max-width: 700px;
-  height: auto;
-}
-*/
-
-/* MOBILE: stack image above text */
-/*@media (max-width: 600px) {
-  .content {
-    flex-direction: column; 
-    /*align-items: center;    
-   /* text-align: center;     
+@media (max-width: 600px) {
+  .project,
+  .main_content5 {
+    width: 100%;
+    
   }
-}*/
 
+  /* force stacking order on mobile only */
+  .project {
+    order: 1;
+   
+  }
 
+  .main_content5 {
+    order: 2;
+  }
 
-/*
-.project {
-  flex: 1;
-  max-width: 500px; 
- position: sticky;
-  top: 0; 
-
-  align-self: flex-start;
-  height: fit-content;
-  padding-left: 40px;
-  padding-right: 40px;
-  border: 2px solid #1A191A;
-  border-radius: 5px;
-  line-height: 25px;
-  margin: auto;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  /* make sure their parent uses flex column on mobile */
+  .parent-container {
+    display: flex;
+    flex-direction: column;
+  }
 }
-*/
+
 /* Mobile and small tablet layout */
 @media (max-width: 768px) {
 .container {
 flex-direction: column; /* stack vertically */
 align-items: stretch;
-padding-top: 60px; /* slightly less padding for small screens */
+/*padding-top: 10px; /* slightly less padding for small screens */
 margin: 10px; /* tighter margin for narrow viewports */
 gap: 1.5rem;
 box-sizing: border-box;
@@ -363,10 +306,10 @@ box-sizing: border-box;
 .project {
 top: 0;
 position: static !important; /* enforce fixed positioning */
-width: 100%;
-max-width: 100%;
-padding: 20px; /* reduce inner padding for small screens */
-margin: 0 auto 1.5rem auto; /* center and add spacing below */
+width: 100%;          /* FULL WIDTH */
+max-width: none;      /* prevents shrinking */
+padding: 0;
+margin: 0;            /* remove auto-centering */
 box-sizing: border-box;
 }
 
@@ -397,7 +340,7 @@ line-height: 1.2;
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 8px;
+   /* gap: 8px;*/
     max-width: 100%;
   }
 
@@ -411,7 +354,7 @@ line-height: 1.2;
 /* Extra-small screens (phones under 480px) */
 @media (max-width: 480px) {
   .project {
-    padding: 15px;
+    padding: 0;
   }
 
   .project_name {
@@ -419,18 +362,17 @@ line-height: 1.2;
   }
 
   .container {
-    margin: 5px;
+    margin: auto;
   }
 }
 
 
 .container {
-padding-top: 70px;
+/*padding-top: 70px;*/
 margin: 20px;
-
 display: flex;
 align-items: flex-start; /* keeps top edges aligned */
-gap: 1rem; /* space between the two sections */
+gap: 3rem; /* space between the two sections */
 }
 
 .project {
@@ -440,25 +382,38 @@ gap: 1rem; /* space between the two sections */
   top: 70px; /* sticks to top of viewport */
   align-self: flex-start;
   height: fit-content;
-  padding-left: 40px;
-  padding-right: 40px;
-  border: 2px dashed #1A191A;
-  border-radius: 5px;
+  /*padding-left: 10px;
+  padding-right: 20px;*/
+  /*border: 2px dashed #1A191A;
+  border-radius: 5px;*/
   line-height: 25px;
   margin: 0; /* remove margin auto */
-  padding-top: 30px; /* aligns with .main_content5 top */
-  padding-bottom: 30px;
+  /*padding-top: 30px; /* aligns with .main_content5 top */
+  /*padding-bottom: 30px;*/
 }
 
+.project-info {
+   color: #7f7f7f;
+  display: flex;
+  /*justify-content: space-between; /* pushes them to opposite sides */
+  align-items: center; /* keeps text aligned nicely */
+  gap: 7rem;
+  /*gap: 24%;*/
+  font-family: "indivisible", sans-serif;
+font-weight: 500;
+font-style: italic;
+ font-size: clamp(0.9rem, 1vw, 1rem);
+ padding-top: 7px;
+}
 .project_name{
   font-family: "articulat-cf", sans-serif;
-  font-weight: 800;
+  font-weight: 700;
   font-style: normal;
-  font-size: clamp(20px, 2.5vw, 30px);
-  line-height: clamp(20px, 3vw, 30px);
+  font-size: clamp(20px, 2.5vw, 25px);
+  line-height: clamp(20px, 3vw, 25px);
 text-transform: uppercase;
   color: #1A191A;
-  padding-top: 5px;
+  /*padding-top: 5px;*/
   padding-bottom: 15px;
 }
 
@@ -470,20 +425,26 @@ text-transform: uppercase;
   line-height: clamp(20px, 1.4vw, 30px);
 
   color: #1A191A;
-  padding-bottom: 15px;
+  padding-bottom: 30px;
 }
 .project-type {
-  font-family: "dico-code-one", mono;
+  /*font-family: "dico-code-one", mono;
   font-weight: 700;
   font-style: normal;
    font-size: clamp(13px, 0.9vw, 15px);
-  line-height: clamp(20px, 1.4vw, 30px);
-  color: #1A191A;
-  padding: 5px 15px; /* top/bottom and left/right padding */
+  line-height: clamp(20px, 1.4vw, 30px);*/
+   font-family: "articulat-cf", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+   font-size: clamp(20px, 2.5vw, 23px);
+  line-height: clamp(20px, 3vw, 23px);
+text-transform: uppercase;
+  color: #e4e4e4;
+  /*padding: 5px 15px; 
   border: 2px solid #1A191A;
-  border-radius: 9999px; /* makes it pill-shaped */
-  display: inline-block; /* ensures padding and border shape apply correctly */
- margin-top: 10px;
+  border-radius: 9999px; 
+  display: inline-block; 
+ margin-top: 10px;*/
 }
 
 .project-year{
@@ -494,14 +455,13 @@ text-transform: uppercase;
   line-height: clamp(20px, 1.4vw, 30px);
  /* font-size: 13px;
  line-height: 20px;*/
-  color: #ffffff;
-  background-color: #1A191A;
+  color: #1A191A;
+ /* background-color: #1A191A;*/
   padding-bottom: 15px;
-  
-  padding: 5px 15px; /* top/bottom and left/right padding */
+  /*padding: 5px 15px; 
   border: 2px solid #1A191A;
-  border-radius: 5px; /* makes it pill-shaped */
-  display: inline-block; /* ensures padding and border shape apply correctly */
+  border-radius: 5px; 
+  display: inline-block;*/
 }
 
 .title1 {
@@ -517,7 +477,7 @@ text-transform: uppercase;
 
 .w-col {
   width: 100%;
-  padding-bottom: 20px;
+ /* padding-bottom: 20px;*/
 }
 
 
@@ -529,7 +489,7 @@ text-transform: uppercase;
   align-items: stretch; /* stretch children instead of centering */
   /*align-items: center;*/
   width: 100%;
-  margin: auto;
+  margin-top: 55px;
   box-sizing: border-box;
 }
 

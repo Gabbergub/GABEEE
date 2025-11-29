@@ -121,20 +121,6 @@ body {
   color: #6b6b6b;
 }
 
-/*.topnav {
- margin-top: -20px;
-  display: flex;
-  justify-content: space-between; 
-  align-items: center; 
-  font-family: "articulat-cf", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  text-transform: uppercase;
-  font-size: clamp(13px, 8vw, 13px);
-  background-color: #ffffff;
-border-bottom: 2px solid #1A191A;
-}*/
-
 .topnav {
 z-index: 1;
   /*padding-left: 30px;
@@ -160,11 +146,13 @@ padding-right: 30px;*/
 }
 
 .name a {
+
   text-decoration: none;
   color: inherit;
 }
 
 .nav-items ul {
+
   display: flex;
   gap: 20px;
   /* spacing between links */
@@ -358,7 +346,7 @@ font-size: 25px;
   width: 100%;
   max-width: 2800px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 20px;
   /* 20px margins left/right */
   box-sizing: border-box;
 }
@@ -384,7 +372,7 @@ font-size: 25px;
   width: 100%;
   max-width: 2800px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 10px;
   /* 20px margins left/right */
   box-sizing: border-box;
 }
@@ -404,6 +392,14 @@ font-size: 25px;
   /* default: full width until media query changes it */
   box-sizing: border-box;
 }
+
+.gif_wrapper img.gif {
+  width: 100%;
+  height: auto;
+  display: block;
+  /*border-radius: 2px; /* optional */
+}
+
 
 /* MOBILE (<= 600px): stack */
 @media (max-width: 600px) {
@@ -438,143 +434,26 @@ font-size: 25px;
   }
 }
 
-/* DESKTOP (>= 1024px): 3 per row */
+/* DESKTOP (>= 1024px): 4 per row */
 @media (min-width: 1024px) {
 
-  .gif_wrapper,
-  .gif_wrapper2 {
-    flex: 1 1 calc((100% - (2 * 35px)) / 3);
-    max-width: calc((100% - (2 * 35px)) / 3);
+  .gif_wrapper {
+    flex: 1 1 calc((100% - (3 * 35px)) / 4);
+    max-width: calc((100% - (3 * 35px)) / 4);
   }
 }
 
-.gif_wrapper img.gif {
-  width: 100%;
-  height: auto;
-  display: block;
-  /*border-radius: 2px; /* optional */
-}
-
-/*.content {
-  display: flex;
-  flex-wrap: wrap;   
-  gap: 23px;       
-  width: calc(100% - 40px);
-  box-sizing: border-box;
-  margin: 0 auto;     
-  /*padding: 0 0px;    
-}
-
-
-.gif_wrapper {
-  display: flex;
-  flex-direction: column;
-
-  box-sizing: border-box;
- align-items: center;  
-  width: 460px;           
-}*/
-
-
-.gif {
-  transition: transform 0.3s ease; /* Smooth animation */
-}
-
-.gif:hover {
-  transform: translateY(-15px); /* Moves up slightly */
-}
-
-/*.gif:hover {
-  transform: translateY(-5px) scale(1.03);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-}*/
 
 
 .caption {
   margin-top: 10px;
   font-size: 14px;
-  color: #1A191A;
+  color: #7f7f7f;
   font-family: "articulat-cf", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  text-transform: uppercase;
-  /*font-family: "indivisible", sans-serif;
-font-weight: 700;
-font-style: normal;
-text-transform: uppercase;
-  /*text-align: center;*/
-}
-
-.button-container {
-  display: flex;
-  gap: 10px;
-  /* adds space between the buttons */
-  padding-top: 5px;
-  padding-bottom: 10px;
-
-}
-
-.button1 {
-  font-size: clamp(11px, 0.9vw, 11px);
-  font-family: "dico-code-one", mono;
-  font-weight: 700;
-  font-style: normal;
-  padding: 5px 10px 5px;
-  background-color: #ececec;
-  color: #7f7f7f;
-  border: 2px solid transparent;
-  border-radius: 3px;
-  margin: 0;
-}
-
-.button2 {
-  font-size: clamp(11px, 0.9vw, 11px);
-  font-family: "dico-code-one", mono;
-  font-weight: 700;
-  font-style: normal;
-  padding: 5px 10px;
-  background-color: #ececec;
-  color: #7f7f7f;
-  border: 2px solid #ececec;
-  /* Dotted black border */
-  border-radius: 30px;
-  margin: 0;
-}
-
-.button2 a {
-  color: #1A191A;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.button3 {
-  font-size: clamp(11px, 0.9vw, 11px);
-  font-family: "dico-code-one", mono;
-  font-weight: 700;
-  font-style: normal;
-  padding: 5px 10px 5px;
-  background-color: transparent;
-  border: 2px dotted #1A191A;
-  /* Dotted black border */
-  border-radius: 30px;
-  margin: 0;
-}
-
-.button3 a {
-  color: #1A191A;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.button3:hover {
-  background-color: transparent;
-  border: 2px solid #7f7f7f;
-}
-
-.button3:hover a {
+  font-weight: 600;
   font-style: italic;
-  color: #7f7f7f;
 }
+
 
 
 .content2 {

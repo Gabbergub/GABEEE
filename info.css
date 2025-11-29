@@ -153,7 +153,7 @@ padding-right: 30px;*/
 .nav-items ul {
  
   display: flex;
-  gap: 30px; /* spacing between links */
+  gap: 20px; /* spacing between links */
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -174,44 +174,11 @@ padding-right: 30px;*/
   color: #7f7f7f;
 }
 
-/*.nav-items .active {
+.nav-items .active {
   text-decoration: overline dotted;
   text-decoration-thickness: 3px;
-}*/
-
-
-
-/*.tabs {
-  display: flex;
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
 }
 
-.VerticalNav {
-  display: flex;
-  flex-direction: column;
-  width: 360px;
-  background-color: transparent;
-  box-sizing: border-box;
-}
-
-.VerticalNav a {
-  text-decoration: none;
-  color: black;
-  font-family: "indivisible", sans-serif;
-  font-weight: 500;
-}
-
-.VerticalNav a:hover {
-  color: #ff0000;
-} */
-
-
-/*.line1 {
-border-right: 2px solid #7f7f7f;
-padding: 450px 0; 
-}*/
 
 .line {
 border-top: 2px solid #7f7f7f;
