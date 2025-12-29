@@ -448,7 +448,7 @@ font-size: 25px;
   }
 }
 
-.gif_wrapper img.gif {
+.gif_wrapper,.gif_wrapper2 img.gif {
   width: 100%;
   height: auto;
   display: block;
@@ -484,6 +484,11 @@ font-size: 25px;
   transform: translateY(-15px); /* Moves up slightly */
 }
 
+.gif_wrapper:hover .button-container {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /*.gif:hover {
   transform: translateY(-5px) scale(1.03);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
@@ -511,8 +516,21 @@ text-transform: uppercase;
   /* adds space between the buttons */
   padding-top: 5px;
   padding-bottom: 10px;
-
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
+.button-container2 {
+  display: flex;
+  gap: 10px;
+  /* adds space between the buttons */
+  padding-top: 5px;
+  padding-bottom: 10px;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
 
 .button1 {
   font-size: clamp(11px, 0.9vw, 11px);
@@ -669,4 +687,61 @@ html {
   font-family: "dico-code-one", mono;
   font-weight: 700;
   font-style: italic;
+}
+
+.footer {
+  width: 100%;
+  /*background-color: #f0f0f0; /* Light gray background */
+  background-color: #ececec;
+  text-align: center;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.footer-text {
+    font-family: "articulat-cf", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+   font-size: clamp(10px, 2vw, 13px);
+  margin: 0;
+    color: #1A191A; /* Dark gray text */
+}
+
+.footer-text2 {
+  position: absolute;
+    font-family: "articulat-cf", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+   font-size: clamp(10px, 2vw, 13px);
+  left: 20px;
+  margin: 0;
+  color: #1A191A;
+}
+
+.footer-right {
+  position: absolute;
+  right: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.footer-text3, .footer-text4 {
+    font-family: "articulat-cf", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+   font-size: clamp(10px, 2vw, 13px);
+  margin: 0;
+  color: #1A191A;
+}
+
+.footer a {
+  text-decoration: none;
+  color: inherit;
 }

@@ -35,7 +35,7 @@ document.addEventListener('mousemove', e => {
 });
 
 // Add hover effect for links
-document.querySelectorAll('a').forEach(link => {
+document.querySelectorAll('.nav-items a').forEach(link => {
   link.addEventListener('mouseenter', () => cursor.classList.add('link-hover'));
   link.addEventListener('mouseleave', () => cursor.classList.remove('link-hover'));
 });

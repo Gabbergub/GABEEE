@@ -36,6 +36,12 @@ background-color: 	#ffffff;
   /*border: 1px solid #1A191A;*/
 }
 
+/* Expanded cursor when hovering topnav */
+.custom-cursor.topnav-hover {
+  transform: translate(-50%, -50%) scale(2);
+  background-color: rgba(236, 236, 236, 0.5);
+}
+
 @media screen and (max-width: 600px) {
 .column, input[type=submit] {
 width: 100%;
@@ -370,6 +376,7 @@ line-height: 1.2;
 .container {
 /*padding-top: 70px;*/
 margin: 20px;
+padding-bottom: 20px;
 display: flex;
 align-items: flex-start; /* keeps top edges aligned */
 gap: 3rem; /* space between the two sections */
@@ -423,7 +430,7 @@ text-transform: uppercase;
   font-style: normal;
    font-size: clamp(13px, 0.9vw, 20px);
   line-height: clamp(20px, 1.4vw, 30px);
-
+  width: 100%;
   color: #1A191A;
   padding-bottom: 30px;
 }
@@ -608,18 +615,20 @@ object-fit: contain;
 #myBtn {
 display: none; /* Hidden by default */
 position: fixed; /* Fixed/sticky position */
-bottom: 20px; /* Place the button at the bottom of the page */
+bottom: 50px; /* Place the button at the bottom of the page */
 right: 20px; /* Place the button 30px from the right */
 z-index: 99; /* Make sure it does not overlap */
 border: none; /* Remove borders */
 outline: none; /* Remove outline */
-outline-style: solid;
+/*outline-style: solid;
 outline-color: #1A191A;
 outline-width: 2px;
-background-color: rgba(236, 236, 236, 0.5); /* light gray with 40% opacity */
-color: #1A191A; /* Text color */
+background-color: rgba(236, 236, 236, 0.5); 
+color: #1A191A; */
+background-color: #ececec;
+color: #7f7f7f;
 cursor: pointer; /* Add a mouse pointer on hover */
-padding: 5px; /* Some padding */
+padding: 5px 10px 5px;
 border-radius: 2px; /* Rounded corners */
 font-size: 15px; /* Increase font size */
 }
@@ -735,3 +744,61 @@ font-size: 15px; /* Increase font size */
         font-weight: 700;
         font-style: italic;
       }
+
+
+.footer {
+  width: 100%;
+  /*background-color: #f0f0f0; /* Light gray background */
+  background-color: #ececec;
+  text-align: center;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.footer-text {
+    font-family: "articulat-cf", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+   font-size: clamp(10px, 2vw, 13px);
+  margin: 0;
+    color: #1A191A; /* Dark gray text */
+}
+
+.footer-text2 {
+  position: absolute;
+    font-family: "articulat-cf", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+   font-size: clamp(10px, 2vw, 13px);
+  left: 20px;
+  margin: 0;
+  color: #1A191A;
+}
+
+.footer-right {
+  position: absolute;
+  right: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.footer-text3, .footer-text4 {
+    font-family: "articulat-cf", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+   font-size: clamp(10px, 2vw, 13px);
+  margin: 0;
+  color: #1A191A;
+}
+
+.footer a {
+  text-decoration: none;
+  color: inherit;
+}
