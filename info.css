@@ -4,6 +4,19 @@ margin: 0;
 background-color: 	#ffffff;
 /*cursor: url('arrow-cursor.png') 0 0, auto; /* set hot spot (x y) */
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main, .container, footer {
+  flex-shrink: 0;
+}
+
+body > *:not(footer):not(.topnav):not(.custom-cursor):not(script) {
+  flex: 1 0 auto;
+}
 .custom-cursor {
   position: fixed;
   top: 0;
@@ -305,7 +318,8 @@ font-size: 25px;
 
 
 .container {
-float: right;
+margin-left: auto;
+margin-right: 0;
 width: 35%;
 padding-top: 90px;
 padding-bottom: 10px;
@@ -518,6 +532,8 @@ text-transform: uppercase;
   justify-content: center;
   align-items: center;
   position: relative;
+  margin-top: auto;
+  flex-shrink: 0;
 }
 
 .footer-text {
