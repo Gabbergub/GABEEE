@@ -1,3 +1,5 @@
+
+
 body {
   margin: 0;
   background-color: #ffffff;
@@ -58,6 +60,7 @@ body {
   .nav-items {
     display: none;
     width: 100%;
+    background-color: #ececec;
     /*background-color: #e1e1e1;*/
     position: absolute;
     top: 55px;
@@ -183,14 +186,17 @@ padding-right: 30px;*/
 }
 
 .nav-items a:hover:not(.active) {
-  text-decoration: overline dotted;
-  text-decoration-thickness: 3px;
+  text-decoration: line-through;
+  /*text-decoration: overline dotted;*/
+  text-decoration-thickness: 2px;
   color: #7f7f7f;
 }
 
 .nav-items .active {
-  text-decoration: overline dotted;
-  text-decoration-thickness: 3px;
+   text-decoration: line-through;
+  text-decoration-thickness: 2px;
+  /*text-decoration: overline dotted;
+  text-decoration-thickness: 3px;*/
 }
 
 /*.tabs {
@@ -373,7 +379,8 @@ font-size: 25px;
 
 .container {
   width: 100%;
-  padding-top: 50px;
+  padding-top: 20px;
+  /*padding-top: 50px;*/
   padding-bottom: 150px;
 }
 
@@ -393,6 +400,7 @@ font-size: 25px;
   max-width: 100%;
   height: auto;
   display: block;
+  border-radius: 7px;
 }
 
 /* GIF wrapper responsive width */
@@ -744,4 +752,72 @@ html {
 .footer a {
   text-decoration: none;
   color: inherit;
+}
+
+
+
+      .heading {
+        position: relative;
+        top: 650px; /* Adjust as needed */
+        margin: 20px;
+        text-transform: uppercase;
+        color: #1A191A;
+        font-family: "articulat-cf", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+           font-size: clamp(30px, 3vw, 70px);
+        line-height: clamp(30px, 3vw, 65px);
+      }
+
+  @media (max-width: 600px) {
+    .heading {
+      font-size: clamp(16px, 8vw, 28px);
+      line-height: clamp(20px, 8vw, 32px);
+      top: 310px;
+      margin: 20px;
+      max-width: 100vw;
+      text-align: left;
+      word-break: break-word;
+      box-sizing: border-box;
+    }
+  }
+      
+  .h-top {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    height: 100vh;
+    width: auto;
+  }
+@media (max-width: 600px) {
+  .h-top {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    height: 50vh;
+    width: 100vw;
+    /*padding: 0 5px;*/
+    box-sizing: border-box;
+  }
+}
+
+
+/* Position .scroll below .heading and align right */
+.scroll {
+  align-self: flex-end;
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-right: 20px;
+  text-align: right;
+  transition: opacity 0.4s;
+}
+
+@media (max-width: 600px) {
+  .scroll {
+    display: none !important;
+  }
 }
