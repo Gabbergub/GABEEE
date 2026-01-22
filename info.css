@@ -8,6 +8,7 @@ background-color: 	#ffffff;
 body {
   display: flex;
   flex-direction: column;
+  padding-bottom: 70px; /* Prevent content from being hidden behind fixed footer */
 }
 
 main, .container, footer {
@@ -58,7 +59,7 @@ body > *:not(footer):not(.topnav):not(.custom-cursor):not(script) {
   display: none;
   font-size: 30px;
   cursor: pointer;
-  padding-right: 10px;
+  padding-right: 15px;
 }
 
 @media screen and (max-width: 600px) {
@@ -354,13 +355,12 @@ padding-top: 20px;
 
 
 .content {
-  /*font-family: "articulat-cf", sans-serif;
+  font-family: "articulat-cf", sans-serif;
   font-weight: 500;
   font-style: normal;
-  font-size: clamp(20px, 2.5vw, 20px);*/
-  font-family: "dico-code-one", mono;
+ /* font-family: "dico-code-one", mono;
   font-weight: 400;
-  font-style: normal;
+  font-style: normal;*/
    font-size: clamp(13px, 0.9vw, 18px);
   line-height: clamp(20px, 1.4vw, 30px);
   display: flex;
@@ -528,15 +528,17 @@ text-transform: uppercase;
 
 .footer {
   width: 100%;
-  /*background-color: #f0f0f0; /* Light gray background */
   background-color: #ececec;
   text-align: center;
   padding: 20px 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  margin-top: auto;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  margin-top: 0;
   flex-shrink: 0;
 }
 
