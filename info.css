@@ -241,17 +241,7 @@ font-family: "articulat-cf", sans-serif;
   font-size: clamp(13px, 2vw, 18px);
   text-transform: uppercase;
 }
-/*h3 {
-padding-top: 40px;
-padding-bottom: 20px;
-margin: 20px;
-color: #7f7f7f;
-font-family: "indivisible", sans-serif;
-font-weight: 500;
-font-style: normal;
-font-size: clamp(0.9rem, 2vw, 8rem);
 
-}*/
 .title2 {
   margin: 20px;
   font-family: "dico-code-one", mono;
@@ -271,30 +261,26 @@ font-style: italic;
  font-size: clamp(0.9rem, 1vw, 1rem);
  padding-top: 7px;
 }
+
 p {
   margin-top: -15px;
-   font-family: "dico-code-one", mono;
-  font-weight: 400;
+font-family: "articulat-cf", sans-serif;
+  font-weight: 500;
   font-style: normal;
-   font-size: clamp(13px, 0.9vw, 18px);
-  line-height: clamp(20px, 1.4vw, 30px);
+  font-size: clamp(13px, 3vw, 15px);
+  /* font-size: clamp(13px, 0.9vw, 18px);
+  line-height: clamp(20px, 1.4vw, 30px);*/
 }
-/*p {
-font-size: 13px;
-color: #1A191A;
-font-family: "owners-text", sans-serif;
-font-weight: 500;
-font-style: normal;
-}*/
 
 .text {
   /* font-family: "dico-code-one", mono;
   font-weight: 400;
-  font-style: normal;*/
+  font-style: normal;
+  font-size: clamp(13px, 0.9vw, 18px);*/
   font-family: "owners-text", sans-serif;
 font-weight: 400;
 font-style: normal;
-   font-size: clamp(13px, 0.9vw, 18px);
+ font-size: clamp(13px, 3vw, 15px);
   line-height: clamp(20px, 1.4vw, 30px);
 margin:0 20px;
 /*padding-top: -30px;*/
@@ -355,16 +341,22 @@ padding-top: 20px;
 
 
 .content {
-  font-family: "articulat-cf", sans-serif;
+ /* font-family: "articulat-cf", sans-serif;
   font-weight: 500;
   font-style: normal;
- /* font-family: "dico-code-one", mono;
-  font-weight: 400;
-  font-style: normal;*/
-   font-size: clamp(13px, 0.9vw, 18px);
-  line-height: clamp(20px, 1.4vw, 30px);
-  display: flex;
-  flex-wrap: wrap;         /* Wrap to the next row */
+font-family: "dico-code-one", mono;
+ font-weight: 400;
+font-style: normal;
+font-size: clamp(13px, 0.9vw, 18px);*/
+/*line-height: clamp(20px, 1.4vw, 30px);*/
+
+font-family: "owners-text", sans-serif;
+font-weight: 400;
+font-style: normal;
+font-size: clamp(13px, 3vw, 15px);
+font-size: clamp(18px, 3vw, 15px);
+display: flex;
+flex-wrap: wrap;         /* Wrap to the next row */
   
   gap: 35px;               /* Space between items */
   margin: 0 auto;          /* Center the whole row */
@@ -372,29 +364,29 @@ padding-top: 20px;
 }
 
 .title{
+text-transform: uppercase;
 margin: 20px;
 color: #1A191A;
 /*font-family: "owners-text", sans-serif;
-font-weight: 500;
+font-weight: 400;
 font-style: normal;*/
-  font-size: clamp(13px, 2vw, 15px);
-  color: #1A191A;
+font-size: clamp(13px, 3vw, 15px);
+color: #1A191A;
   font-family: "articulat-cf", sans-serif;
   font-weight: 600;
   font-style: normal;
 }
 
+/*
 .caption {
 margin-top: 20px; 
 font-size: 14px;
 color: #333;
-
 font-family: "indivisible", sans-serif;
 font-weight: 700;
 font-style: normal;
 text-transform: uppercase;
-  /*text-align: center;*/
-}
+} */
 
 .button-container {
   margin: 20px;
@@ -404,14 +396,14 @@ text-transform: uppercase;
 }
 
 .button1 {
-   font-size: clamp(11px, 0.9vw, 11px);
-  font-family: "dico-code-one", mono;
-  font-weight: 400;
-  font-style: normal;
+font-size: clamp(11px, 0.9vw, 11px);
+font-family: "owners-text", sans-serif;
+font-weight: 400;
+font-style: normal;
   padding: 5px 15px;
   background-color: #1A191A;
   border: 3px solid transparent;     
-  border-radius: 5px;
+ /* border-radius: 5px;*/
   margin: 0;
   transition: all 0.3s ease; /* smooth hover effect */
   
@@ -430,30 +422,34 @@ text-transform: uppercase;
 
 .button1:hover a {
   /*font-style: italic;*/
-  color: #ffffff;
+  color: #7f7f7f;
 }
 
 .button2 {
-   font-size: clamp(11px, 0.9vw, 11px);
-  font-family: "dico-code-one", mono;
+ font-size: clamp(11px, 0.9vw, 11px);
+ /* font-family: "dico-code-one", mono;
   font-weight: 400;
-  font-style: normal;
+  font-style: normal;*/
+  font-family: "owners-text", sans-serif;
+font-weight: 400;
+font-style: normal;
   padding: 5px 15px;
-  background-color: transparent;
-  border: 3px dotted #1A191A;         /* Dotted black border */
+  color: #7f7f7f;
+ background-color: #ececec;
+  border: 2px solid #ececec;         /* Dotted black border */
   border-radius: 30px;
   margin: 0;
 }
 
 .button2 a {
-  color: #1A191A;
+  color: #7f7f7f;
   text-decoration: none;
    cursor: pointer;
 }
 
 .button2:hover {
-  background-color: transparent;
-  border: 2px solid #7f7f7f;
+background-color: #bebebe;
+border: 2px solid #bebebe;
 }
 
 .button2:hover a {
@@ -525,6 +521,11 @@ text-transform: uppercase;
       }
 
 
+      .Owners Text Medium{
+font-family: "owners-text", sans-serif;
+font-weight: 500;
+font-style: normal;
+      }
 
 .footer {
   width: 100%;
