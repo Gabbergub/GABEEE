@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: #ffffff;
+  background-color: #ececec;
   /* cursor: url('arrow-cursor.png') 0 0, auto; /* set hot spot (x y) */
   cursor: none;
   overflow-x: hidden;
@@ -161,8 +161,9 @@ padding-right: 30px;*/
   font-style: normal;
   text-transform: uppercase;
   font-size: clamp(10px, 2vw, 13px);
-  background-color: #ffffff;
-  /* border-bottom: 2px solid #1A191A;*/
+  background-color: #ececec;
+
+  border-bottom: 1px solid #1A191A;
 }
 
 .name a {
@@ -235,7 +236,8 @@ padding: 450px 0;
 }*/
 
 .line {
-  border-top: 1px solid #7f7f7f;
+  /*border-top: 1px solid #7f7f7f;*/
+  border-top: 1px solid #1A191A;
   padding: 20px 0;
   /* optional: add space between borders and content */
   margin-left: 20px;
@@ -421,7 +423,7 @@ font-size: 25px;
   max-width: 100%;
   height: auto;
   display: block;
-  border-radius: 3px;
+ /* border-radius: 3px; */
 }
 
 /* GIF wrapper responsive width */
@@ -530,7 +532,7 @@ font-style: normal;
   display: flex;
   gap: 10px;
   /* adds space between the buttons */
-  padding-top: 5px;
+  padding-top: 20px;
   padding-bottom: 10px;
   opacity: 0;
   transform: translateY(-20px);
@@ -540,7 +542,7 @@ font-style: normal;
   display: flex;
   gap: 10px;
   /* adds space between the buttons */
-  padding-top: 5px;
+  padding-top: 20px;
   padding-bottom: 10px;
   opacity: 1;
   transform: translateY(0);
@@ -558,9 +560,9 @@ font-style: normal;
   font-style: normal;
   padding: 5px 10px 5px;
   background-color: #1A191A;
-  color: #ffffff;
+  color: #ececec;
   border: 2px solid #1A191A;
-  /*border-radius: 3px;*/
+  border-radius: 3px;
   margin: 0;
 }
 
@@ -573,9 +575,9 @@ font-style: normal;
   font-weight: 600;
   font-style: normal;
   padding: 5px 10px;
-  background-color: #ececec;
+  background-color: #ffffff;
   color: #7f7f7f;
-  border: 2px solid #ececec;
+  border: 2px solid #ffffff;
   /* Dotted black border */
   border-radius: 30px;
   margin: 0;
@@ -713,8 +715,9 @@ html {
 
 .footer {
   width: 100%;
+  border-top: 1px solid #1A191A;
   /*background-color: #f0f0f0; /* Light gray background */
-  background-color: #ececec;
+  background-color: #D3D3D3;
   text-align: center;
   padding: 20px 0;
   display: flex;
@@ -899,7 +902,7 @@ font-style: normal;
 .content3 .gif_wrapper3 img.gif {
 width: 100%;
 max-width: 500px;
-border-radius: 3px;
+/*border-radius: 3px;*/
 }
 .content3 {
   display: flex;
