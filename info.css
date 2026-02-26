@@ -1,31 +1,37 @@
-body, html {
-padding: 0;
-margin: 0;
-background-color: 	#ffffff;
-/*cursor: url('arrow-cursor.png') 0 0, auto; /* set hot spot (x y) */
+body,
+html {
+  padding: 0;
+  margin: 0;
+  background-color: #ffffff;
+  font-family: ABCFavoriteEdu-Regular, sans-serif;
+  /*cursor: url('arrow-cursor.png') 0 0, auto; /* set hot spot (x y) */
 }
 
 body {
   display: flex;
   flex-direction: column;
-  padding-bottom: 70px; /* Prevent content from being hidden behind fixed footer */
+  padding-bottom: 70px;
+  /* Prevent content from being hidden behind fixed footer */
 }
 
-main, .container, footer {
+main,
+.container,
+footer {
   flex-shrink: 0;
 }
 
-body > *:not(footer):not(.topnav):not(.custom-cursor):not(script) {
+body>*:not(footer):not(.topnav):not(.custom-cursor):not(script) {
   flex: 1 0 auto;
 }
+
 .custom-cursor {
   position: fixed;
   top: 0;
   left: 0;
   /* Adjust size as needed */
-    width: 25px;
+  width: 25px;
   height: 25px;
- /* border: 2px solid #1A191A;*/
+  /* border: 2px solid #1A191A;*/
   /* black outline */
   background-color: rgba(236, 236, 236, 0.5);
   background-color: #dd3e2b;
@@ -48,6 +54,7 @@ body > *:not(footer):not(.topnav):not(.custom-cursor):not(script) {
   background-color: rgba(236, 236, 236, 0.5);
   /*border: 1px solid #1A191A;*/
 }
+
 /*.icon{
   margin-left: 5px;
   width: 70px;
@@ -66,14 +73,16 @@ body > *:not(footer):not(.topnav):not(.custom-cursor):not(script) {
   .nav-items {
     display: none;
     width: 100%;
-     background-color: #ececec;
+    background-color: #ececec;
     /*background-color: #e1e1e1;*/
     position: absolute;
-    top: 55px; /* Adjust based on your .topnav height */
-    right: 0; /* Align to the right */
+    top: 55px;
+    /* Adjust based on your .topnav height */
+    right: 0;
+    /* Align to the right */
     z-index: 999;
-   /* border-bottom: 1px solid #ccc;*/
-   /* border: 1px solid #ccc;*/
+    /* border-bottom: 1px solid #ccc;*/
+    /* border: 1px solid #ccc;*/
     /*border-radius: 4px;*/
     padding: 0;
     padding-bottom: 20px;
@@ -94,7 +103,7 @@ body > *:not(footer):not(.topnav):not(.custom-cursor):not(script) {
 
   .hamburger {
     display: block;
-   /* font-size: 24px;*/
+    /* font-size: 24px;*/
     cursor: pointer;
     margin-left: auto;
   }
@@ -105,23 +114,24 @@ body > *:not(footer):not(.topnav):not(.custom-cursor):not(script) {
 }
 
 
-  .icon {
-    margin-left: 5px;
-    width: 70px;
-    height: auto;
-    cursor: pointer;
-  }
+.icon {
+  margin-left: 5px;
+  width: 70px;
+  height: auto;
+  cursor: pointer;
+}
 
 .gabe {
-font-family: "articulat-cf", sans-serif;
-font-weight: 700;
-font-style: normal;
-font-size: clamp(15px, 8vw, 15px);
+  font-family: "articulat-cf", sans-serif;
+  font-family: ABCFavoriteEdu-Regular, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: clamp(15px, 8vw, 15px);
   color: #1A191A;
 }
 
 .heading1:hover:not(.active) {
-color: #6b6b6b;
+  color: #6b6b6b;
 }
 
 /*.topnav {
@@ -139,35 +149,40 @@ border-bottom: 2px solid #1A191A;
 }*/
 
 .topnav {
-/*padding-left: 30px;
+  /*padding-left: 30px;
 padding-right: 30px;*/
   width: 100%;
   position: fixed;
-  top: 0; /* safer than margin-top */
+  top: 0;
+  /* safer than margin-top */
   left: 50%;
-  transform: translateX(-50%); /* centers horizontally */
+  transform: translateX(-50%);
+  /* centers horizontally */
   display: flex;
-  justify-content: space-between; /* centers content inside */
-  align-items: center; 
+  justify-content: space-between;
+  /* centers content inside */
+  align-items: center;
   font-family: "articulat-cf", sans-serif;
+  font-family: ABCFavoriteEdu-Regular, sans-serif;
   font-weight: 600;
   font-style: normal;
   text-transform: uppercase;
-   font-size: clamp(10px, 2vw, 13px);
+  font-size: clamp(10px, 2vw, 13px);
   background-color: #ffffff;
- border-bottom: 1px solid #1A191A;
+  border-bottom: 1px solid #1A191A;
 }
 
 .name a {
- 
+
   text-decoration: none;
   color: inherit;
 }
 
 .nav-items ul {
- 
+
   display: flex;
-  gap: 20px; /* spacing between links */
+  gap: 20px;
+  /* spacing between links */
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -178,7 +193,7 @@ padding-right: 30px;*/
   display: block;
   line-height: 30px;
   color: #1A191A;
- /* color: #1A191A;*/
+  /* color: #1A191A;*/
   text-decoration: none;
 }
 
@@ -190,7 +205,7 @@ padding-right: 30px;*/
 }
 
 .nav-items .active {
-   text-decoration: line-through;
+  text-decoration: line-through;
   text-decoration-thickness: 2px;
   /*text-decoration: overline dotted;
   text-decoration-thickness: 3px;*/
@@ -198,23 +213,25 @@ padding-right: 30px;*/
 
 
 .line {
-border-top: 2px solid #7f7f7f;
-padding: 20px 0; /* optional: add space between borders and content */
-margin-left: 20px;
-margin-right:20px;
+  border-top: 2px solid #7f7f7f;
+  padding: 20px 0;
+  /* optional: add space between borders and content */
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .divider {
-border-top: 2px dashed #7f7f7f;
-margin-top: 50px;
-margin-left: 20px;
-margin-right:20px;
+  border-top: 2px dashed #7f7f7f;
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .divider2 {
-border-top: 2px solid #7f7f7f;
-padding: 5px 0; /* optional: add space between borders and content */
-margin-top: 30px;
+  border-top: 2px solid #7f7f7f;
+  padding: 5px 0;
+  /* optional: add space between borders and content */
+  margin-top: 30px;
 
 }
 
@@ -222,22 +239,26 @@ margin-top: 30px;
 .link {
   text-decoration: underline;
   color: #1A191A;
-  display:inline;
+  display: inline;
   margin: 0;
   padding: 0;
   line-height: inherit;
   font-family: inherit;
+  font-family: ABCFavoriteEdu-Regular, sans-serif;
   font-size: inherit;
+  font-size: clamp(18px, 3vw, 15px);
 }
+
 h3 {
- /* padding-top: 40px;*/
+  /* padding-top: 40px;*/
   padding-bottom: 10px;
   margin: 20px;
   color: #1A191A;
-font-family: "articulat-cf", sans-serif;
+  font-family: "articulat-cf", sans-serif;
+  font-family: ABCFavoriteEdu-Regular, sans-serif;
   font-weight: 700;
   font-style: normal;
-/*-webkit-text-stroke: 1px #1A191A;*/
+  /*-webkit-text-stroke: 1px #1A191A;*/
   font-size: clamp(13px, 2vw, 18px);
   text-transform: uppercase;
 }
@@ -245,29 +266,35 @@ font-family: "articulat-cf", sans-serif;
 .title2 {
   margin: 20px;
   font-family: "dico-code-one", mono;
+  font-family: ABCFavoriteEdu-Regular, sans-serif;
   font-weight: 700;
   font-style: normal;
 }
+
 .project-info {
-   color: #7f7f7f;
+  color: #7f7f7f;
   display: flex;
   /*justify-content: space-between; /* pushes them to opposite sides */
-  align-items: center; /* keeps text aligned nicely */
+  align-items: center;
+  /* keeps text aligned nicely */
   gap: 7rem;
   /*gap: 24%;*/
   font-family: "indivisible", sans-serif;
-font-weight: 500;
-font-style: italic;
- font-size: clamp(0.9rem, 1vw, 1rem);
- padding-top: 7px;
+  font-family: ABCFavoriteEdu-Regular, sans-serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: clamp(0.9rem, 1vw, 1rem);
+  padding-top: 7px;
 }
 
 p {
   margin-top: -15px;
-font-family: "articulat-cf", sans-serif;
+  font-family: "articulat-cf", sans-serif;
+  font-family: ABCFavoriteEdu-Regular, sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: clamp(13px, 3vw, 15px);
+  font-size: clamp(18px, 3vw, 15px);
   /* font-size: clamp(13px, 0.9vw, 18px);
   line-height: clamp(20px, 1.4vw, 30px);*/
 }
@@ -278,12 +305,13 @@ font-family: "articulat-cf", sans-serif;
   font-style: normal;
   font-size: clamp(13px, 0.9vw, 18px);*/
   font-family: "owners-text", sans-serif;
-font-weight: 400;
-font-style: normal;
- font-size: clamp(13px, 3vw, 15px);
+  font-family: ABCFavoriteEdu-Regular, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: clamp(13px, 3vw, 15px);
   line-height: clamp(20px, 1.4vw, 30px);
-margin:0 20px;
-/*padding-top: -30px;*/
+  margin: 0 20px;
+  /*padding-top: -30px;*/
 }
 
 span {
@@ -309,70 +337,81 @@ font-size: 25px;
 
 
 .container {
-margin-left: auto;
-margin-right: 0;
-width: 35%;
-padding-top: 90px;
-padding-bottom: 10px;
+  margin-left: auto;
+  margin-right: 0;
+  width: 35%;
+  padding-top: 90px;
+  padding-bottom: 10px;
 }
 
 @media (max-width: 768px) {
-  .container, .container2 {
+
+  .container,
+  .container2 {
     width: 100%;
-   /* padding-top: 60px;   /* optional: adjust spacing for mobile */
-   /* padding-bottom: 100px;*/
+    /* padding-top: 60px;   /* optional: adjust spacing for mobile */
+    /* padding-bottom: 100px;*/
   }
 }
 
 .container2 {
-width: 95%;
-padding-top: 20px;
+  width: 95%;
+  padding-top: 20px;
 }
 
 /* MOBILE: stack image above text */
 @media (max-width: 600px) {
-  .content, .container, .container2 {
+
+  .content,
+  .container,
+  .container2 {
     flex-direction: column;
-     /* stack vertically */
+    /* stack vertically */
     /*align-items: center;      /* optional: center text under image */
-   /* text-align: center;       /* optional: center text */
+    /* text-align: center;       /* optional: center text */
   }
 }
 
 
 .content {
- /* font-family: "articulat-cf", sans-serif;
+  /* font-family: "articulat-cf", sans-serif;
   font-weight: 500;
   font-style: normal;
 font-family: "dico-code-one", mono;
  font-weight: 400;
 font-style: normal;
 font-size: clamp(13px, 0.9vw, 18px);*/
-/*line-height: clamp(20px, 1.4vw, 30px);*/
+  /*line-height: clamp(20px, 1.4vw, 30px);*/
 
-font-family: "owners-text", sans-serif;
-font-weight: 400;
-font-style: normal;
-font-size: clamp(13px, 3vw, 15px);
-font-size: clamp(18px, 3vw, 15px);
-display: flex;
-flex-wrap: wrap;         /* Wrap to the next row */
-  
-  gap: 35px;               /* Space between items */
-  margin: 0 auto;          /* Center the whole row */
-  padding: 0 20px;         /* Optional: side breathing room */
+  font-family: "owners-text", sans-serif;
+  font-family: ABCFavoriteEdu-Regular, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: clamp(13px, 3vw, 15px);
+  font-size: clamp(18px, 3vw, 15px);
+  display: flex;
+  flex-wrap: wrap;
+  /* Wrap to the next row */
+
+  gap: 35px;
+  /* Space between items */
+  margin: 0 auto;
+  /* Center the whole row */
+  padding: 0 20px;
+  /* Optional: side breathing room */
 }
 
-.title{
-text-transform: uppercase;
-margin: 20px;
-color: #1A191A;
-/*font-family: "owners-text", sans-serif;
+.title {
+  text-transform: uppercase;
+  margin: 20px;
+  color: #1A191A;
+  /*font-family: "owners-text", sans-serif;
 font-weight: 400;
 font-style: normal;*/
-font-size: clamp(13px, 3vw, 15px);
-color: #1A191A;
+  font-size: clamp(13px, 3vw, 15px);
+  color: #1A191A;
   font-family: "articulat-cf", sans-serif;
+  font-family: ABCFavoriteEdu-Regular, sans-serif;
   font-weight: 600;
   font-style: normal;
 }
@@ -392,21 +431,24 @@ text-transform: uppercase;
   margin: 20px;
   display: flex;
   /*flex-wrap: wrap; /* allow buttons to wrap on small screens */
-  gap: 10px; /* space between buttons */
+  gap: 10px;
+  /* space between buttons */
 }
 
 .button1 {
-font-size: clamp(11px, 0.9vw, 11px);
-font-family: "owners-text", sans-serif;
-font-weight: 400;
-font-style: normal;
+  font-size: clamp(11px, 0.9vw, 11px);
+  font-family: "owners-text", sans-serif;
+  font-family: ABCFavoriteEdu-Regular, sans-serif;
+  font-weight: 400;
+  font-style: normal;
   padding: 5px 15px;
   background-color: #1A191A;
-  border: 3px solid transparent;     
- border-radius: 3px;
+  border: 3px solid transparent;
+  border-radius: 3px;
   margin: 0;
-  transition: all 0.3s ease; /* smooth hover effect */
-  
+  transition: all 0.3s ease;
+  /* smooth hover effect */
+
 }
 
 .button1 a {
@@ -417,7 +459,7 @@ font-style: normal;
 
 .button1:hover {
   background-color: #bebebe;
- /* border-color: #7f7f7f;*/
+  /* border-color: #7f7f7f;*/
 }
 
 .button1:hover a {
@@ -426,17 +468,19 @@ font-style: normal;
 }
 
 .button2 {
- font-size: clamp(11px, 0.9vw, 11px);
- /* font-family: "dico-code-one", mono;
+  font-size: clamp(11px, 0.9vw, 11px);
+  /* font-family: "dico-code-one", mono;
   font-weight: 400;
   font-style: normal;*/
   font-family: "owners-text", sans-serif;
-font-weight: 400;
-font-style: normal;
+  font-family: ABCFavoriteEdu-Regular, sans-serif;
+  font-weight: 400;
+  font-style: normal;
   padding: 5px 15px;
   color: #7f7f7f;
- background-color: #ececec;
-  border: 2px solid #ececec;         /* Dotted black border */
+  background-color: #ececec;
+  border: 2px solid #ececec;
+  /* Dotted black border */
   border-radius: 30px;
   margin: 0;
 }
@@ -444,12 +488,12 @@ font-style: normal;
 .button2 a {
   color: #7f7f7f;
   text-decoration: none;
-   cursor: pointer;
+  cursor: pointer;
 }
 
 .button2:hover {
-background-color: #bebebe;
-border: 2px solid #bebebe;
+  background-color: #bebebe;
+  border: 2px solid #bebebe;
 }
 
 .button2:hover a {
@@ -464,68 +508,71 @@ border: 2px solid #bebebe;
 
 
 .Articulat-CF-Bold {
-      font-family: "articulat-cf", sans-serif;
-      font-weight: 700;
-      font-style: normal;
-      }
-      
-      .Articulat-CF-Bold {
-        font-family: "articulat-cf", sans-serif;
-        font-weight: 800;
-        font-style: normal;
-        }
-  
-      .Articulat-CF-Extra-Bold {
-        font-family: "articulat-cf", sans-serif;
-        font-weight: 900;
-        font-style: normal;
-      }
-      .Articulat-CF-Heavy {
-        font-family: "articulat-heavy-cf", sans-serif;
-      font-weight: 900;
-      font-style: normal;
-      }
-      
-      .Articulat-CF-Medium {
-        font-family: "articulat-cf", sans-serif;
-        font-weight: 600;
-        font-style: normal;
-      }
-      .Articulat-CF-Regular {
-        font-family: "articulat-cf", sans-serif;
-        font-weight: 500;
-        font-style: normal;
-      }
-      .Articulat-CF-Regular {
-      font-family: "articulat-cf", sans-serif;
-      font-weight: 300;
-      font-style: normal;
-      }
-      
-      .Dico-Code-One-Regular {
-        font-family: "dico-code-one", mono;
-        font-weight: 400;
-        font-style: normal;
-      }
-      
-      .Dico-Code-One-Bold {
-        font-family: "dico-code-one", mono;
-        font-weight: 700;
-        font-style: normal;
-      }
-      
-      .Dico-Code-One-Bold-Italic {
-        font-family: "dico-code-one", mono;
-        font-weight: 700;
-        font-style: italic;
-      }
+  font-family: "articulat-cf", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.Articulat-CF-Bold {
+  font-family: "articulat-cf", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.Articulat-CF-Extra-Bold {
+  font-family: "articulat-cf", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.Articulat-CF-Heavy {
+  font-family: "articulat-heavy-cf", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.Articulat-CF-Medium {
+  font-family: "articulat-cf", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.Articulat-CF-Regular {
+  font-family: "articulat-cf", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.Articulat-CF-Regular {
+  font-family: "articulat-cf", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.Dico-Code-One-Regular {
+  font-family: "dico-code-one", mono;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.Dico-Code-One-Bold {
+  font-family: "dico-code-one", mono;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.Dico-Code-One-Bold-Italic {
+  font-family: "dico-code-one", mono;
+  font-weight: 700;
+  font-style: italic;
+}
 
 
-      .Owners Text Medium{
-font-family: "owners-text", sans-serif;
-font-weight: 500;
-font-style: normal;
-      }
+.Owners Text Medium {
+  font-family: "owners-text", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
 
 .footer {
   border-top: 1px solid #1A191A;
@@ -545,22 +592,25 @@ font-style: normal;
 }
 
 .footer-text {
-    font-family: "articulat-cf", sans-serif;
+  font-family: "articulat-cf", sans-serif;
+  font-family: ABCFavoriteEdu-Regular, sans-serif;
   font-weight: 600;
   font-style: normal;
   text-transform: uppercase;
-   font-size: clamp(10px, 2vw, 13px);
+  font-size: clamp(10px, 2vw, 13px);
   margin: 0;
-    color: #1A191A; /* Dark gray text */
+  color: #1A191A;
+  /* Dark gray text */
 }
 
 .footer-text2 {
   position: absolute;
-    font-family: "articulat-cf", sans-serif;
+  font-family: "articulat-cf", sans-serif;
+  font-family: ABCFavoriteEdu-Regular, sans-serif;
   font-weight: 600;
   font-style: normal;
   text-transform: uppercase;
-   font-size: clamp(10px, 2vw, 13px);
+  font-size: clamp(10px, 2vw, 13px);
   left: 20px;
   margin: 0;
   color: #1A191A;
@@ -574,12 +624,14 @@ font-style: normal;
   align-items: center;
 }
 
-.footer-text3, .footer-text4 {
-    font-family: "articulat-cf", sans-serif;
+.footer-text3,
+.footer-text4 {
+  font-family: "articulat-cf", sans-serif;
+  font-family: ABCFavoriteEdu-Regular, sans-serif;
   font-weight: 600;
   font-style: normal;
   text-transform: uppercase;
-   font-size: clamp(10px, 2vw, 13px);
+  font-size: clamp(10px, 2vw, 13px);
   margin: 0;
   color: #1A191A;
 }
@@ -587,4 +639,20 @@ font-style: normal;
 .footer a {
   text-decoration: none;
   color: inherit;
+}
+
+
+@font-face {
+  font-family: "ABCFavoriteEdu-Bold";
+  src: url(Web/ABCFavoritEdu-Bold.woff);
+}
+
+@font-face {
+  font-family: "ABCFavoriteEdu-Medium";
+  src: url(Web/ABCFavoritEdu-Medium.woff);
+}
+
+@font-face {
+  font-family: "ABCFavoriteEdu-Regular";
+  src: url(Web/ABCFavoritEdu-Regular.woff);
 }
