@@ -410,7 +410,7 @@ font-size: 25px;
 
 .container {
   width: 100%;
-  padding-top: 20px;
+  /*padding-top: 20px;*/
   /*padding-top: 50px;*/
   padding-bottom: 150px;
 }
