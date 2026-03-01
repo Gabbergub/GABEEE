@@ -68,21 +68,17 @@ html {
   padding-right: 15px;
 }
 
+
+
 @media screen and (max-width: 600px) {
   .nav-items {
     display: none;
     width: 100%;
     background-color: #ececec;
-    /*background-color: #e1e1e1;*/
     position: absolute;
     top: 55px;
-    /* Adjust based on your .topnav height */
     right: 0;
-    /* Align to the right */
     z-index: 999;
-    /* border-bottom: 1px solid #ccc;*/
-    /* border: 1px solid #ccc;*/
-    /*border-radius: 4px;*/
     padding: 0;
     padding-bottom: 20px;
   }
@@ -102,7 +98,6 @@ html {
 
   .hamburger {
     display: block;
-    /* font-size: 24px;*/
     cursor: pointer;
     margin-left: auto;
   }
@@ -111,9 +106,6 @@ html {
     display: block;
   }
 }
-
-
-
 
 .gabe {
   font-family: "articulat-cf", sans-serif;
@@ -129,18 +121,13 @@ html {
 }
 
 .topnav {
-  /*padding-left: 30px;
-padding-right: 30px;*/
   width: 100%;
   position: fixed;
   top: 0;
-  /* safer than margin-top */
   left: 50%;
   transform: translateX(-50%);
-  /* centers horizontally */
   display: flex;
   justify-content: space-between;
-  /* centers content inside */
   align-items: center;
   font-family: "articulat-cf", sans-serif;
   font-family: ABCFavoriteEdu-Regular, sans-serif;
@@ -150,19 +137,19 @@ padding-right: 30px;*/
   font-size: clamp(10px, 2vw, 13px);
   background-color: #ffffff;
   border-bottom: 1px solid #1A191A;
+  /* Ensure navbar height is consistent — used as reference for sticky top */
+  /*height: 40px;*/
+  z-index: 1000;
 }
 
 .name a {
-
   text-decoration: none;
   color: inherit;
 }
 
 .nav-items ul {
-
   display: flex;
   gap: 20px;
-  /* spacing between links */
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -173,13 +160,11 @@ padding-right: 30px;*/
   display: block;
   line-height: 30px;
   color: #1A191A;
-  /* color: #1A191A;*/
   text-decoration: none;
 }
 
 .nav-items a:hover:not(.active) {
   text-decoration: line-through;
-  /*text-decoration: overline dotted;*/
   text-decoration-thickness: 2px;
   color: #7f7f7f;
 }
@@ -187,40 +172,24 @@ padding-right: 30px;*/
 .nav-items .active {
   text-decoration: line-through;
   text-decoration-thickness: 2px;
-  /*text-decoration: overline dotted;
-  text-decoration-thickness: 3px;*/
 }
 
 .line {
   border-top: 2px solid #7f7f7f;
   padding: 20px 0;
-  /* optional: add space between borders and content */
   margin-left: 20px;
   margin-right: 20px;
 }
 
 .divider {
-  border-top: 2px dashed #7f7f7f;
+  border-top: 1px solid #7f7f7f;
   margin-top: 50px;
-  margin-left: 20px;
-  margin-right: 20px;
+  padding: 20px 0;
 }
-
-.divider2 {
-  border-top: 2px solid #7f7f7f;
-  padding: 5px 0;
-  /* optional: add space between borders and content */
-  margin-top: 30px;
-
-}
-
 
 a {
-
   text-decoration: underline;
-  /*color: #69df46;*/
   color: #1A191A;
-
 }
 
 .link {
@@ -230,7 +199,15 @@ a {
   font-weight: 700;
   font-style: normal;
   font-size: 25px;
-  /*font-size: clamp(1rem, 2vw + 0.1rem, 1.5rem);*/
+}
+
+.links {
+  line-height: 0px;
+  font-family: "indivisible", sans-serif;
+  font-family: ABCFavoriteEdu-Regular, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #7f7f7f;
 }
 
 .header {
@@ -239,15 +216,11 @@ a {
   font-weight: 700;
   font-style: normal;
   text-transform: uppercase;
-  /* font-size: clamp(1rem, 2vw + 0.5rem, 2.5rem);*/
   font-size: clamp(1rem, 2vw + 0.1rem, 1.5rem);
   display: inline;
-  /* makes background only cover the text */
   background-color: #69df46;
   margin: 0;
-  /* remove default margin */
   padding: 0;
-  /* remove any padding */
 }
 
 h3 {
@@ -260,13 +233,11 @@ h3 {
   font-weight: 500;
   font-style: normal;
   font-size: clamp(0.9rem, 2vw, 8rem);
-  /*text-transform: uppercase;*/
 }
 
 .title2 {
   margin: 20px;
 }
-
 
 p {
   font-size: 13px;
@@ -283,7 +254,6 @@ p {
   font-family: ABCFavoriteEdu-Regular, sans-serif;
 }
 
-
 @media (max-width: 768px) {
   .text {
     width: 100%;
@@ -297,7 +267,6 @@ video {
 }
 
 img {
-  /* border-radius: 3px;*/
   max-width: 100%;
   height: auto;
   object-fit: cover;
@@ -309,20 +278,16 @@ img {
   .project,
   .main_content5 {
     width: 100%;
-
   }
 
-  /* force stacking order on mobile only */
   .project {
     order: 1;
-
   }
 
   .main_content5 {
     order: 2;
   }
 
-  /* make sure their parent uses flex column on mobile */
   .parent-container {
     display: flex;
     flex-direction: column;
@@ -333,26 +298,22 @@ img {
 @media (max-width: 768px) {
   .container {
     flex-direction: column;
-    /* stack vertically */
     align-items: stretch;
-    /*padding-top: 10px; /* slightly less padding for small screens */
     margin: 10px;
-    /* tighter margin for narrow viewports */
     gap: 1.5rem;
     box-sizing: border-box;
   }
 
   .project {
-    top: 0;
-    position: static !important;
-    /* enforce fixed positioning */
+    /* FIX: reset sticky positioning on mobile so it stacks normally */
+    position: relative !important;
+   
+    top: 70px !important; /* maintain spacing below navbar */
+    max-height: none !important;
     width: 100%;
-    /* FULL WIDTH */
     max-width: none;
-    /* prevents shrinking */
     padding: 0;
     margin: 0;
-    /* remove auto-centering */
     box-sizing: border-box;
   }
 
@@ -369,7 +330,6 @@ img {
   }
 
   .main_content5 {
-
     width: 100%;
     flex: none;
     display: flex;
@@ -383,7 +343,6 @@ img {
     width: 100%;
     flex-wrap: wrap;
     justify-content: center;
-    /* gap: 8px;*/
     max-width: 100%;
   }
 
@@ -394,7 +353,7 @@ img {
   }
 }
 
-/* Extra-small screens (phones under 480px) */
+/* Extra-small screens */
 @media (max-width: 480px) {
   .project {
     padding: 0;
@@ -409,45 +368,48 @@ img {
   }
 }
 
-
 .container {
-  /*padding-top: 70px;*/
   margin: 20px;
   padding-bottom: 20px;
   display: flex;
   align-items: flex-start;
-  /* keeps top edges aligned */
   gap: 3rem;
-  /* space between the two sections */
+}
+
+.flex-section {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.section1, .section2 {
+  flex: 1 1 0;
+  min-width: 200px;
+  color: #7f7f7f;
+  font-size: clamp(13px, 1vw + 0.5rem, 15px);
+  line-height: clamp(20px, 1.4vw, 30px);
 }
 
 .project {
   flex: 1;
   max-width: 500px;
-  position: sticky;
-  top: 70px;
-  /* sticks to top of viewport */
   align-self: flex-start;
   height: fit-content;
-  /*padding-left: 10px;
-  padding-right: 20px;*/
-  /*border: 2px dashed #1A191A;
-  border-radius: 5px;*/
   line-height: 25px;
   margin: 0;
-  /* remove margin auto */
-  /*padding-top: 30px; /* aligns with .main_content5 top */
-  /*padding-bottom: 30px;*/
+
+  /* FIX: sticky positioning so it scrolls with page but stops below navbar */
+  position: sticky;
+  top: 70px; /* matches navbar height (40px) + a little breathing room */
 }
 
 .project-info {
   color: #7f7f7f;
   display: flex;
-  /*justify-content: space-between; /* pushes them to opposite sides */
   align-items: center;
-  /* keeps text aligned nicely */
   gap: 7rem;
-  /*gap: 24%;*/
   font-family: "indivisible", sans-serif;
   font-family: ABCFavoriteEdu-Regular, sans-serif;
   font-weight: 500;
@@ -465,36 +427,23 @@ img {
   line-height: clamp(20px, 3vw, 25px);
   text-transform: uppercase;
   color: #1A191A;
-  /*padding-top: 5px;*/
   padding-bottom: 15px;
 }
 
 .project-descriptor {
-  /*  font-family: "dico-code-one", mono;
-  font-weight: 400;
-  font-style: normal;*/
-
   font-family: "owners-text", sans-serif;
   font-family: ABCFavoriteEdu-Regular, sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: clamp(13px, 0.9vw, 20px);
-  /*line-height: clamp(20px, 1.4vw, 30px);*/
-
-  font-size: clamp(13px, 3vw, 15px);
+  font-size: clamp(13px, 1vw + 0.5rem, 15px);
   line-height: clamp(20px, 1.4vw, 30px);
   width: 100%;
-  color: #1A191A;
+  color: #7f7f7f;
   margin-top: 100px;
   padding-bottom: 30px;
 }
 
 .project-type {
-  /*font-family: "dico-code-one", mono;
-  font-weight: 700;
-  font-style: normal;
-   font-size: clamp(13px, 0.9vw, 15px);
-  line-height: clamp(20px, 1.4vw, 30px);*/
   font-family: "articulat-cf", sans-serif;
   font-family: ABCFavoriteEdu-Regular, sans-serif;
   font-weight: 600;
@@ -503,11 +452,6 @@ img {
   line-height: clamp(20px, 3vw, 23px);
   text-transform: uppercase;
   color: #e4e4e4;
-  /*padding: 5px 15px; 
-  border: 2px solid #1A191A;
-  border-radius: 9999px; 
-  display: inline-block; 
- margin-top: 10px;*/
 }
 
 .project-year {
@@ -517,21 +461,21 @@ img {
   font-style: italic;
   font-size: clamp(13px, 0.9vw, 15px);
   line-height: clamp(20px, 1.4vw, 30px);
-  /* font-size: 13px;
- line-height: 20px;*/
   color: #1A191A;
-  /* background-color: #1A191A;*/
   padding-bottom: 15px;
-  /*padding: 5px 15px; 
-  border: 2px solid #1A191A;
-  border-radius: 5px; 
-  display: inline-block;*/
+}
+
+span {
+  font-family: "dico-code-one", mono;
+  font-weight: 400;
+  font-style: normal;
+  font-size: clamp(8px, 0.9vw, 8px);
 }
 
 .title1 {
   text-transform: uppercase;
   color: #1A191A;
-  font-size: clamp(13px, 3vw, 13px);
+  font-size: clamp(13px, 1vw + 0.5rem, 15px);
   font-family: "articulat-cf", sans-serif;
   font-family: ABCFavoriteEdu-Regular, sans-serif;
   font-weight: 600;
@@ -539,22 +483,14 @@ img {
   padding-bottom: 10px;
 }
 
-
-
 .w-col {
   width: 100%;
-  /* padding-bottom: 20px;*/
 }
-
-
-
 
 .main_content5 {
   flex: 2;
   display: flex;
   align-items: stretch;
-  /* stretch children instead of centering */
-  /*align-items: center;*/
   width: 100%;
   margin-top: 55px;
   box-sizing: border-box;
@@ -563,30 +499,17 @@ img {
 .picture_wrapper5 {
   display: flex;
   flex-wrap: wrap;
-  /*justify-content: center;*/
   justify-content: flex-start;
-  /* align items from left edge */
   gap: 10px;
   width: 100%;
   max-width: 100%;
-  /* remove previous hard limit */
-  /*max-width: 2560px;*/
   object-fit: cover;
-
 }
 
-
-
-
 .mockup1 {
-  /* width: 900px;*/
   width: 100%;
-
-  /* width: 835px;
-          /*width:57vw;*/
   height: auto;
   object-fit: contain;
-  /*top:100vh;*/
 }
 
 .mockup2 {
@@ -603,25 +526,6 @@ img {
 }
 
 .poster {
-  /*width:39.5%;*/
-  /*width: 500px;*/
-  width: 700px;
-  height: auto;
-  object-fit: contain;
-}
-
-.mockup1 {
-  /* width: 900px;*/
-  width: 100%;
-
-  /* width: 835px;
-  /*width:57vw;*/
-  height: auto;
-  object-fit: contain;
-  /*top:100vh;*/
-}
-
-.mockup2 {
   width: 700px;
   height: auto;
   object-fit: contain;
@@ -629,16 +533,12 @@ img {
 
 .mag-gif {
   object-fit: contain;
-  /*width: 883px;*/
   width: 100%;
   height: auto;
 }
 
 .mag-cover {
   width: 600px;
-  /* width: 463px;
-     /*width: 100%;
-     padding-right: 50%;*/
   height: auto;
   object-fit: contain;
 }
@@ -651,13 +551,11 @@ img {
 
 .poster_m2 {
   width: 700px;
-
   height: auto;
   object-fit: contain;
 }
 
 .tabu_poster2 {
-  /*width: 800px;*/
   width: 100%;
   height: auto;
   object-fit: contain;
@@ -683,60 +581,33 @@ img {
   object-fit: contain;
 }
 
-
 #myBtn {
   display: none;
-  /* Hidden by default */
   position: fixed;
-  /* Fixed/sticky position */
   bottom: 50px;
-  /* Place the button at the bottom of the page */
   right: 20px;
-  /* Place the button 30px from the right */
   z-index: 99;
-  /* Make sure it does not overlap */
   border: none;
-  /* Remove borders */
   outline: none;
-  /* Remove outline */
-  /*outline-style: solid;
-outline-color: #1A191A;
-outline-width: 2px;
-background-color: rgba(236, 236, 236, 0.5); 
-color: #1A191A; */
   background-color: #ececec;
-  /*color: #7f7f7f;*/
   color: #1A191A;
   cursor: pointer;
-  /* Add a mouse pointer on hover */
   padding: 5px 10px 5px;
   border-radius: 2px;
-  /* Rounded corners */
   font-family: ABCFavoriteEdu-Regular, sans-serif;
   font-size: 15px;
-  /* Increase font size */
 }
 
 #myBtn:hover {
   background-color: #1A191A;
-  /* Add a dark-grey background on hover */
   color: #ececec;
 }
-
 
 html {
   scroll-behavior: smooth;
 }
 
-
-/*.picture_wrapper5 img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 5px;
-}     */
-
-
-/* responsive */
+/* responsive column counts */
 @media (min-width: 2560px) {
   .main_content .main_content2 .main_content3 .main_content5 {
     column-count: 5;
@@ -766,12 +637,6 @@ html {
     column-count: 1;
   }
 }
-
-
-
-
-
-
 
 .Articulat-CF-Bold {
   font-family: "articulat-cf", sans-serif;
@@ -833,13 +698,10 @@ html {
   font-style: italic;
 }
 
-
 .footer {
   width: 100%;
-  /*background-color: #f0f0f0; /* Light gray background */
   border-top: 1px solid #1A191A;
   background-color: #ececec;
-  /*background-color: #D3D3D3;*/
   text-align: center;
   padding: 20px 0;
   display: flex;
@@ -857,7 +719,6 @@ html {
   font-size: clamp(10px, 2vw, 13px);
   margin: 0;
   color: #1A191A;
-  /* Dark gray text */
 }
 
 .footer-text2 {
@@ -898,21 +759,14 @@ html {
   color: inherit;
 }
 
-
-
 .button-container {
   display: flex;
   gap: 10px;
-  /* adds space between the buttons */
   padding-top: 3px;
-
 }
 
 .button1 {
   font-size: clamp(11px, 0.9vw, 11px);
-  /*font-family: "dico-code-one", mono;
-  font-weight: 400;
-  font-style: normal;*/
   font-family: "articulat-cf", sans-serif;
   font-family: ABCFavoriteEdu-Regular, sans-serif;
   font-weight: 600;
@@ -927,9 +781,6 @@ html {
 
 .button2 {
   font-size: clamp(11px, 0.9vw, 11px);
-  /*font-family: "dico-code-one", mono;
-  font-weight: 400;
-  font-style: normal;*/
   font-family: "articulat-cf", sans-serif;
   font-family: ABCFavoriteEdu-Regular, sans-serif;
   font-weight: 600;
@@ -938,11 +789,9 @@ html {
   background-color: #ececec;
   color: #7f7f7f;
   border: 2px solid #ececec;
-  /* Dotted black border */
   border-radius: 30px;
   margin: 0;
 }
-
 
 @font-face {
   font-family: "ABCFavoriteEdu-Bold";
