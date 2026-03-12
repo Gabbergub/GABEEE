@@ -122,9 +122,10 @@ html {
 .logo {
   position: absolute;
   top: -5px;
+  top: 2px;
   left: 50%;
   transform: translateX(-50%);
-  width: 200px;
+  width: 175px;
   max-width: 40vw;
   height: auto;
   cursor: pointer;
@@ -133,7 +134,7 @@ html {
 @media (max-width: 600px) {
   .logo {
      top: 5px;
-    width: 150px;
+    width: 130px;
     max-width: 70vw;
   }
 }
@@ -496,7 +497,7 @@ p {
   font-size: clamp(15px, 2vw, 13px);
   color: #1A191A;
   font-family: "articulat-cf", sans-serif;
-  font-family: ABCFavoriteEdu-Regular, sans-serif;
+  font-family: ABCFavoriteEdu-Bold, sans-serif;
   font-weight: 500;
   font-style: normal;
   text-transform: uppercase;
@@ -524,31 +525,44 @@ p {
 
 .button1 {
   font-size: clamp(11px, 0.9vw, 11px);
+  /*font-family: "dico-code-one", mono;
+  font-weight: 400;
+  font-style: normal;*/
   font-family: "articulat-cf", sans-serif;
-  font-family: ABCFavoriteEdu-Regular, sans-serif;
+  font-family: ABCFavoriteEdu-Bold, sans-serif;
   font-weight: 600;
   font-style: normal;
   padding: 5px 10px 5px;
-  background-color: #1A191A;
-  color: #ececec;
-  border: 2px solid #1A191A;
-  border-radius: 3px;
+  /* background-color: #1A191A; 
+ border: 2px solid #1A191A;
+ color: #ececec;
+ border-radius: 3px;*/
+  color: #1A191A;
+  border: 1px solid #1A191A;
+  
   margin: 0;
 }
 
 .button2 {
   font-size: clamp(11px, 0.9vw, 11px);
+  /*font-family: "dico-code-one", mono;
+  font-weight: 400;
+  font-style: normal;*/
   font-family: "articulat-cf", sans-serif;
-  font-family: ABCFavoriteEdu-Regular, sans-serif;
+  font-family: ABCFavoriteEdu-Bold, sans-serif;
   font-weight: 600;
   font-style: normal;
   padding: 5px 10px;
-  background-color: #ffffff;
+  /*background-color: #ffffff;
   color: #7f7f7f;
   border: 2px solid #ffffff;
+  border-radius: 30px;*/
+  color: #1A191A;
+  border: 1px solid #1A191A;
   border-radius: 30px;
   margin: 0;
 }
+
 
 .button2 a {
   font-family: ABCFavoriteEdu-Regular, sans-serif;

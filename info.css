@@ -127,9 +127,11 @@ body>*:not(footer):not(.topnav):not(.custom-cursor):not(script) {
 .logo {
   position: absolute;
   top: -5px;
+  top: 2px;
   left: 50%;
   transform: translateX(-50%);
   width: 200px;
+  width: 175px;
   max-width: 40vw;
   height: auto;
   cursor: pointer;
@@ -139,6 +141,7 @@ body>*:not(footer):not(.topnav):not(.custom-cursor):not(script) {
   .logo {
      top: 5px;
     width: 150px;
+    width: 130px;
     max-width: 70vw;
   }
 }
@@ -205,7 +208,7 @@ padding-right: 30px;*/
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ececec;
+  background-color: #ffffff;
   border-bottom: 1px solid #1A191A;
   font-family: ABCFavoriteEdu-Regular, sans-serif;
   font-weight: 600;
@@ -481,13 +484,14 @@ text-transform: uppercase;
 .button1 {
   font-size: clamp(11px, 0.9vw, 11px);
   font-family: "owners-text", sans-serif;
-  font-family: ABCFavoriteEdu-Regular, sans-serif;
+  font-family: ABCFavoriteEdu-Bold, sans-serif;
   font-weight: 400;
   font-style: normal;
   padding: 5px 15px;
-  background-color: #1A191A;
+ /* background-color: #1A191A;
   border: 3px solid transparent;
-  border-radius: 3px;
+  border-radius: 3px;*/
+  border: 1px solid #7f7f7f;
   margin: 0;
   transition: all 0.3s ease;
   /* smooth hover effect */
@@ -496,12 +500,14 @@ text-transform: uppercase;
 
 .button1 a {
   color: #ffffff;
+  color: #7f7f7f;
   text-decoration: none;
   display: block;
 }
 
 .button1:hover {
   background-color: #bebebe;
+  border: 1px solid #bebebe;
   /* border-color: #7f7f7f;*/
 }
 
@@ -516,14 +522,14 @@ text-transform: uppercase;
   font-weight: 400;
   font-style: normal;*/
   font-family: "owners-text", sans-serif;
-  font-family: ABCFavoriteEdu-Regular, sans-serif;
+  font-family: ABCFavoriteEdu-Bold, sans-serif;
   font-weight: 400;
   font-style: normal;
   padding: 5px 15px;
-  color: #7f7f7f;
+  /*color: #7f7f7f;
   background-color: #ececec;
-  border: 2px solid #ececec;
-  /* Dotted black border */
+  border: 2px solid #ececec;*/
+  border: 1px solid #7f7f7f;
   border-radius: 30px;
   margin: 0;
 }
@@ -536,7 +542,7 @@ text-transform: uppercase;
 
 .button2:hover {
   background-color: #bebebe;
-  border: 2px solid #bebebe;
+  border: 1px solid #bebebe;
 }
 
 .button2:hover a {
