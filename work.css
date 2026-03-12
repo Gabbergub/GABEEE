@@ -67,6 +67,25 @@ html {
     padding-bottom: 20px;
   }
 
+    .nav-items {
+    display: none;
+    width: 100%;
+    border-bottom: 1px solid #1A191A;
+    background-color: #ececec;
+    /*background-color: #e1e1e1;*/
+    position: absolute;
+    top: 66px;
+    /* Adjust based on your .topnav height */
+    right: 0;
+    /* Align to the right */
+    z-index: 999;
+    /* border-bottom: 1px solid #ccc;*/
+    /* border: 1px solid #ccc;*/
+    /*border-radius: 4px;*/
+    padding: 0;
+    padding-bottom: 20px;
+  }
+
   .nav-items ul {
     flex-direction: column;
     align-items: flex-end;
@@ -91,12 +110,35 @@ html {
   }
 }
 
+/* left icon */
 .icon {
   margin-left: 5px;
   width: 70px;
   height: auto;
   cursor: pointer;
 }
+
+/* perfectly centered logo */
+.logo {
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  max-width: 40vw;
+  height: auto;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .logo {
+     top: 5px;
+    width: 150px;
+    max-width: 70vw;
+  }
+}
+
+
 
 .gabe {
   font-family: "articulat-cf", sans-serif;
@@ -129,6 +171,24 @@ html {
   font-size: clamp(10px, 2vw, 13px);
   background-color: #ececec;
   border-bottom: 1px solid #1A191A;
+}
+
+.topnav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ececec;
+  border-bottom: 1px solid #1A191A;
+  font-family: ABCFavoriteEdu-Regular, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: clamp(10px, 2vw, 13px);
+  z-index: 1000;
 }
 
 .name a {
