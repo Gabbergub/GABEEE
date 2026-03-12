@@ -1,3 +1,5 @@
+
+
 body,
 html {
   padding: 0;
@@ -455,6 +457,25 @@ img {
   line-height: clamp(20px, 1.4vw, 30px);
 }
 
+@media (max-width: 600px) {
+  .flex-section {
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0 10px;
+  }
+  .section1, .section2 {
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    word-break: break-word;
+  }
+}
+
 .project {
   flex: 1;
   max-width: 500px;
@@ -858,6 +879,26 @@ html {
   border: 1px solid #1A191A;
   border-radius: 30px;
   margin: 0;
+}
+
+
+@media (max-width: 600px) {
+  .button-container {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .button1, .button2 {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    word-break: break-word;
+  }
 }
 
 @font-face {
