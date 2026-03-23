@@ -426,6 +426,7 @@ img {
 @media (max-width: 480px) {
   .project {
     padding: 0;
+    gap: 3rem;
   }
 
   .project_name {
@@ -434,6 +435,7 @@ img {
 
   .container {
     margin: auto;
+   
   }
 }
 
@@ -442,7 +444,7 @@ img {
   padding-bottom: 20px;
   display: flex;
   align-items: flex-start;
-  gap: 3rem;
+  gap: 2.5rem;
 }
 
 .flex-section {
@@ -487,10 +489,11 @@ img {
   height: fit-content;
   line-height: 25px;
   margin: 0;
-
-  /* FIX: sticky positioning so it scrolls with page but stops below navbar */
   position: sticky;
-  top: 70px; /* matches navbar height (40px) + a little breathing room */
+  top: 70px;
+  box-sizing: border-box;
+  background: transparent;
+  transition: all 0.3s ease;
 }
 
 .project-info {
@@ -523,13 +526,72 @@ img {
   font-family: ABCFavoriteEdu-Regular, sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: clamp(13px, 1vw + 0.5rem, 15px);
-  font-size: clamp(18px, 3vw, 15px);
-  line-height: clamp(20px, 1.4vw, 30px);
+  font-size: clamp(15px, 2vw, 18px);
+  line-height: clamp(20px, 2vw, 30px);
   width: 100%;
   color: #7f7f7f;
-  margin-top: 100px;
-  padding-bottom: 30px;
+  margin-top: 60px;
+  padding-bottom: 24px;
+  box-sizing: border-box;
+  word-break: break-word;
+  transition: all 0.3s ease;
+}
+/* Responsive .project and .project-descriptor for all screens */
+@media (max-width: 1199px) {
+  .project {
+    max-width: 90vw;
+    top: 60px;
+    padding: 0 2vw;
+  }
+  .project-descriptor {
+    font-size: clamp(14px, 2.5vw, 17px);
+    margin-top: 40px;
+    padding-bottom: 18px;
+  }
+}
+
+@media (max-width: 900px) {
+  .project {
+    max-width: 100vw;
+    position: relative;
+    top: 0;
+    padding: 0 1vw;
+  }
+  .project-descriptor {
+    font-size: clamp(13px, 3vw, 16px);
+    margin-top: 30px;
+    padding-bottom: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .project {
+    max-width: 100vw;
+    width: 100%;
+    position: relative;
+    top: 0;
+    padding: 0 0.5vw;
+    margin: 0;
+  }
+  .project-descriptor {
+    font-size: clamp(12px, 4vw, 15px);
+    margin-top: 18px;
+    padding-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .project {
+    max-width: 100vw;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .project-descriptor {
+    font-size: clamp(11px, 5vw, 14px);
+    margin-top: 10px;
+    padding-bottom: 6px;
+  }
 }
 
 .project-type {
@@ -579,10 +641,52 @@ span {
 .main_content5 {
   flex: 2;
   display: flex;
+  flex-wrap: wrap;
   align-items: stretch;
   width: 100%;
   margin-top: 55px;
   box-sizing: border-box;
+  gap: 1.5rem; /* Desktop default */
+}
+/* Responsive main_content5 for desktop, tablet, and iPhone */
+@media (max-width: 1199px) {
+  .main_content5 {
+    gap: 1.5rem; /* Large tablet */
+    margin-top: 40px;
+    padding: 0 2vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .main_content5 {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem; /* Tablet */
+    margin-top: 30px;
+    padding: 0 1vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .main_content5 {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 0.5vw;
+    gap: 0.8rem; /* iPhone/Small devices */
+  }
+}
+
+@media (max-width: 480px) {
+  .main_content5 {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    margin-top: 10px;
+    padding: 0;
+    gap: 0.5rem; /* Extra small */
+  }
 }
 
 .picture_wrapper5 {
