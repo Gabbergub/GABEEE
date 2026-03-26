@@ -10,14 +10,13 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  padding-bottom: 70px;
+  /* Removed padding-bottom, not needed for sticky footer */
   /* Prevent content from being hidden behind fixed footer */
 }
 
-main,
-.container,
-footer {
-  flex-shrink: 0;
+
+.container {
+  flex: 1 0 auto;
 }
 
 body>*:not(footer):not(.topnav):not(.custom-cursor):not(script) {
@@ -654,7 +653,7 @@ text-transform: uppercase;
   font-style: normal;
 }
 
-.footer {
+/*.footer {
   border-top: 1.5px solid #1A191A;
   width: 100%;
   background-color: #e5e5e5;
@@ -669,6 +668,20 @@ text-transform: uppercase;
   z-index: 100;
   margin-top: 0;
   flex-shrink: 0;
+}*/
+
+.footer {
+  width: 100%;
+  border-top: 1.5px solid #1A191A;
+  /*background-color: #D3D3D3;*/
+  background-color: #e5e5e5;
+  text-align: center;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: auto;
 }
 
 .footer-text {

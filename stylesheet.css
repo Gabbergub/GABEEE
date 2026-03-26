@@ -10,6 +10,15 @@ body {
 
 html {
   overflow-x: hidden;
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  .footer {
+    margin-top: auto;
+    position: relative;
+  }
 }
 
 .custom-cursor {
@@ -471,7 +480,7 @@ font-size: 25px;
   .content {
     flex-direction: column;
     align-items: stretch;
-    margin: 20px;
+    margin: 0 20px;
     padding: 0;
     width: auto;
     max-width: 100vw;
