@@ -1,3 +1,17 @@
+.container {
+  margin: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+
+@media (min-width: 2560px) {
+  .container {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
 
 
 body,
