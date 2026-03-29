@@ -10,6 +10,7 @@ html {
 body {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
   /* Removed padding-bottom, not needed for sticky footer */
   /* Prevent content from being hidden behind fixed footer */
 }
@@ -732,6 +733,20 @@ text-transform: uppercase;
 .footer a {
   text-decoration: none;
   color: inherit;
+}
+
+/* TABLET + DESKTOP: keep footer pinned to viewport bottom */
+@media (min-width: 768px) {
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+  }
+
+  .container {
+    padding-bottom: 110px;
+  }
 }
 
 
