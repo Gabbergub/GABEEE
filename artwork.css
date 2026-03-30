@@ -1,8 +1,10 @@
 body {
   margin: 0;
-  background-color: #ffffff;
+  background-color: #ececec;
+  background-color: #F5F8FA;
   /* cursor: url('arrow-cursor.png') 0 0, auto; /* set hot spot (x y) */
   cursor: none;
+  overflow-x: hidden;
 }
 
 .custom-cursor {
@@ -47,20 +49,36 @@ body {
   height: auto;
 }*/
 /* Hamburger icon */
+/* Hamburger icon */
 .hamburger {
   display: none;
   font-size: 30px;
   cursor: pointer;
-  padding-right: 30px;
+  padding-right: 15px;
 }
 
 @media screen and (max-width: 600px) {
   .nav-items {
     display: none;
     width: 100%;
-    /*background-color: #e1e1e1;*/
+    background-color: #ececec;
+    background-color: #F5F8FA;
     position: absolute;
     top: 55px;
+    right: 0;
+    z-index: 999;
+    padding: 0;
+    padding-bottom: 20px;
+  }
+
+    .nav-items {
+    display: none;
+    width: 100%;
+    border-bottom: 1.5px solid #1A191A;
+    background-color: #F5F8FA;
+    /*background-color: #e1e1e1;*/
+    position: absolute;
+    top: 66px;
     /* Adjust based on your .topnav height */
     right: 0;
     /* Align to the right */
@@ -87,7 +105,6 @@ body {
 
   .hamburger {
     display: block;
-    /* font-size: 24px;*/
     cursor: pointer;
     margin-left: auto;
   }
@@ -97,9 +114,7 @@ body {
   }
 }
 
-
-
-
+/* left icon */
 .icon {
   margin-left: 5px;
   width: 70px;
@@ -107,55 +122,95 @@ body {
   cursor: pointer;
 }
 
+/* perfectly centered logo */
+.logo {
+  position: absolute;
+  top: -5px;
+  top: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 175px;
+  max-width: 40vw;
+  height: auto;
+  cursor: pointer;
+}
 
+@media (max-width: 600px) {
+  .logo {
+     top: 5px;
+    width: 130px;
+    max-width: 70vw;
+  }
+}
+
+
+
+
+.name {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
 .gabe {
-  font-family: "articulat-cf", sans-serif;
+  font-family: ABCFavoriteEdu-Bold, sans-serif;
   font-weight: 700;
-  font-style: normal;
-  font-size: clamp(15px, 8vw, 15px);
-  color: #1A191A;
+  font-size: clamp(13px, 2vw, 15px);
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .gabe {
+    font-size: clamp(13px, 5vw, 15px);
+    padding: 0 10px;
+  }
 }
 
 .heading1:hover:not(.active) {
   color: #6b6b6b;
 }
 
-.topnav {
-z-index: 1;
-  /*padding-left: 30px;
-padding-right: 30px;*/
+.heading1:hover:not(.active) {
+  color: #6b6b6b;
+}
+
+/*.topnav {
   width: 100%;
   position: fixed;
   top: 0;
-  /* safer than margin-top */
   left: 50%;
   transform: translateX(-50%);
-  /* centers horizontally */
   display: flex;
   justify-content: space-between;
-  /* centers content inside */
   align-items: center;
-  font-family: "articulat-cf", sans-serif;
+  background-color: #ececec;
+  border-bottom: 1px solid #1A191A;
+  font-family: ABCFavoriteEdu-Regular, sans-serif;
   font-weight: 600;
-  font-style: normal;
   text-transform: uppercase;
   font-size: clamp(10px, 2vw, 13px);
-  background-color: #ffffff;
-  /* border-bottom: 2px solid #1A191A;*/
-}
+  z-index: 1000;
+}*/
 
-.name a {
-
-  text-decoration: none;
-  color: inherit;
+.topnav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F5F8FA;
+  border-bottom: 1.5px solid #1A191A;
+    font-family: ABCFavoriteEdu-Regular, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: clamp(10px, 2vw, 13px);
+   z-index: 1000;
 }
 
 .nav-items ul {
-
   display: flex;
   gap: 20px;
-  /* spacing between links */
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -166,57 +221,23 @@ padding-right: 30px;*/
   display: block;
   line-height: 30px;
   color: #1A191A;
-  /* color: #1A191A;*/
   text-decoration: none;
 }
 
 .nav-items a:hover:not(.active) {
-  text-decoration: overline dotted;
-  text-decoration-thickness: 3px;
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
   color: #7f7f7f;
 }
 
 .nav-items .active {
-  text-decoration: overline dotted;
-  text-decoration-thickness: 3px;
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
 }
-
-/*.tabs {
-  display: flex;
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-}
-
-.VerticalNav {
-  display: flex;
-  flex-direction: column;
-  width: 360px;
-  background-color: transparent;
-  box-sizing: border-box;
-}
-
-.VerticalNav a {
-  text-decoration: none;
-  color: black;
-  font-family: "indivisible", sans-serif;
-  font-weight: 500;
-}
-
-.VerticalNav a:hover {
-  color: #ff0000;
-} */
-
-
-/*.line1 {
-border-right: 2px solid #7f7f7f;
-padding: 450px 0; 
-}*/
 
 .line {
-  border-top: 1px solid #7f7f7f;
+  border-top: 1px solid #1A191A;
   padding: 20px 0;
-  /* optional: add space between borders and content */
   margin-left: 20px;
   margin-right: 20px;
 }
@@ -339,7 +360,7 @@ font-size: 25px;
   }
 }
 
-.content5 {
+/*.content5 {
   display: flex;
   flex-wrap: wrap;
   gap: 35px;
@@ -347,101 +368,48 @@ font-size: 25px;
   max-width: 2800px;
   margin: 0 auto;
   padding: 0 20px;
-  /* 20px margins left/right */
   box-sizing: border-box;
+}*/
+/* ─── MASONRY GRID (FIXED) ───────────────────────────────────────── */
+
+.content5 {
+  column-count: 3;
+  column-gap: 18px;
+
+  width: calc(100% - 40px);
+  margin: 0 20px;
 }
 
-/* Option 1: Make 4 images fit in the container */
+/* Each item wrapper (IMPORTANT) */
+.content5 .item {
+  break-inside: avoid;
+  margin-bottom: 24px;
+}
+
+/* Images */
 .content5 img {
-  width: calc(25% - 35px);
+  width: 100%;
   height: auto;
-  object-fit: cover;
+  display: block;
 }
 
-
-.container {
-  width: 100%;
-  padding-top: 50px;
+/* Caption tweak to match layout */
+.content5 {
+  margin-top: 85px;
   padding-bottom: 150px;
 }
 
-.content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 35px;
+----------
+.container {
   width: 100%;
-  max-width: 2800px;
-  margin: 0 auto;
-  padding: 0 10px;
-  /* 20px margins left/right */
-  box-sizing: border-box;
-}
 
-.content img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* GIF wrapper responsive width */
-.gif_wrapper,
-.gif_wrapper2 {
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 100%;
-  /* default: full width until media query changes it */
-  box-sizing: border-box;
-}
-
-.gif_wrapper img.gif {
-  width: 100%;
-  height: auto;
-  display: block;
-  /*border-radius: 2px; /* optional */
 }
 
 
-/* MOBILE (<= 600px): stack */
-@media (max-width: 600px) {
-  .content {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .gif_wrapper,
-  .gif_wrapper2 {
-    width: 100%;
-    max-width: 500px;
-  }
 
-  .content img {
-    width: 100%;
-    max-width: 500px;
-  }
-}
 
-/* TABLET (<= 768px): stack */
-@media (max-width: 768px) {
-  .content {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .gif_wrapper,
-  .gif_wrapper2 {
-    width: 100%;
-    max-width: 500px;
-  }
-}
-
-/* DESKTOP (>= 1024px): 4 per row */
-@media (min-width: 1024px) {
-
-  .gif_wrapper {
-    flex: 1 1 calc((100% - (3 * 35px)) / 4);
-    max-width: calc((100% - (3 * 35px)) / 4);
-  }
-}
 
 
 
@@ -450,23 +418,14 @@ font-size: 25px;
   font-size: 14px;
   color: #7f7f7f;
   font-family: "articulat-cf", sans-serif;
-  font-weight: 600;
+  font-family: ABCFavoriteEdu-Regular, sans-serif;
+  font-weight: 500;
   font-style: italic;
 }
 
 
 
-.content2 {
-  flex-wrap: wrap;
-  /* Allows wrapping to next row */
-  margin: 20px;
 
-  max-width: 100%;
-  /* Container can span full width */
-  box-sizing: border-box;
-
-
-}
 
 .list a {
   /*font-family: "articulat-cf", sans-serif;
@@ -484,6 +443,100 @@ font-size: 25px;
   font-style: italic;
 }
 
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* ─── FOOTER ───────────────────────────────────────────────────────────────── */
+.footer {
+  width: 100%;
+  border-top: 1.5px solid #1A191A;
+  /*background-color: #f0f0f0; /* Light gray background */
+  /*background-color: #D3D3D3;*/
+  background-color: #e5e5e5;
+  text-align: center;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.footer-text {
+  font-family: "articulat-cf", sans-serif;
+  font-family: ABCFavoriteEdu-Medium, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: clamp(10px, 2vw, 13px);
+  margin: 0;
+  color: #1A191A;
+  /* Dark gray text */
+}
+
+.footer-text2 {
+  position: absolute;
+  font-family: "articulat-cf", sans-serif;
+  font-family: ABCFavoriteEdu-Regular, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: clamp(10px, 2vw, 13px);
+  left: 20px;
+  margin: 0;
+  color: #1A191A;
+}
+
+.footer-right {
+  position: absolute;
+  right: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.footer-text3,
+.footer-text4 {
+  font-family: "articulat-cf", sans-serif;
+  font-family: ABCFavoriteEdu-Regular, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: clamp(10px, 2vw, 13px);
+  margin: 0;
+  color: #1A191A;
+}
+
+.footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  /*background-color: #ececec;*/
+  background-color: #e5e5e5;
+  color: #1A191A;
+  cursor: pointer;
+  padding: 5px 10px 5px;
+  border-radius: 2px;
+  font-family: ABCFavoriteEdu-Regular, sans-serif;
+  font-size: 15px;
+}
+
+#myBtn:hover {
+  background-color: #1A191A;
+  color: #ececec;
+}
 
 html {
   scroll-behavior: smooth;
@@ -548,4 +601,47 @@ html {
   font-family: "dico-code-one", mono;
   font-weight: 700;
   font-style: italic;
+}
+
+.artwork-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.artwork-gallery img {
+  max-width: 200px;
+  height: auto;
+  display: block;
+}
+
+
+@font-face {
+  font-family: "ABCFavoriteEdu-Bold";
+  src: url(Web/ABCFavoritEdu-Bold.woff);
+}
+
+@font-face {
+  font-family: "ABCFavoriteEdu-Medium";
+  src: url(Web/ABCFavoritEdu-Medium.woff);
+}
+
+@font-face {
+  font-family: "ABCFavoriteEdu-Regular";
+  src: url(Web/ABCFavoritEdu-Regular.woff);
+}
+
+
+@media (max-width: 1024px) {
+  .content5 {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .content5 {
+    column-count: 1;
+  }
 }
