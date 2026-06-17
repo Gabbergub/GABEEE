@@ -14,10 +14,10 @@ html {
   /* Adjust size as needed */
   width: 25px;
   height: 25px;
-  /* border: 2px solid #1A191A;*/
+  border: 2px solid #1A191A;
   /* black outline */
   background-color: rgba(236, 236, 236, 0.5);
-  background-color: #dd3e2b;
+  /* background-color: #dd3e2b; */
   /* light gray with 40% opacity */
   border-radius: 50%;
   /* Make it a circle */
