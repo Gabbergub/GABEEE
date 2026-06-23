@@ -110,6 +110,58 @@
   <script src="stylesheet.js" async defer></script>
   <script src="cursor.js" async defer></script>
   <div class="custom-cursor"></div>
+
+  <style>
+    .content,
+    .container2 {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .content.fade-in,
+    .container2.fade-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+
+  <script>
+    (function () {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+
+      document.querySelectorAll('.content, .container2').forEach(function (el) {
+        observer.observe(el);
+      });
+    })();
+  </script>
+
+  <style>
+    /* === Blank page load-in === */
+    body {
+      opacity: 0;
+      transition: opacity 0.8s ease;
+    }
+    body.page-loaded {
+      opacity: 1;
+    }
+  </style>
+
+  <script>
+    // Blank page load-in
+    window.addEventListener("DOMContentLoaded", function () {
+      requestAnimationFrame(function () {
+        document.body.classList.add("page-loaded");
+      });
+    });
+  </script>
 </body>
 
 </html>
