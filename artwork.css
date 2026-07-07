@@ -242,13 +242,14 @@ body {
 }
 
 .nav-items a:hover:not(.active) {
-  text-decoration: line-through;
+  /*text-decoration: line-through;*/
+  text-decoration: underline;
   text-decoration-thickness: 2px;
   color: #7f7f7f;
 }
 
 .nav-items .active {
-  text-decoration: line-through;
+  /*text-decoration: line-through;*/
   text-decoration-thickness: 2px;
 }
 

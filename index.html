@@ -47,15 +47,17 @@ Marroquin
 
   <div class="topnav">
     <a href="index.html"><img class="icon" src="Smiley_Face.gif" alt="Smiley icon"></a>
-   <!--- <a href="index.html"><img class="logo" src="GabeeeM_logo.gif" alt=""></a> -->
-      <div class="name"><a href="index.html"><div class="gabe">Gabe Marroquin</div></a></div>
+    <!--- <a href="index.html"><img class="logo" src="GabeeeM_logo.gif" alt=""></a> -->
+    <div class="name"><a href="index.html">
+        <div class="gabe">Gabe Marroquin</div>
+      </a></div>
     <!--<div class="name"><a href="index.html"><div class="gabe">Gabe Marroquin</div></a></div>-->
     <div class="hamburger" onclick="toggleMenu()">☰</div>
     <div class="nav-items" id="navMenu">
       <ul>
         <!--- <li><a class="active" href="index.html">Work</a></li> -->
-        <li><a href="work.html">Work</a></li>
-        <li><a  href="artwork.html">Art</a></li>
+        <li><a href="work.html">Index</a></li>
+        <li><a href="artwork.html">Art</a></li>
         <!--<li><a href="motion.html">Motion</a></li> -->
         <li><a href="info.html">Info</a></li>
         <!--<li><a href="#fixed-stroke">Archive</a></li>-->
@@ -71,7 +73,7 @@ Marroquin
     <div class="contact">
       <div class="sub-caption">[Contact]</div>
       <br>
-      <div class="social"><a href="mailto: gabemarroquin.art@gmail.com" class="email">Gabemarroquin.art@gmail.com</a>
+      <div class="social"><a href="mailto: gabemarroquin.art@gmail.com" class="email">Email</a>
       </div>
       <!--<p class="footer-text">© 2023 Gabe Marroquin</p>-->
       <div class="social"><a href="https://www.instagram.com/the.gabe.marroquin/" class="instagram">Instagram</a></div>
@@ -82,23 +84,36 @@ Marroquin
     </div>
   </div>
 
-
   <div class="container">
     <!----
 <h3 class="fix-stroke">[Selected Work]</h3>--->
+<div class="sub-caption">[Selected Work]</div>
+<br><br>
     <div class="content">
 
       <div class="gif_wrapper">
         <a href="project14.html"><img class="gif" src="SS_logo_progress.gif" alt=""></a>
-        <div class="caption">SolidSky — Rebrand</div>
-        <div class="text">A rebrand and visual identity for SolidSky.</div>
+        <div class="caption">SolidSky – Redesign</div>
+        <div class="text">A logo and visual identity redesign for SolidSky.</div>
+        <div class="button-container">
+          <div class="button1">2026</div>
+          <div class="button2">Identity</div>
+          <div class="button2">Logo</div>
+
+        </div>
+      </div>
+
+      <!--<div class="gif_wrapper">
+        <a href=""><img class="gif" src="CW-Gif.gif" alt=""></a>
+        <div class="caption">Citywide — Specialty Coffee</div>
+        <div class="text">A Logo for a new mobile coffee stand.</div>
         <div class="button-container">
           <div class="button1">2026</div>
           <div class="button2">Identity</div>
           <div class="button2">Logo</div>
           <div class="button2">In Progress</div>
         </div>
-      </div>
+      </div>-->
 
       <div class="gif_wrapper2">
         <a href="project12.html"><img class="gif" src="559_3D_logo.gif" alt=""></a>
@@ -108,12 +123,12 @@ Marroquin
           <div class="button1">2026</div>
           <div class="button2">Identity</div>
           <div class="button2">Logo</div>
-          <div class="button2">In Progress</div>
+          <!--<div class="button2">In Progress</div>-->
         </div>
       </div>
 
 
-       <div class="gif_wrapper2">
+      <div class="gif_wrapper2">
         <a href="project15.html"><img class="gif" src="CosmicIntervention_Cover.png" alt=""></a>
         <div class="caption">Cosmic Intervention — Projection</div>
         <div class="text">Video narrative exploring themes of rebirth, soul transference, and spirituality.</div>
@@ -126,7 +141,7 @@ Marroquin
       </div>
 
       <div class="gif_wrapper">
-       <a href="project17.html"><img class="gif" src="Scribbled_Word.gif" alt=""></a>
+        <a href="project17.html"><img class="gif" src="Scribbled_Word.gif" alt=""></a>
         <div class="caption">Gabeee's Editorial Site</div>
         <div class="text">Website showcasing essays, research, and critical writing developed throughout the D-Crit
           Residency/Intensive at the School of Visual Arts.</div>
@@ -377,11 +392,12 @@ Marroquin
   <div class="custom-cursor"></div>
 
   <style>
-      /* === Blank page load-in === */
+    /* === Blank page load-in === */
     body {
       opacity: 0;
       transition: opacity 0.8s ease;
     }
+
     body.page-loaded {
       opacity: 1;
     }
@@ -393,11 +409,13 @@ Marroquin
       transform: translateY(16px);
       transition: opacity 0.6s ease, transform 0.6s ease;
     }
+
     .topnav.page-loaded {
       opacity: 1;
       transform: translateY(0);
       transition-delay: 0s;
     }
+
     .up-top.page-loaded {
       opacity: 1;
       transform: translateY(0);
@@ -411,6 +429,7 @@ Marroquin
       transform: translateY(32px);
       transition: opacity 0.6s ease, transform 0.6s ease;
     }
+
     .gif_wrapper.fade-in,
     .gif_wrapper2.fade-in {
       opacity: 1;
@@ -419,13 +438,13 @@ Marroquin
   </style>
 
   <script>
-     // Blank page load-in
+    // Blank page load-in
     window.addEventListener("DOMContentLoaded", function () {
       requestAnimationFrame(function () {
         document.body.classList.add("page-loaded");
       });
     });
-    
+
     // Page load-in
     window.addEventListener('DOMContentLoaded', function () {
       document.querySelector('.topnav').classList.add('page-loaded');

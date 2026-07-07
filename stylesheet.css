@@ -224,14 +224,14 @@ html {
 }
 
 .nav-items a:hover:not(.active) {
-  text-decoration: line-through;
+  text-decoration: underline;
   /*text-decoration: overline dotted;*/
   text-decoration-thickness: 2px;
   color: #7f7f7f;
 }
 
 .nav-items .active {
-  text-decoration: line-through;
+  text-decoration: bracket;
   text-decoration-thickness: 2px;
   /*text-decoration: overline dotted;
   text-decoration-thickness: 3px;*/
@@ -967,6 +967,7 @@ html {
   font-family: ABCFavoriteEdu-Regular, sans-serif;
   font-weight: 500;
   font-style: normal;
+  text-decoration: underline;
   /* font-size: clamp(15px, 2vw, 13px);
   font-size: clamp(13px, 0.9vw, 18px);*/
   font-size: clamp(13px, 3vw, 15px);
@@ -992,7 +993,10 @@ html {
   }
 
   .contact {
-    align-items: flex-start;
+    /*align-items: flex-start;*/
+    margin-left: auto;
+    align-items: flex-end;
+    text-align: right;
   }
 }
 
