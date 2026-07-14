@@ -375,7 +375,7 @@ img {
   .project {
     /* FIX: reset sticky positioning on mobile so it stacks normally */
     position: relative !important;
-   
+    order: 1; /* stack above .main_content5 on tablet and phone */
     top: 70px !important; /* maintain spacing below navbar */
     max-height: none !important;
     width: 100%;
@@ -405,6 +405,7 @@ img {
     align-items: center;
     margin: 0 auto;
     box-sizing: border-box;
+    order: 2; /* keep below .project on tablet and phone */
   }
 
   .picture_wrapper5 {
