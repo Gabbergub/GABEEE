@@ -388,33 +388,59 @@ font-size: 25px;
   padding: 0 20px;
   box-sizing: border-box;
 }*/
-/* ─── MASONRY GRID (FIXED) ───────────────────────────────────────── */
+/* ─── JUSTIFIED MOSAIC, 3 PER ROW ────────────────────────────────── */
+/* Row heights are computed by the script below (true "justified gallery"
+   layout, like the reference video) so every row fills edge-to-edge and
+   no image is ever cropped or stretched out of its own aspect ratio.
+   These rules are just the pre-JS / fallback sizing. */
 
 .content5 {
-  column-count: 3;
-  column-gap: 18px;
-
   width: calc(100% - 40px);
-  margin: 0 20px;
+  margin: 85px 20px 0;
+  padding-bottom: 150px;
 }
 
-/* Each item wrapper (IMPORTANT) */
-.content5 .item {
-  break-inside: avoid;
+/* Each row holds exactly 3 images */
+.content5 .row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 18px;
   margin-bottom: 24px;
 }
 
-/* Images */
+/* Each item wrapper: sized by its own image, no cropping */
+.content5 .item {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  min-width: 0;
+}
+
+/* Height is set inline by JS per row; width always follows the image's own
+   aspect ratio (auto), so it can never be squished or distorted. */
 .content5 img {
-  width: 100%;
-  height: auto;
+  height: 340px;
+  width: auto;
+  max-width: 100%;
   display: block;
 }
 
-/* Caption tweak to match layout */
-.content5 {
-  margin-top: 85px;
-  padding-bottom: 150px;
+/* Tablet and phone: single stacked column, each image fills the margins */
+@media (max-width: 1024px) {
+  .content5 .row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .content5 .item {
+    margin-bottom: 24px;
+  }
+
+  .content5 img {
+    height: auto !important;
+    width: 100%;
+  }
 }
 
 ----------
@@ -650,17 +676,4 @@ html {
 @font-face {
   font-family: "ABCFavoriteEdu-Regular";
   src: url(Web/ABCFavoritEdu-Regular.woff);
-}
-
-
-@media (max-width: 1024px) {
-  .content5 {
-    column-count: 2;
-  }
-}
-
-@media (max-width: 600px) {
-  .content5 {
-    column-count: 1;
-  }
 }

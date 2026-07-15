@@ -913,6 +913,7 @@ html {
   justify-content: space-between;
   align-items: baseline;
   gap: 100px;
+ 
   width: 100%;
   box-sizing: border-box;
 }

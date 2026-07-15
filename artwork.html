@@ -57,7 +57,6 @@
             <div class="item">
                 <img class="gif" src="/Artwork/Thank You.jpg" alt="">
                 <div class="caption">THANK YOU!, digital painting</div>
-
             </div>
 
             <div class="item">
@@ -69,7 +68,6 @@
                 <img class="gif" src="/Artwork/Omar.JPG" alt="">
                 <div class="caption">OMAR APOLLO, digital painting</div>
             </div>
-
 
             <div class="item">
                 <img class="gif" src="/Artwork/Brave_New_World.jpg" alt="">
@@ -115,7 +113,6 @@
                 <img class="gif" src="/Artwork/Perspective_Marco_New.jpg" alt="">
                 <div class="caption">Marco – PERSPECTIVE 2, pencil on paper</div>
             </div>
-
 
             <div class="item">
                 <img class="gif" src="/Artwork/Depression.jpg" alt="">
@@ -203,6 +200,147 @@
                     document.body.classList.add("page-loaded");
                 });
             });
+        </script>
+
+        <script>
+            // === Justified mosaic layout for .content5 ===
+            // Groups the .item images into rows of 3 (or 2, whichever gives
+            // a more reasonable height) and always solves each row's height
+            // so its images fill the row edge-to-edge, at their own,
+            // untouched aspect ratio — scaling images up when needed so
+            // there's never a leftover gap. Nothing is ever cropped or
+            // distorted: every image keeps its own ratio, just larger or
+            // smaller as a whole. Re-groups on resize.
+            (function () {
+                var GAP = 18;
+                var IDEAL_HEIGHT = 340;
+                var STACK_BREAKPOINT = 1024; // tablet and phone: single stacked column
+                var content5 = document.querySelector('.content5');
+                if (!content5) return;
+
+                // Keep a stable, flat list of the original .item elements so
+                // we can re-group them freely without losing any.
+                var items = Array.prototype.slice.call(content5.querySelectorAll('.item'));
+
+                function ratioOf(item) {
+                    var img = item.querySelector('img');
+                    return (img && img.naturalWidth && img.naturalHeight)
+                        ? img.naturalWidth / img.naturalHeight
+                        : 1;
+                }
+
+                // Height needed for `count` items (with their ratios) to
+                // exactly fill `availableWidth` — this is always used as-is
+                // (no capping), so rows always reach the margins.
+                function heightToFill(ratios, count, availableWidth) {
+                    var width = availableWidth - GAP * (count - 1);
+                    var sum = ratios.slice(0, count).reduce(function (a, b) { return a + b; }, 0);
+                    return width / sum;
+                }
+
+                function buildRows() {
+                    var availableWidth = content5.clientWidth;
+                    var rows = [];
+                    var i = 0;
+
+                    while (i < items.length) {
+                        var remaining = items.length - i;
+
+                        // Never leave a lone straggler that can't share a
+                        // row — split the last 4 into two rows of 2 instead
+                        // of 3 + 1.
+                        if (remaining === 4) {
+                            var r4 = items.slice(i, i + 2).map(ratioOf);
+                            rows.push({ items: items.slice(i, i + 2), height: heightToFill(r4, 2, availableWidth) });
+                            i += 2;
+                            continue;
+                        }
+
+                        if (remaining <= 2) {
+                            var rLast = items.slice(i, i + remaining).map(ratioOf);
+                            rows.push({ items: items.slice(i, i + remaining), height: heightToFill(rLast, remaining, availableWidth) });
+                            i += remaining;
+                            continue;
+                        }
+
+                        // remaining is 3 or >= 5: choose 3 vs 2 for this row
+                        // based on whichever lands closer to a pleasant
+                        // height, then fill it exactly (grow as needed).
+                        var ratios = items.slice(i, i + 3).map(ratioOf);
+                        var h3 = heightToFill(ratios, 3, availableWidth);
+                        var h2 = heightToFill(ratios.slice(0, 2), 2, availableWidth);
+
+                        if (Math.abs(h3 - IDEAL_HEIGHT) <= Math.abs(h2 - IDEAL_HEIGHT)) {
+                            rows.push({ items: items.slice(i, i + 3), height: h3 });
+                            i += 3;
+                        } else {
+                            rows.push({ items: items.slice(i, i + 2), height: h2 });
+                            i += 2;
+                        }
+                    }
+
+                    return rows;
+                }
+
+                function render() {
+                    if (window.innerWidth <= STACK_BREAKPOINT) {
+                        // Tablet / phone: single stacked column, each image
+                        // fills the margins full-width (see CSS), no row
+                        // grouping needed.
+                        content5.innerHTML = '';
+                        items.forEach(function (item) {
+                            item.querySelector('img').style.height = '';
+                            content5.appendChild(item);
+                        });
+                        return;
+                    }
+
+                    var rows = buildRows();
+                    content5.innerHTML = '';
+                    rows.forEach(function (row) {
+                        var rowEl = document.createElement('div');
+                        rowEl.className = 'row';
+                        row.items.forEach(function (item) {
+                            item.querySelector('img').style.height = row.height + 'px';
+                            rowEl.appendChild(item);
+                        });
+                        content5.appendChild(rowEl);
+                    });
+                }
+
+                function whenImagesReady(imgs, cb) {
+                    var remaining = imgs.length;
+                    if (!remaining) return cb();
+                    imgs.forEach(function (img) {
+                        if (img.complete) {
+                            if (--remaining === 0) cb();
+                        } else {
+                            img.addEventListener('load', done);
+                            img.addEventListener('error', done);
+                        }
+                    });
+                    function done() {
+                        if (--remaining === 0) cb();
+                    }
+                }
+
+                function init() {
+                    var imgs = items.map(function (item) { return item.querySelector('img'); });
+                    whenImagesReady(imgs, render);
+                }
+
+                if (document.readyState !== 'loading') {
+                    init();
+                } else {
+                    document.addEventListener('DOMContentLoaded', init);
+                }
+
+                var resizeTimer;
+                window.addEventListener('resize', function () {
+                    clearTimeout(resizeTimer);
+                    resizeTimer = setTimeout(render, 150);
+                });
+            })();
         </script>
 </body>
 
