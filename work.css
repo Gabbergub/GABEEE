@@ -489,10 +489,66 @@ p {
 /* DESKTOP: 3 per row */
 @media (min-width: 1024px) {
   .gif_wrapper,
-  .gif_wrapper2,
   .gif_wrapper3 {
     flex: 0 0 calc(33.333% - 12px);
     max-width: calc(33.333% - 12px);
+  }
+}
+
+/* ─── FIT SECTION (paired gifs, equal height, flush to margins) ──────────── */
+/* .fit wraps the "Is This Real" + "Fragile" pair. It takes a full row of
+   .content3 (so its edges land on the same margins as every other row).
+   Both gifs are held to the same row height with object-fit: cover, so
+   the boxes fill their columns exactly: the 18px gap between them and
+   the flush fit against the outer margins both line up precisely,
+   matching the rest of .content3 (minor cropping, no stretching/distortion). */
+
+.fit {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  flex: 1 1 100%;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.fit .gif_wrapper3,
+.fit .gif_wrapper2 {
+  flex: 1 1 100%;
+  max-width: 100%;
+}
+
+.fit .gif_wrapper3 img.gif,
+.fit .gif_wrapper2 img.gif {
+  width: 100%;
+  height: clamp(320px, 34vw, 500px);
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (min-width: 1024px) {
+  /* gif_wrapper3 keeps 1 column on the left; gif_wrapper2 spans the
+     remaining 2 columns + inner gap so it reaches the right margin. */
+  .fit .gif_wrapper3 {
+    flex: 0 0 calc(33.333% - 12px);
+    max-width: calc(33.333% - 12px);
+  }
+
+  .fit .gif_wrapper2 {
+    flex: 0 0 calc(66.666% - 6px);
+    max-width: calc(66.666% - 6px);
+  }
+}
+
+/* TABLET/MOBILE: gif_wrapper3's gif inside .fit drops the forced height +
+   cover-crop and displays at its natural width/height, same as every
+   other gif in .content3. */
+@media (max-width: 768px) {
+  .fit .gif_wrapper3 img.gif {
+    height: auto;
+    object-fit: unset;
+    object-position: unset;
   }
 }
 
