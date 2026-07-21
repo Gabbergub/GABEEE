@@ -126,7 +126,7 @@ html {
     padding: 0;
     padding-bottom: 20px;
   }
-  
+
 
   .nav-items ul {
     flex-direction: column;
@@ -435,7 +435,7 @@ img {
 
   .container {
     margin: auto;
-   
+
   }
 }
 
@@ -448,8 +448,8 @@ img {
 }
 /*.container {
   max-width: 1200px;   controls overall content width
-  margin: 0 auto;      centers it 
-  padding: 0 40px;    side breathing room 
+  margin: 0 auto;      centers it
+  padding: 0 40px;    side breathing room
   padding-bottom: 20px;
 
   display: flex;
@@ -727,6 +727,39 @@ span {
   width: 100%;
   max-width: 100%;
   object-fit: cover;
+}
+
+/* Paired logo/painting images inside .picture_wrapper5 (previously inline flex rows) */
+.logo-pair {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  gap: 10px;
+  width: 100%;
+}
+
+.logo-pair-img {
+  width: 49.5%;
+  max-width: 50%;
+  flex: 0 0 48.5%;
+  padding: clamp(24px, 7vw, 70px);
+  box-sizing: border-box;
+  display: inline-block;
+  height: auto;
+}
+
+/* Tablet and phone: stack the pair instead of shrinking side-by-side,
+   so each image stays large instead of squeezing down to half width */
+@media (max-width: 768px) {
+  .logo-pair {
+    flex-direction: column;
+  }
+
+  .logo-pair-img {
+    width: 100%;
+    max-width: 100%;
+    flex: 1 1 auto;
+  }
 }
 
 .mockup1 {
