@@ -662,6 +662,13 @@ html {
   display: block;
 }
 
+span {
+  font-family: "dico-code-one", mono;
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(8px, 0.9vw, 8px);
+}
+
 
 @font-face {
   font-family: "ABCFavoriteEdu-Bold";

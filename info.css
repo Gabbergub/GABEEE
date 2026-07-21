@@ -75,6 +75,7 @@ body>*:not(footer):not(.topnav):not(.custom-cursor):not(script) {
     width: 100%;
     border-bottom: 1.5px solid #1A191A;
     background-color: #ececec;
+    background-color: #F5F8FA;
     /*background-color: #e1e1e1;*/
     position: absolute;
     top: 66px;
