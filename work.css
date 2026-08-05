@@ -872,7 +872,7 @@ html {
 
 .sub-caption {
   margin-left: 20px;
-  font-family: ABCFavoriteEdu-Medium, sans-serif;
+  font-family: ABCFavoriteEdu-Book, sans-serif;
   font-size: clamp(13px, 2vw, 15px);
   font-size: clamp(13px, 0.9vw, 18px);
   margin-top: -5px;
@@ -918,7 +918,7 @@ html {
   font-family: "owners-text", sans-serif;
   font-family: ABCFavoriteEdu-Regular, sans-serif;
   font-family: ABCFavoriteEdu-Book, sans-serif;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   text-align:justify;
 
   font-size: clamp(18px, 3vw, 15px);
@@ -987,6 +987,7 @@ span {
   font-style: normal;
   font-size: clamp(8px, 0.9vw, 8px);
   font-size: clamp(9px, 0.9vw, 11px);
+  text-transform: uppercase;
 }
 
 /* ─── FONT FACES ───────────────────────────────────────────────────────────── */

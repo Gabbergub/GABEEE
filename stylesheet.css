@@ -919,7 +919,7 @@ html {
   font-family: "owners-text", sans-serif;
   font-family: ABCFavoriteEdu-Regular, sans-serif;
   font-family: ABCFavoriteEdu-Book, sans-serif;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   text-align:justify;
   /*font-weight: 400;
   font-weight: 500;
@@ -1051,6 +1051,7 @@ span {
   font-style: normal;
   font-size: clamp(8px, 0.9vw, 8px);
   font-size: clamp(9px, 0.9vw, 10px);
+  text-transform: uppercase;
   
 }
 
