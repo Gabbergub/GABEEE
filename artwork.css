@@ -24,39 +24,80 @@ body {
   opacity: 0;
 }*/
 
+/* --- old circle cursor + hidden rule, replaced by the shared arrow-cursor block below ---
 .custom-cursor {
   position: fixed;
   top: 0;
   left: 0;
-  /* Adjust size as needed */
+
   width: 25px;
   height: 25px;
   border: 2px solid #1A191A;
-  /* black outline */
+
   background-color: rgba(236, 236, 236, 0.5);
-  /* background-color: #dd3e2b; */
-  /* light gray with 40% opacity */
+
   border-radius: 50%;
-  /* Make it a circle */
+
   pointer-events: none;
-  /* Ensure it doesn't block clicks */
+
   z-index: 10000;
-  /* Keep it above all other elements */
+
   transition: transform 0.1s ease, background-color 0.2s ease, opacity 0.2s ease;
   transform: translate(-50%, -50%);
   opacity: 0;
-  /* Start as hidden */
+
 }
 
-/* Expanded and color-changed cursor when hovering links */
 .custom-cursor.link-hover {
   transform: translate(-50%, -50%) scale(2);
   background-color: rgba(236, 236, 236, 0.5);
-  /*border: 1px solid #1A191A;*/
+
 }
 
 .hidden {
   opacity: 0;
+
+}
+--- end old cursor rules --- */
+
+/* Arrow-cursor shape, shared by the main cursor and its trail via CSS mask */
+.custom-cursor,
+.cursor-trail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* Matches the 27x43 arrow cursor reference */
+  width: 27px;
+  height: 33px;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 43'%3E%3Cpath d='M0 0 L0 29 L6 23 L11 34 L15 32 L10 21 L20 21 Z'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 43'%3E%3Cpath d='M0 0 L0 29 L6 23 L11 34 L15 32 L10 21 L20 21 Z'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  pointer-events: none;
+  /* Ensure it doesn't block clicks */
+  transform: translate(0, 0);
+  transform-origin: 0 0;
+  /* Anchor the arrow's tip (top-left of the shape) at the cursor position */
+  opacity: 0;
+  /* Start as hidden */
+}
+
+.custom-cursor {
+  background-color: #1A191A;
+  z-index: 10000;
+  /* Keep it above all other elements */
+  transition: transform 0.1s ease, opacity 0.2s ease;
+}
+
+.cursor-trail {
+  background-color: #7f7f7f;
+  z-index: 9999;
+}
+
+.hidden {
+  opacity: 0 !important;
   /* Hide when out of bounds */
 }
 
@@ -70,7 +111,6 @@ body {
 .hamburger {
   display: none;
   font-size: 30px;
-  cursor: pointer;
   padding-right: 15px;
 }
 
@@ -111,7 +151,6 @@ body {
   .hamburger {
     display: block;
     /* font-size: 24px;*/
-    cursor: pointer;
     margin-left: auto;
   }
 
@@ -125,7 +164,6 @@ body {
   margin-left: 5px;
   width: 70px;
   height: auto;
-  cursor: pointer;
 }
 
 /* perfectly centered logo */
@@ -138,7 +176,6 @@ body {
   width: 175px;
   max-width: 40vw;
   height: auto;
-  cursor: pointer;
 }
 
 @media (max-width: 600px) {
@@ -281,6 +318,9 @@ a {
   text-decoration: none;
   /*color: #69df46;*/
   color: #1A191A;
+  /* Browsers apply their own built-in cursor: pointer directly to links,
+     which beats an inherited cursor: none from body — override it here. */
+  cursor: none;
 
 }
 
@@ -573,7 +613,6 @@ html {
   /*background-color: #ececec;*/
   background-color: #e5e5e5;
   color: #1A191A;
-  cursor: pointer;
   padding: 5px 10px 5px;
   border-radius: 2px;
   font-family: ABCFavoriteEdu-Regular, sans-serif;

@@ -1,7 +1,8 @@
 body {
   margin: 0;
   background-color: #ececec;
-  background-color: #F5F8FA;
+   background-color: #F5F8FA;
+  font-family: ABCFavoriteEdu-Regular, sans-serif;
   /* cursor: url('arrow-cursor.png') 0 0, auto; /* set hot spot (x y) */
   cursor: none;
   overflow-x: hidden;
@@ -9,89 +10,63 @@ body {
 
 html {
   overflow-x: hidden;
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  .footer {
+    margin-top: auto;
+    position: relative;
+  }
 }
 
-/* --- old circle cursor + hidden rule, replaced by the shared arrow-cursor block below ---
 .custom-cursor {
   position: fixed;
   top: 0;
   left: 0;
-
+  /* Adjust size as needed */
   width: 25px;
   height: 25px;
   border: 2px solid #1A191A;
-
+  /* black outline */
   background-color: rgba(236, 236, 236, 0.5);
-
+  /* background-color: #dd3e2b; */
+  /* light gray with 40% opacity */
   border-radius: 50%;
-
-  pointer-events: none;
-
-  z-index: 10000;
-
-  transition: transform 0.1s ease, background-color 0.2s ease, opacity 0.2s ease;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-
-}
-
-.custom-cursor.link-hover {
-  transform: translate(-50%, -50%) scale(2);
-  background-color: rgba(236, 236, 236, 0.5);
-
-}
-
-.hidden {
-  opacity: 0;
-
-}
---- end old circle cursor + hidden rule --- */
-
-/* Arrow-cursor shape, shared by the main cursor and its trail via CSS mask */
-.custom-cursor,
-.cursor-trail {
-  position: fixed;
-  top: 0;
-  left: 0;
-  /* Matches the 27x43 arrow cursor reference */
-  width: 27px;
-  height: 33px;
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 43'%3E%3Cpath d='M0 0 L0 29 L6 23 L11 34 L15 32 L10 21 L20 21 Z'/%3E%3C/svg%3E");
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 43'%3E%3Cpath d='M0 0 L0 29 L6 23 L11 34 L15 32 L10 21 L20 21 Z'/%3E%3C/svg%3E");
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: contain;
-  mask-size: contain;
+  /* Make it a circle */
   pointer-events: none;
   /* Ensure it doesn't block clicks */
-  transform: translate(0, 0);
-  transform-origin: 0 0;
-  /* Anchor the arrow's tip (top-left of the shape) at the cursor position */
+  z-index: 10000;
+  /* Keep it above all other elements */
+  transition: transform 0.1s ease, background-color 0.2s ease, opacity 0.2s ease;
+  transform: translate(-50%, -50%);
   opacity: 0;
   /* Start as hidden */
 }
 
-.custom-cursor {
-  background-color: #1A191A;
-  z-index: 10000;
-  /* Keep it above all other elements */
-  transition: transform 0.1s ease, opacity 0.2s ease;
-}
-
-.cursor-trail {
-  background-color: #7f7f7f;
-  z-index: 9999;
+/* Expanded and color-changed cursor when hovering links */
+.custom-cursor.link-hover {
+  transform: translate(-50%, -50%) scale(2);
+  background-color: rgba(236, 236, 236, 0.5);
+  /*border: 1px solid #1A191A;*/
 }
 
 .hidden {
-  opacity: 0 !important;
+  opacity: 0;
   /* Hide when out of bounds */
 }
 
+/*.icon{
+  margin-left: 5px;
+  width: 70px;
+  height: auto;
+}*/
 /* Hamburger icon */
 .hamburger {
   display: none;
   font-size: 30px;
+  cursor: pointer;
   padding-right: 15px;
 }
 
@@ -99,20 +74,8 @@ html {
   .nav-items {
     display: none;
     width: 100%;
-    background-color: #ececec;
-    background-color: #F5F8FA;
-    position: absolute;
-    top: 55px;
-    right: 0;
-    z-index: 999;
-    padding: 0;
-    padding-bottom: 20px;
-  }
-
-    .nav-items {
-    display: none;
-    width: 100%;
     border-bottom: 1.5px solid #1A191A;
+    background-color: #ececec;
     background-color: #F5F8FA;
     /*background-color: #e1e1e1;*/
     position: absolute;
@@ -143,6 +106,8 @@ html {
 
   .hamburger {
     display: block;
+    /* font-size: 24px;*/
+    cursor: pointer;
     margin-left: auto;
   }
 
@@ -156,7 +121,8 @@ html {
   margin-left: 5px;
   width: 70px;
   height: auto;
-}*/
+  cursor: pointer;
+}
 
 /* perfectly centered logo */
 .logo {
@@ -168,21 +134,17 @@ html {
   width: 175px;
   max-width: 40vw;
   height: auto;
+  cursor: pointer;
 }
 
 @media (max-width: 600px) {
   .logo {
-     top: 5px;
+    top: 5px;
+    width: 150px;
     width: 130px;
     max-width: 70vw;
   }
 }
-
-/*.name a {
-  text-decoration: none;
-  color: inherit;
-}*/
-
 .name {
   position: absolute;
   margin-left: 20px;
@@ -201,7 +163,8 @@ html {
 
 @media (max-width: 600px) {
   .gabe {
-    font-size: clamp(13px, 5vw, 15px);
+   /* font-size: clamp(13px, 5vw, 15px);*/
+   /* font-size: clamp(10px, 5vw, 13px);*/
     padding: 0 10px;
   }
 }
@@ -210,9 +173,7 @@ html {
   color: #6b6b6b;
 }
 
-.heading1:hover:not(.active) {
-  color: #6b6b6b;
-}
+
 
 /*.topnav {
   width: 100%;
@@ -231,9 +192,8 @@ html {
   font-size: clamp(10px, 2vw, 13px);
   z-index: 1000;
 }*/
-
 .topnav {
-   width: 100%;
+  width: 100%;
   position: fixed;
   top: 0;
   display: flex;
@@ -248,14 +208,20 @@ html {
   font-size: clamp(13px, 2vw, 11px);
    z-index: 1000;
    padding: 10px 0;
+  
 }
+
+
 .nav-items {
   margin-left: auto;
 }
 
 .nav-items ul {
+  
   display: flex;
+  justify-content: flex-end;
   gap: 20px;
+  /* spacing between links */
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -266,23 +232,30 @@ html {
   display: block;
   line-height: 30px;
   color: #1A191A;
+  /* color: #1A191A;*/
   text-decoration: none;
 }
 
 .nav-items a:hover:not(.active) {
   text-decoration: underline;
+  /*text-decoration: overline dotted;*/
   text-decoration-thickness: 2px;
   color: #7f7f7f;
 }
 
 .nav-items .active {
-  /*text-decoration: line-through;*/
+  text-decoration: bracket;
   text-decoration-thickness: 2px;
+  /*text-decoration: overline dotted;
+  text-decoration-thickness: 3px;*/
 }
 
+
 .line {
+  /*border-top: 1px solid #7f7f7f;*/
   border-top: 1px solid #1A191A;
   padding: 20px 0;
+  /* optional: add space between borders and content */
   margin-left: 20px;
   margin-right: 20px;
 }
@@ -294,14 +267,14 @@ html {
   font-family: ABCFavoriteEdu-Book, sans-serif;
   font-weight: 700;
   font-style: normal;
+  font-size: clamp(30px, 3vw, 70px);
   font-size: clamp(20px, 2.5vw, 25px);
-  margin-left: 20px;
-  margin-right: 20px;
+  margin: 20px;
   color: #1A191A;
 }
 
 .divider {
-  border-top: 1.5px solid #1A191A;
+  border-top: 1.5px solid #7f7f7f;
   margin-top: 50px;
   margin-left: 20px;
   margin-right: 20px;
@@ -311,44 +284,56 @@ html {
 .divider2 {
   border-top: 1px dashed #7f7f7f;
   padding: 5px 0;
+  /* optional: add space between borders and content */
   margin-top: 30px;
+
 }
+
 
 a {
   text-decoration: none;
+  /*color: #69df46;*/
   color: #1A191A;
-  /* Browsers apply their own built-in cursor: pointer directly to links,
-     which beats an inherited cursor: none from body — override it here. */
-  cursor: none;
-}
 
+}
 
 
 .header {
   font-family: "indivisible", sans-serif;
   font-family: ABCFavoriteEdu-Book, sans-serif;
-  font-weight: 700;
+  font-weight: 500;
   font-style: normal;
   text-transform: uppercase;
+  /* font-size: clamp(1rem, 2vw + 0.5rem, 2.5rem);*/
   font-size: clamp(1rem, 2vw + 0.1rem, 1.5rem);
   display: inline;
+  /* makes background only cover the text */
   background-color: #69df46;
   margin: 0;
+  /* remove default margin */
   padding: 0;
+  /* remove any padding */
 }
 
 
 
+/*.fix-stroke {
+  font-size: 30px;
+  paint-order: stroke fill;
+}*/
+
 .title2 {
-  margin-left: 20px;
-  margin-right: 20px;
+  margin: 20px;
 }
 
 .project-info {
   color: #7f7f7f;
   display: flex;
+  /*justify-content: space-between; /* pushes them to opposite sides */
   align-items: center;
+  /* keeps text aligned nicely */
   gap: 7rem;
+  /*gap: 24%;*/
   font-family: "indivisible", sans-serif;
   font-family: ABCFavoriteEdu-Book, sans-serif;
   font-weight: 500;
@@ -368,7 +353,8 @@ p {
 
 .text {
   color: #7f7f7f;
-   padding-top: -30px;
+  
+  padding-top: -30px;
   font-family: "articulat-cf", sans-serif;
   font-family: ABCFavoriteEdu-Book, sans-serif;
   text-transform: uppercase;
@@ -376,16 +362,27 @@ p {
   font-style: normal;
   font-style: italic;
   
-  /*font-size: clamp(15px, 2vw, 13px);*/
+  /* font-family: "dico-code-one", mono;
+  font-weight: 400;
+  font-style: normal;
+  font-size: clamp(11px, 0.9vw, 13px);
+    font-size: clamp(15px, 2vw, 13px);*/
   font-size: clamp(13px, 0.9vw, 18px);
+ /* line-height: clamp(18px, 1.4vw, 24px);*/
   line-height: clamp(10px, 3vw, 15px);
 
   font-family: "dico-code-one", mono;
   font-weight: 400;
   font-style: normal;
   font-size: clamp(9px, 0.9vw, 10px);
-   font-size: clamp(9px, 0.9vw, 11px);
 }
+
+/*.text {
+width: 50%;
+padding-top: 10px;
+padding-bottom: 40px;
+font-size: 25px;
+}*/
 
 @media (max-width: 768px) {
   .text {
@@ -393,29 +390,54 @@ p {
   }
 }
 
-/* ─── CONTENT WRAPPERS ────────────────────────────────────────────────────── */
-/* All content blocks use margin-left/right: 20px and NO extra horizontal
-   padding so every edge lines up at exactly 20px from the viewport. */
-
-.container {
+.content5 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
   width: 100%;
-  padding-top: 85px;
-  padding-top: 70px;
-  padding-bottom: 150px;
+  /*max-width: 2800px;
+  margin: 0 auto;
+  padding: 0 10px;*/
+  box-sizing: border-box;
 }
 
+/* Option 1: Make 4 images fit in the container */
+.content5 img {
+  width: calc(25% - 35px);
+  height: auto;
+  object-fit: cover;
+}
+
+
+/*.container {
+  width: 100%;
+  padding-bottom: 150px;
+  margin: 20px;
+}*/
+.container {
+   width: 100%;
+  padding: 0 20px;   /* true 20px side spacing */
+  padding-bottom: 150px;
+  box-sizing: border-box;
+}
+
+/*.content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  width: 100%;
+  max-width: 2800px;
+  box-sizing: border-box;
+}*/
 .content {
   display: flex;
   flex-wrap: wrap;
   gap: 18px;
-  /* FIX: use explicit side margins instead of shorthand + width:100% */
-  width: calc(100% - 40px);
-  margin-left: 20px;
-  margin-right: 20px;
- /* margin-top: 20px;
-  padding-top: 35px;*/
-  margin-bottom: 0;
+
+  width: 100%;
+  max-width: 100%;   /* IMPORTANT: remove constraint */
   
+  margin: 0;         /* remove auto centering */
   box-sizing: border-box;
 }
 
@@ -423,194 +445,129 @@ p {
   max-width: 100%;
   height: auto;
   display: block;
+  /* border-radius: 3px; */
 }
 
-.content3 {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-  /* FIX: same treatment as .content */
-  width: calc(100% - 40px);
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.content5 {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 35px;
-  /* FIX: same treatment */
-  width: calc(100% - 40px);
-  margin-left: 20px;
-  margin-right: 20px;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.content5 img {
-  width: calc(25% - 35px);
-  height: auto;
-  object-fit: cover;
-}
-
-/* ─── GIF WRAPPERS ─────────────────────────────────────────────────────────── */
-
+/* GIF wrapper responsive width */
 .gif_wrapper,
-.gif_wrapper2,
-.gif_wrapper3 {
+.gif_wrapper2 {
   display: flex;
   flex-direction: column;
   flex: 1 1 100%;
+  /* default: full width until media query changes it */
   box-sizing: border-box;
 }
 
-.gif_wrapper img,
-.gif_wrapper2 img,
-.gif_wrapper3 img {
+/* MOBILE (<= 600px): stack */
+@media (max-width: 600px) {
+  .container {
+   width: 100%;
+  padding: 0 20px;   /* true 20px side spacing */
+  padding-bottom: 150px;
+  box-sizing: border-box;
+}
+  /*.content {
+    flex-direction: column;
+    align-items: stretch;
+    /*margin: 0 20px;
+    padding: 0;
+    width: auto;
+    box-sizing: border-box;
+  }*/
+    .content {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .gif_wrapper,
+  .gif_wrapper2 {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .content img {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* TABLET (<= 768px): stack */
+@media (max-width: 768px) {
+  /*.content {
+    flex-direction: column;
+    align-items: center;
+    align-items: stretch;
+  }*/
+    .content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .gif_wrapper,
+  .gif_wrapper2 {
+    width: 100%;
+    /* max-width: 500px;*/
+  }
+}
+
+/* DESKTOP (>= 1024px): 3 per row */
+@media (min-width: 1024px) {
+  .gif_wrapper2 {
+    flex: 0 0 calc(66.666% - 9px);
+    max-width: calc(66.666% - 9px);
+    box-sizing: border-box;
+  }
+
+  .gif_wrapper {
+    flex: 0 0 calc(33.334% - 9px);
+    max-width: calc(33.334% - 9px);
+    box-sizing: border-box;
+  }
+}
+
+.gif_wrapper,
+.gif_wrapper2 img.gif {
   width: 100%;
   height: auto;
   display: block;
+  /*border-radius: 2px; /* optional */
 }
 
-.gif_wrapper3 {
-  flex: 1 1 calc((100% - 18px) / 2);
-  max-width: calc((100% - 18px) / 2);
+
+
+/*.gif {
+  transition: transform 0.3s ease; Smooth animation 
 }
 
-/* MOBILE */
-@media (max-width: 600px) {
-  .content,
-  .content3 {
-    flex-direction: column;
-    align-items: stretch;
-    width: calc(100% - 40px);
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 0;
-  }
+.gif:hover {
+  transform: translateY(-15px); Moves up slightly 
+}*/
 
-  .gif_wrapper,
-  .gif_wrapper2,
-  .gif_wrapper3 {
-    width: 100%;
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-
-  .content img,
-  .content3 img {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
+.gif_wrapper:hover .button-container {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* TABLET */
-@media (max-width: 768px) {
-  .content,
-  .content3 {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .gif_wrapper,
-  .gif_wrapper2,
-  .gif_wrapper3 {
-    width: 100%;
-    max-width: 100%;
-  }
-}
-
-/* DESKTOP: 3 per row (gif_wrapper2 spans 2 columns, so it pairs up
-   with a single gif_wrapper — 2 per row wherever gif_wrapper2 appears) */
-@media (min-width: 1024px) {
-  .gif_wrapper,
-  .gif_wrapper3 {
-    flex: 0 0 calc(33.333% - 12px);
-    max-width: calc(33.333% - 12px);
-  }
-
-  .gif_wrapper2 {
-    flex: 0 0 calc(66.666% - 6px);
-    max-width: calc(66.666% - 6px);
-  }
-}
-
-/* ─── FIT SECTION (paired gifs, equal height, flush to margins) ──────────── */
-/* .fit wraps the "Is This Real" + "Fragile" pair. It takes a full row of
-   .content3 (so its edges land on the same margins as every other row).
-   Both gifs are held to the same row height with object-fit: cover, so
-   the boxes fill their columns exactly: the 18px gap between them and
-   the flush fit against the outer margins both line up precisely,
-   matching the rest of .content3 (minor cropping, no stretching/distortion). */
-
-.fit {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
-  flex: 1 1 100%;
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-}
-
-.fit .gif_wrapper3,
-.fit .gif_wrapper2 {
-  flex: 1 1 100%;
-  max-width: 100%;
-}
-
-.fit .gif_wrapper3 img.gif,
-.fit .gif_wrapper2 img.gif {
-  width: 100%;
-  height: clamp(320px, 34vw, 500px);
-  object-fit: cover;
-  object-position: center;
-}
-
-@media (min-width: 1024px) {
-  /* gif_wrapper3 keeps 1 column on the left; gif_wrapper2 spans the
-     remaining 2 columns + inner gap so it reaches the right margin. */
-  .fit .gif_wrapper3 {
-    flex: 0 0 calc(33.333% - 12px);
-    max-width: calc(33.333% - 12px);
-  }
-
-  .fit .gif_wrapper2 {
-    flex: 0 0 calc(66.666% - 6px);
-    max-width: calc(66.666% - 6px);
-  }
-}
-
-/* TABLET/MOBILE: gif_wrapper3's gif inside .fit drops the forced height +
-   cover-crop and displays at its natural width/height, same as every
-   other gif in .content3. */
-@media (max-width: 768px) {
-  .fit .gif_wrapper3 img.gif {
-    height: auto;
-    object-fit: unset;
-    object-position: unset;
-  }
-}
-
-/* ─── HOVER / BUTTON ───────────────────────────────────────────────────────── */
-
-.gif_wrapper:hover .button-container,
 .gif_wrapper2:hover .button-container {
   opacity: 1;
   transform: translateY(0);
 }
+
+/*.gif:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}*/
 .caption{
   margin-top: 10px;
 }
 
 .caption a{
-  margin-top: 10px;
+  
   font-size: clamp(15px, 2vw, 13px);
   font-size: clamp(13px, 0.9vw, 18px);
   color: #1A191A;
@@ -627,14 +584,10 @@ font-weight: 700;
 font-style: normal;
   /*text-align: center;*/
 }
-.caption{
-  font-family: ABCFavoriteEdu-medium, sans-serif;
-  font-size: clamp(13px, 0.9vw, 18px);
-  text-transform: uppercase;
-}
 .caption a:hover {
   color: #7f7f7f;
   text-decoration: none;
+  cursor: pointer;
 }
 
 
@@ -660,7 +613,6 @@ font-style: normal;
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.3s ease, transform 0.3s ease;
-  text-transform: uppercase;
 }
 
 
@@ -706,22 +658,23 @@ font-style: normal;
   margin: 0;
 }
 
-
 .button2 a {
-  font-family: ABCFavoriteEdu-Book, sans-serif;
+  font-family: ABCFavoriteEdu-Regular, sans-serif;
   color: #1A191A;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .button3 {
   font-size: clamp(11px, 0.9vw, 11px);
   font-family: "dico-code-one", mono;
-  font-family: ABCFavoriteEdu-Book, sans-serif;
+  font-family: ABCFavoriteEdu-Regular, sans-serif;
   font-weight: 700;
   font-style: normal;
   padding: 5px 10px 5px;
   background-color: transparent;
   border: 2px dotted #1A191A;
+  /* Dotted black border */
   border-radius: 30px;
   margin: 0;
 }
@@ -729,6 +682,7 @@ font-style: normal;
 .button3 a {
   color: #1A191A;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .button3:hover {
@@ -741,17 +695,23 @@ font-style: normal;
   color: #7f7f7f;
 }
 
-/* ─── CONTENT2 / LIST ──────────────────────────────────────────────────────── */
 
 .content2 {
   flex-wrap: wrap;
-  margin-left: 20px;
-  margin-right: 20px;
+  /* Allows wrapping to next row */
+  margin: 20px;
+
   max-width: 100%;
+  /* Container can span full width */
   box-sizing: border-box;
+
+
 }
 
 .list a {
+  /*font-family: "articulat-cf", sans-serif;
+  font-weight: 700;
+  font-style: normal;*/
   font-family: "dico-code-one", mono;
   font-family: ABCFavoriteEdu-Book, sans-serif;
   font-weight: 600;
@@ -765,15 +725,21 @@ font-style: normal;
   font-style: italic;
 }
 
+
 html {
   scroll-behavior: smooth;
 }
 
-/* ─── FONT UTILITIES ───────────────────────────────────────────────────────── */
 
 .Articulat-CF-Bold {
   font-family: "articulat-cf", sans-serif;
   font-weight: 700;
+  font-style: normal;
+}
+
+.Articulat-CF-Bold {
+  font-family: "articulat-cf", sans-serif;
+  font-weight: 800;
   font-style: normal;
 }
 
@@ -801,6 +767,12 @@ html {
   font-style: normal;
 }
 
+.Articulat-CF-Regular {
+  font-family: "articulat-cf", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
 .Dico-Code-One-Regular {
   font-family: "dico-code-one", mono;
   font-weight: 400;
@@ -819,11 +791,10 @@ html {
   font-style: italic;
 }
 
-/* ─── FOOTER ───────────────────────────────────────────────────────────────── */
-
 .footer {
   width: 100%;
   border-top: 1.5px solid #1A191A;
+  /*background-color: #f0f0f0; /* Light gray background */
   /*background-color: #D3D3D3;*/
   background-color: #e5e5e5;
   text-align: center;
@@ -843,6 +814,7 @@ html {
   font-size: clamp(10px, 2vw, 13px);
   margin: 0;
   color: #1A191A;
+  /* Dark gray text */
 }
 
 .footer-text2 {
@@ -885,8 +857,10 @@ html {
   color: inherit;
 }
 
-/* ─── SCROLL INDICATOR ─────────────────────────────────────────────────────── */
 
+
+
+/* Scroll indicator */
 .scroll {
   font-family: "articulat-cf", sans-serif;
   font-family: ABCFavoriteEdu-Regular, sans-serif;
@@ -908,15 +882,16 @@ html {
 }
 
 .sub-caption {
-  margin-left: 20px;
-  font-family: ABCFavoriteEdu-Book, sans-serif;
+  font-family: ABCFavoriteEdu-Medium, sans-serif;
   font-size: clamp(13px, 2vw, 15px);
   font-size: clamp(13px, 0.9vw, 18px);
   margin-top: -5px;
   text-transform: uppercase;
 }
 
-/* ─── UP-TOP / HEADING / CONTACT ───────────────────────────────────────────── */
+
+
+
 
 .up-top {
   display: flex;
@@ -924,29 +899,18 @@ html {
   justify-content: space-between;
   align-items: baseline;
   gap: 100px;
+ 
   width: 100%;
   box-sizing: border-box;
 }
 
-/*.heading {
+.heading {
   flex: 2 1 75%;
   min-width: 220px;
-  width: 50%;
-  position: relative;
-  padding-top: 70px;
-  margin-left: 20px;
-  margin-right: 20px;
-  color: #1A191A;
-  font-family: "owners-text", sans-serif;
-  font-family: ABCFavoriteEdu-Regular, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: clamp(18px, 3vw, 15px);
-  box-sizing: border-box;
-}*/
+}
 
 .heading {
- width: 50%;
+  width: 50%;
   position: relative;
   padding-top: 50px;
   margin: 20px;
@@ -957,7 +921,10 @@ html {
   font-family: ABCFavoriteEdu-Book, sans-serif;
   /*text-transform: uppercase;*/
   text-align:justify;
-
+  /*font-weight: 400;
+  font-weight: 500;
+  font-style: normal;*/
+  /* font-size: clamp(20px, 2.5vw, 25px); */
   font-size: clamp(18px, 3vw, 15px);
   line-height: clamp(20px, 3vw, 15px);
   /*line-height: clamp(20px, 3vw, 25px);*/
@@ -966,11 +933,10 @@ html {
 
 @media (max-width: 800px) {
   .heading {
-    width: 100%;
-    max-width: 100vw;
-    padding-right: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+    width: auto;
+    max-width: none;
+    padding-right: 0;
+    margin: 20px;
     box-sizing: border-box;
   }
 }
@@ -979,21 +945,35 @@ html {
   .heading {
     font-size: clamp(20px, 2.5vw, 25px);
     line-height: clamp(20px, 3vw, 25px);
-    margin-left: 20px;
-    margin-right: 20px;
-    max-width: 100vw;
+    margin: 20px;
+    max-width: none;
     text-align: left;
     word-break: break-word;
     box-sizing: border-box;
   }
 }
 
-.social {
+.social a {
   font-family: "articulat-cf", sans-serif;
-  font-family: ABCFavoriteEdu-Regular, sans-serif;
+  font-family: ABCFavoriteEdu-Book, sans-serif;
+  
   font-weight: 500;
   font-style: normal;
+
+  /*font-family: "dico-code-one", mono;
+  font-weight: 400;
+  font-style: normal;*/
+
+  text-decoration: underline;
+  text-transform: uppercase;
   font-size: clamp(13px, 0.9vw, 18px);
+  color: #7f7f7f;
+  color: #1A191A;
+}
+.social a:hover {
+  color: #7f7f7f;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .contact {
@@ -1002,8 +982,8 @@ html {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin: 20px;
+
 }
 
 @media (max-width: 800px) {
@@ -1014,7 +994,54 @@ html {
   }
 
   .contact {
-    align-items: flex-start;
+    /*align-items: flex-start;*/
+    margin-left: auto;
+    align-items: flex-end;
+    text-align: right;
+  }
+}
+
+
+
+
+
+
+
+.content3 .gif_wrapper3 img.gif {
+  width: 100%;
+  max-width: 500px;
+  /*border-radius: 3px;*/
+}
+
+.content3 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+  width: 100%;
+  max-width: 2800px;
+  margin: 0 auto;
+  padding: 0 20px;
+  /* 20px margins left/right */
+  box-sizing: border-box;
+}
+
+.gif_wrapper3 {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 30%;
+  max-width: 50%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+  .content3 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gif_wrapper3 {
+    max-width: 100%;
+    width: 100%;
   }
 }
 
@@ -1023,11 +1050,13 @@ span {
   font-weight: 400;
   font-style: normal;
   font-size: clamp(8px, 0.9vw, 8px);
-  font-size: clamp(9px, 0.9vw, 11px);
+  font-size: clamp(9px, 0.9vw, 10px);
   text-transform: uppercase;
+  
 }
 
-/* ─── FONT FACES ───────────────────────────────────────────────────────────── */
+
+
 
 @font-face {
   font-family: "ABCFavoriteEdu-Bold";
