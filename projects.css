@@ -380,6 +380,7 @@ h3 {
   font-size: clamp(15px, 3vw, 18px);
   font-size: clamp(13px, 2vw, 15px);
   font-size: clamp(11px, 3vw, 13px);
+  line-height: clamp(15px, 3vw, 18px);
   text-transform: uppercase;
   letter-spacing: 0;
   word-spacing: 0;
