@@ -149,8 +149,9 @@ body>*:not(footer):not(.topnav):not(.custom-cursor):not(script) {
 
 .name {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-left: 20px;
+  /*left: 50%;
+  transform: translateX(-50%);*/
 }
 
 .name a {
@@ -160,14 +161,17 @@ body>*:not(footer):not(.topnav):not(.custom-cursor):not(script) {
 
 .gabe {
   font-family: ABCFavoriteEdu-Bold, sans-serif;
+  font-family: ABCFavoriteEdu-Medium, sans-serif;
   font-weight: 700;
-  font-size: clamp(13px, 2vw, 15px);
+  /*font-size: clamp(13px, 2vw, 15px);*/
+  font-size: clamp(13px, 0.9vw, 18px);
   text-align: center;
 }
 
 @media (max-width: 600px) {
   .gabe {
-    font-size: clamp(13px, 5vw, 15px);
+   /* font-size: clamp(13px, 5vw, 15px);*/
+   /* font-size: clamp(10px, 5vw, 13px);*/
     padding: 0 10px;
   }
 }
@@ -205,17 +209,24 @@ body>*:not(footer):not(.topnav):not(.custom-cursor):not(script) {
   background-color: #ececec;
   background-color: #F5F8FA;
   border-bottom: 1.5px solid #1A191A;
-    font-family: ABCFavoriteEdu-Regular, sans-serif;
+    font-family: ABCFavoriteEdu-Book, sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   font-size: clamp(10px, 2vw, 13px);
+  font-size: clamp(13px, 2vw, 11px);
    z-index: 1000;
-   
+   padding: 10px 0;
+
+}
+
+.nav-items {
+  margin-left: auto;
 }
 
 .nav-items ul {
 
   display: flex;
+  justify-content: flex-end;
   gap: 20px;
   /* spacing between links */
   list-style-type: none;
@@ -240,8 +251,10 @@ body>*:not(footer):not(.topnav):not(.custom-cursor):not(script) {
 }
 
 .nav-items .active {
-  /*text-decoration: line-through;*/
+  text-decoration: bracket;
   text-decoration-thickness: 2px;
+  /*text-decoration: overline dotted;
+  text-decoration-thickness: 3px;*/
 }
 
 
@@ -277,7 +290,7 @@ body>*:not(footer):not(.topnav):not(.custom-cursor):not(script) {
   padding: 0;
   line-height: inherit;
   font-family: inherit;
-  font-family: ABCFavoriteEdu-Regular, sans-serif;
+  font-family: ABCFavoriteEdu-Book, sans-serif;
   font-size: inherit;
   font-size: clamp(18px, 3vw, 15px);
 }
@@ -288,7 +301,7 @@ h3 {
   margin: 20px;
   color: #1A191A;
   font-family: "articulat-cf", sans-serif;
-  font-family: ABCFavoriteEdu-Regular, sans-serif;
+  font-family: ABCFavoriteEdu-Book, sans-serif;
   font-weight: 700;
   font-style: normal;
   /*-webkit-text-stroke: 1px #1A191A;*/
@@ -299,7 +312,7 @@ h3 {
 .title2 {
   margin: 20px;
   font-family: "dico-code-one", mono;
-  font-family: ABCFavoriteEdu-Regular, sans-serif;
+  font-family: ABCFavoriteEdu-Book, sans-serif;
   font-weight: 700;
   font-style: normal;
 }
@@ -313,7 +326,7 @@ h3 {
   gap: 7rem;
   /*gap: 24%;*/
   font-family: "indivisible", sans-serif;
-  font-family: ABCFavoriteEdu-Regular, sans-serif;
+  font-family: ABCFavoriteEdu-Book, sans-serif;
   font-weight: 500;
   font-style: italic;
   font-size: clamp(0.9rem, 1vw, 1rem);
@@ -323,7 +336,7 @@ h3 {
 p {
   margin-top: -15px;
   font-family: "articulat-cf", sans-serif;
-  font-family: ABCFavoriteEdu-Regular, sans-serif;
+  font-family: ABCFavoriteEdu-Book, sans-serif;
   font-weight: 500;
   font-style: normal;
   font-size: clamp(13px, 3vw, 15px);
@@ -339,10 +352,12 @@ p {
   font-size: clamp(13px, 0.9vw, 18px);*/
   color: #7f7f7f;
   font-family: "owners-text", sans-serif;
-  font-family: ABCFavoriteEdu-Regular, sans-serif;
+  font-family: ABCFavoriteEdu-Book, sans-serif;
+  text-transform: uppercase;
   font-weight: 400;
   font-style: normal;
   font-size: clamp(13px, 3vw, 15px);
+  font-size: clamp(11px, 3vw, 13px);
   line-height: clamp(20px, 1.4vw, 30px);
   margin: 0 20px;
   /*padding-top: -30px;*/
@@ -353,6 +368,9 @@ span {
   font-weight: 400;
   font-style: normal;
   font-size: clamp(8px, 0.9vw, 8px);
+  font-size: clamp(9px, 0.9vw, 11px);
+  line-height: clamp(10px, 3vw, 15px);
+  text-transform: none;
 }
 
 /*.text {
@@ -375,6 +393,8 @@ font-size: 25px;
   margin-right: 0;
   width: 35%;
   padding-top: 90px;
+  padding-top: 70px;
+
   padding-bottom: 10px;
   box-sizing: border-box;
   transition: all 0.3s ease;
@@ -384,6 +404,7 @@ font-size: 25px;
   .container {
     width: 60%;
     padding-top: 90px;
+    padding-top: 70px;
     padding-bottom: 10px;
     margin-left: auto;
     margin-right: auto;
@@ -394,6 +415,7 @@ font-size: 25px;
   .container {
     width: 90%;
     padding-top: 90px;
+    padding-top: 70px;
     padding-bottom: 8px;
     margin-left: auto;
     margin-right: auto;
@@ -404,6 +426,7 @@ font-size: 25px;
   .container {
     width: 100%;
     padding-top: 90px;
+    padding-top: 70px;
     padding-bottom: 6px;
     margin-left: 0;
     margin-right: 0;
@@ -414,6 +437,7 @@ font-size: 25px;
   .container {
     width: 100%;
     padding-top: 90px;
+    padding-top: 70px;
     padding-bottom: 2px;
     margin-left: 0;
     margin-right: 0;
@@ -450,21 +474,17 @@ font-size: 25px;
 
 
 .content {
-  /* font-family: "articulat-cf", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-font-family: "dico-code-one", mono;
- font-weight: 400;
-font-style: normal;
-font-size: clamp(13px, 0.9vw, 18px);*/
-  /*line-height: clamp(20px, 1.4vw, 30px);*/
+ 
   color: #7f7f7f;
   font-family: "owners-text", sans-serif;
   font-family: ABCFavoriteEdu-Regular, sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  font-family: ABCFavoriteEdu-Book, sans-serif;
+  text-align:justify;
+  /*text-transform: uppercase;*/
+ 
   font-size: clamp(13px, 3vw, 15px);
-  font-size: clamp(18px, 3vw, 15px);
+  font-size: clamp(15px, 3vw, 18px);
+   line-height: clamp(15px, 3vw, 20px);
   display: flex;
   flex-wrap: wrap;
   /* Wrap to the next row */
@@ -487,7 +507,7 @@ font-style: normal;*/
   font-size: clamp(13px, 3vw, 15px);
   color: #1A191A;
   font-family: "articulat-cf", sans-serif;
-  font-family: ABCFavoriteEdu-Regular, sans-serif;
+  font-family: ABCFavoriteEdu-Book, sans-serif;
   font-weight: 600;
   font-style: normal;
 }
@@ -514,7 +534,8 @@ text-transform: uppercase;
 .button1 {
   font-size: clamp(11px, 0.9vw, 11px);
   font-family: "owners-text", sans-serif;
-  font-family: ABCFavoriteEdu-Bold, sans-serif;
+  font-family: ABCFavoriteEdu-Book, sans-serif;
+  text-transform: uppercase;
   font-weight: 400;
   font-style: normal;
   padding: 5px 15px;
@@ -552,7 +573,8 @@ text-transform: uppercase;
   font-weight: 400;
   font-style: normal;*/
   font-family: "owners-text", sans-serif;
-  font-family: ABCFavoriteEdu-Bold, sans-serif;
+  font-family: ABCFavoriteEdu-Book, sans-serif;
+  text-transform: uppercase;
   font-weight: 400;
   font-style: normal;
   padding: 5px 15px;
@@ -764,4 +786,12 @@ text-transform: uppercase;
 @font-face {
   font-family: "ABCFavoriteEdu-Regular";
   src: url(Web/ABCFavoritEdu-Regular.woff);
+}
+@font-face {
+  font-family: "ABCFavoriteEdu-Light";
+  src: url(Web/ABCFavoritEdu-Light.woff);
+}
+@font-face {
+  font-family: "ABCFavoriteEdu-Book";
+  src: url(Web/ABCFavoritEdu-Book.woff);
 }

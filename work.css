@@ -118,7 +118,7 @@ html {
   width: 70px;
   height: auto;
   cursor: pointer;
-}
+}*/
 
 /* perfectly centered logo */
 .logo {
@@ -148,14 +148,17 @@ html {
 
 .name {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-left: 20px;
+  /*left: 50%;
+  transform: translateX(-50%);*/
 }
 
 .gabe {
   font-family: ABCFavoriteEdu-Bold, sans-serif;
+  font-family: ABCFavoriteEdu-Medium, sans-serif;
   font-weight: 700;
-  font-size: clamp(13px, 2vw, 15px);
+  /*font-size: clamp(13px, 2vw, 15px);*/
+  font-size: clamp(13px, 0.9vw, 18px);
   text-align: center;
 }
 
@@ -193,7 +196,7 @@ html {
 }*/
 
 .topnav {
-  width: 100%;
+   width: 100%;
   position: fixed;
   top: 0;
   display: flex;
@@ -201,11 +204,16 @@ html {
   align-items: center;
   background-color: #F5F8FA;
   border-bottom: 1.5px solid #1A191A;
-    font-family: ABCFavoriteEdu-Regular, sans-serif;
+  font-family: ABCFavoriteEdu-Book, sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   font-size: clamp(10px, 2vw, 13px);
+  font-size: clamp(13px, 2vw, 11px);
    z-index: 1000;
+   padding: 10px 0;
+}
+.nav-items {
+  margin-left: auto;
 }
 
 .nav-items ul {
@@ -246,7 +254,7 @@ html {
   text-transform: uppercase;
   padding-top: 75px;
   font-family: "articulat-cf", sans-serif;
-  font-family: ABCFavoriteEdu-Regular, sans-serif;
+  font-family: ABCFavoriteEdu-Book, sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: clamp(20px, 2.5vw, 25px);
@@ -274,18 +282,11 @@ a {
   color: #1A191A;
 }
 
-.link {
-  line-height: 0px;
-  text-transform: uppercase;
-  font-family: "indivisible", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 25px;
-}
+
 
 .header {
   font-family: "indivisible", sans-serif;
-  font-family: ABCFavoriteEdu-Regular, sans-serif;
+  font-family: ABCFavoriteEdu-Book, sans-serif;
   font-weight: 700;
   font-style: normal;
   text-transform: uppercase;
@@ -296,19 +297,7 @@ a {
   padding: 0;
 }
 
-h3 {
-  padding-top: 40px;
-  padding-bottom: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
-  color: #1A191A;
-  font-family: "articulat-cf", sans-serif;
-  font-family: ABCFavoriteEdu-Regular, sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  text-transform: uppercase;
-  font-size: clamp(13px, 2vw, 15px);
-}
+
 
 .title2 {
   margin-left: 20px;
@@ -321,7 +310,7 @@ h3 {
   align-items: center;
   gap: 7rem;
   font-family: "indivisible", sans-serif;
-  font-family: ABCFavoriteEdu-Regular, sans-serif;
+  font-family: ABCFavoriteEdu-Book, sans-serif;
   font-weight: 500;
   font-style: italic;
   font-size: clamp(0.9rem, 1vw, 1rem);
@@ -332,20 +321,30 @@ p {
   font-size: 13px;
   color: #1A191A;
   font-family: "owners-text", sans-serif;
-  font-family: ABCFavoriteEdu-Regular, sans-serif;
+  font-family: ABCFavoriteEdu-Book, sans-serif;
   font-weight: 500;
   font-style: normal;
 }
 
 .text {
   color: #7f7f7f;
-  padding-top: -30px;
+   padding-top: -30px;
   font-family: "articulat-cf", sans-serif;
-  font-family: ABCFavoriteEdu-Regular, sans-serif;
+  font-family: ABCFavoriteEdu-Book, sans-serif;
+  text-transform: uppercase;
   font-weight: 500;
   font-style: normal;
+  font-style: italic;
+  
+  /*font-size: clamp(15px, 2vw, 13px);*/
   font-size: clamp(13px, 0.9vw, 18px);
-  line-height: clamp(18px, 1.4vw, 24px);
+  line-height: clamp(10px, 3vw, 15px);
+
+  font-family: "dico-code-one", mono;
+  font-weight: 400;
+  font-style: normal;
+  font-size: clamp(9px, 0.9vw, 10px);
+   font-size: clamp(9px, 0.9vw, 11px);
 }
 
 @media (max-width: 768px) {
@@ -361,6 +360,7 @@ p {
 .container {
   width: 100%;
   padding-top: 85px;
+  padding-top: 70px;
   padding-bottom: 150px;
 }
 
@@ -486,12 +486,18 @@ p {
   }
 }
 
-/* DESKTOP: 3 per row */
+/* DESKTOP: 3 per row (gif_wrapper2 spans 2 columns, so it pairs up
+   with a single gif_wrapper — 2 per row wherever gif_wrapper2 appears) */
 @media (min-width: 1024px) {
   .gif_wrapper,
   .gif_wrapper3 {
     flex: 0 0 calc(33.333% - 12px);
     max-width: calc(33.333% - 12px);
+  }
+
+  .gif_wrapper2 {
+    flex: 0 0 calc(66.666% - 6px);
+    max-width: calc(66.666% - 6px);
   }
 }
 
@@ -559,37 +565,65 @@ p {
   opacity: 1;
   transform: translateY(0);
 }
+.caption{
+  margin-top: 10px;
+}
 
-.caption {
+.caption a{
   margin-top: 10px;
   font-size: clamp(15px, 2vw, 13px);
+  font-size: clamp(13px, 0.9vw, 18px);
   color: #1A191A;
   font-family: "articulat-cf", sans-serif;
-  font-family: ABCFavoriteEdu-Bold, sans-serif;
+  font-family: ABCFavoriteEdu-Book, sans-serif;
+  font-family: ABCFavoriteEdu-medium, sans-serif;
+  
   font-weight: 500;
   font-style: normal;
   text-transform: uppercase;
+  text-decoration: underline;
+  /*font-family: "indivisible", sans-serif;
+font-weight: 700;
+font-style: normal;
+  /*text-align: center;*/
 }
+.caption{
+  font-family: ABCFavoriteEdu-medium, sans-serif;
+  font-size: clamp(13px, 0.9vw, 18px);
+  text-transform: uppercase;
+}
+.caption a:hover {
+  color: #7f7f7f;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 
 .button-container {
   display: flex;
   gap: 10px;
+  /* adds space between the buttons */
   padding-top: 20px;
   padding-bottom: 10px;
   opacity: 0;
   transform: translateY(-20px);
   transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1;
+  text-transform: uppercase;
 }
 
 .button-container2 {
   display: flex;
   gap: 10px;
+  /* adds space between the buttons */
   padding-top: 20px;
   padding-bottom: 10px;
   opacity: 1;
   transform: translateY(0);
   transition: opacity 0.3s ease, transform 0.3s ease;
+  text-transform: uppercase;
 }
+
 
 .button1 {
   font-size: clamp(11px, 0.9vw, 11px);
@@ -597,7 +631,8 @@ p {
   font-weight: 400;
   font-style: normal;*/
   font-family: "articulat-cf", sans-serif;
-  font-family: ABCFavoriteEdu-Bold, sans-serif;
+  font-family: ABCFavoriteEdu-bold, sans-serif;
+  font-family: ABCFavoriteEdu-Book, sans-serif;
   font-weight: 600;
   font-style: normal;
   padding: 5px 10px 5px;
@@ -618,6 +653,7 @@ p {
   font-style: normal;*/
   font-family: "articulat-cf", sans-serif;
   font-family: ABCFavoriteEdu-Bold, sans-serif;
+  font-family: ABCFavoriteEdu-Book, sans-serif;
   font-weight: 600;
   font-style: normal;
   padding: 5px 10px;
@@ -633,7 +669,7 @@ p {
 
 
 .button2 a {
-  font-family: ABCFavoriteEdu-Regular, sans-serif;
+  font-family: ABCFavoriteEdu-Book, sans-serif;
   color: #1A191A;
   text-decoration: none;
   cursor: pointer;
@@ -642,7 +678,7 @@ p {
 .button3 {
   font-size: clamp(11px, 0.9vw, 11px);
   font-family: "dico-code-one", mono;
-  font-family: ABCFavoriteEdu-Regular, sans-serif;
+  font-family: ABCFavoriteEdu-Book, sans-serif;
   font-weight: 700;
   font-style: normal;
   padding: 5px 10px 5px;
@@ -680,7 +716,7 @@ p {
 
 .list a {
   font-family: "dico-code-one", mono;
-  font-family: ABCFavoriteEdu-Regular, sans-serif;
+  font-family: ABCFavoriteEdu-Book, sans-serif;
   font-weight: 600;
   font-style: normal;
   text-transform: uppercase;
@@ -836,8 +872,9 @@ html {
 
 .sub-caption {
   margin-left: 20px;
-  font-family: ABCFavoriteEdu-Regular, sans-serif;
+  font-family: ABCFavoriteEdu-Medium, sans-serif;
   font-size: clamp(13px, 2vw, 15px);
+  font-size: clamp(13px, 0.9vw, 18px);
   margin-top: -5px;
   text-transform: uppercase;
 }
@@ -872,20 +909,20 @@ html {
 }*/
 
 .heading {
-  width: 50%;
+ width: 50%;
   position: relative;
-  /*padding-top: 70px;*/
+  padding-top: 50px;
   margin: 20px;
   color: #7f7f7f;
-  /*font-family: "articulat-cf", sans-serif;
-  font-weight: 500;
-  font-style: normal;*/
+  
   font-family: "owners-text", sans-serif;
   font-family: ABCFavoriteEdu-Regular, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  /* font-size: clamp(20px, 2.5vw, 25px); */
+  font-family: ABCFavoriteEdu-Book, sans-serif;
+  text-transform: uppercase;
+  text-align:justify;
+
   font-size: clamp(18px, 3vw, 15px);
+  line-height: clamp(20px, 3vw, 15px);
   /*line-height: clamp(20px, 3vw, 25px);*/
   box-sizing: border-box;
 }
@@ -949,6 +986,7 @@ span {
   font-weight: 400;
   font-style: normal;
   font-size: clamp(8px, 0.9vw, 8px);
+  font-size: clamp(9px, 0.9vw, 11px);
 }
 
 /* ─── FONT FACES ───────────────────────────────────────────────────────────── */
@@ -966,4 +1004,12 @@ span {
 @font-face {
   font-family: "ABCFavoriteEdu-Regular";
   src: url(Web/ABCFavoritEdu-Regular.woff);
+}
+@font-face {
+  font-family: "ABCFavoriteEdu-Light";
+  src: url(Web/ABCFavoritEdu-Light.woff);
+}
+@font-face {
+  font-family: "ABCFavoriteEdu-Book";
+  src: url(Web/ABCFavoritEdu-Book.woff);
 }

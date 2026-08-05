@@ -78,20 +78,8 @@ body {
   .nav-items {
     display: none;
     width: 100%;
-    background-color: #ececec;
-    background-color: #F5F8FA;
-    position: absolute;
-    top: 55px;
-    right: 0;
-    z-index: 999;
-    padding: 0;
-    padding-bottom: 20px;
-  }
-
-    .nav-items {
-    display: none;
-    width: 100%;
     border-bottom: 1.5px solid #1A191A;
+    background-color: #ececec;
     background-color: #F5F8FA;
     /*background-color: #e1e1e1;*/
     position: absolute;
@@ -122,6 +110,7 @@ body {
 
   .hamburger {
     display: block;
+    /* font-size: 24px;*/
     cursor: pointer;
     margin-left: auto;
   }
@@ -155,36 +144,34 @@ body {
 @media (max-width: 600px) {
   .logo {
      top: 5px;
+    width: 150px;
     width: 130px;
     max-width: 70vw;
   }
 }
 
-
-
-
 .name {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-left: 20px;
+  /*left: 50%;
+  transform: translateX(-50%);*/
 }
 
 .gabe {
   font-family: ABCFavoriteEdu-Bold, sans-serif;
+  font-family: ABCFavoriteEdu-Medium, sans-serif;
   font-weight: 700;
-  font-size: clamp(13px, 2vw, 15px);
+  /*font-size: clamp(13px, 2vw, 15px);*/
+  font-size: clamp(13px, 0.9vw, 18px);
   text-align: center;
 }
 
 @media (max-width: 600px) {
   .gabe {
-    font-size: clamp(13px, 5vw, 15px);
+   /* font-size: clamp(13px, 5vw, 15px);*/
+   /* font-size: clamp(10px, 5vw, 13px);*/
     padding: 0 10px;
   }
-}
-
-.heading1:hover:not(.active) {
-  color: #6b6b6b;
 }
 
 .heading1:hover:not(.active) {
@@ -218,16 +205,26 @@ body {
   align-items: center;
   background-color: #F5F8FA;
   border-bottom: 1.5px solid #1A191A;
-    font-family: ABCFavoriteEdu-Regular, sans-serif;
+  font-family: ABCFavoriteEdu-Book, sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   font-size: clamp(10px, 2vw, 13px);
+  font-size: clamp(13px, 2vw, 11px);
    z-index: 1000;
+   padding: 10px 0;
+
+}
+
+.nav-items {
+  margin-left: auto;
 }
 
 .nav-items ul {
+
   display: flex;
+  justify-content: flex-end;
   gap: 20px;
+  /* spacing between links */
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -238,19 +235,22 @@ body {
   display: block;
   line-height: 30px;
   color: #1A191A;
+  /* color: #1A191A;*/
   text-decoration: none;
 }
 
 .nav-items a:hover:not(.active) {
-  /*text-decoration: line-through;*/
   text-decoration: underline;
+  /*text-decoration: overline dotted;*/
   text-decoration-thickness: 2px;
   color: #7f7f7f;
 }
 
 .nav-items .active {
-  /*text-decoration: line-through;*/
+  text-decoration: bracket;
   text-decoration-thickness: 2px;
+  /*text-decoration: overline dotted;
+  text-decoration-thickness: 3px;*/
 }
 
 .line {
@@ -397,6 +397,7 @@ font-size: 25px;
 .content5 {
   width: calc(100% - 40px);
   margin: 85px 20px 0;
+  margin: 70px 20px 0;
   padding-bottom: 150px;
 }
 
@@ -446,6 +447,7 @@ font-size: 25px;
 ----------
 .container {
   width: 100%;
+  
 
 }
 
@@ -683,4 +685,9 @@ span {
 @font-face {
   font-family: "ABCFavoriteEdu-Regular";
   src: url(Web/ABCFavoritEdu-Regular.woff);
+}
+
+@font-face {
+  font-family: "ABCFavoriteEdu-Book";
+  src: url(Web/ABCFavoritEdu-Book.woff);
 }
