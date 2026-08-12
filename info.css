@@ -537,7 +537,7 @@ font-size: 25px;
   font-family: "owners-text", sans-serif;
   font-family: ABCFavoriteEdu-Regular, sans-serif;
   font-family: ABCFavoriteEdu-Book, sans-serif;
-  text-align:justify;
+  /*text-align:justify;*/
   /*text-transform: uppercase;*/
  
   font-size: clamp(13px, 3vw, 15px);
