@@ -915,6 +915,7 @@ html {
 .heading {
   flex: 2 1 75%;
   min-width: 220px;
+   text-align: justify;
 }
 
 .heading {
